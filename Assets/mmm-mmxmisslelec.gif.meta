@@ -1,0 +1,587 @@
+fileFormatVersion: 2
+guid: 56662324fbd20ab4095c150a1420753b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mmx_xsheet(1)_140
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 160
+        width: 42
+        height: 59
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ac18abb7d779ec60800000000000000
+      internalID: 7847935594119830689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmx_xsheet(1)_141
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 160
+        width: 42
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e9ba1fc1960434b0800000000000000
+      internalID: -5461733224778909215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmx_xsheet(1)_142
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 160
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 668ffe9ec293c1be0800000000000000
+      internalID: -1505265310382426010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmx_xsheet(1)_143
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 160
+        width: 43
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e82550582c659fd20800000000000000
+      internalID: 3312774394363073166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmx_xsheet(1)_144
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 160
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41a06f4b5bfad4290800000000000000
+      internalID: -7904468576005387756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmx_xsheet(1)_145
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 160
+        width: 45
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bb086e8f521c66e0800000000000000
+      internalID: -1843077945880998992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmx_xsheet(1)_147
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 160
+        width: 56
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50e778915d805a5f0800000000000000
+      internalID: -746180451910582779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmx_xsheet(1)_148
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 84
+        width: 54
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b89eed6d0ef52e90800000000000000
+      internalID: -7050950307946260300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmx_xsheet(1)_149
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 82
+        width: 54
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 379e590c1053261d0800000000000000
+      internalID: -3359064090422679181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmx_xsheet(1)_150
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 82
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82a2455b3e6b48750800000000000000
+      internalID: 6306366467341560360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmx_xsheet(1)_155
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 54
+        width: 34
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6458c1e1ccb1d4660800000000000000
+      internalID: 7371578728567833926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmx_xsheet(1)_161
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 52
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a3176d8cf46a3d30800000000000000
+      internalID: 4411949820829701026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mmx_xsheet(1)_169
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 34
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee1c7ee42e0fceff0800000000000000
+      internalID: -5364644757126674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      mmx_xsheet(1)_0: -7155104178629707851
+      mmx_xsheet(1)_1: -7069402744626675068
+      mmx_xsheet(1)_10: -159934877267053233
+      mmx_xsheet(1)_100: -3720650909430149736
+      mmx_xsheet(1)_101: 7469831608003748258
+      mmx_xsheet(1)_102: 4043281813363645412
+      mmx_xsheet(1)_103: 5126141044431802915
+      mmx_xsheet(1)_104: 4595075528430533928
+      mmx_xsheet(1)_105: -5300588007909230070
+      mmx_xsheet(1)_106: -537158913914044408
+      mmx_xsheet(1)_107: -1563426640396879421
+      mmx_xsheet(1)_108: -6675483740913104814
+      mmx_xsheet(1)_109: -4848765895316282589
+      mmx_xsheet(1)_11: 5530046291503974030
+      mmx_xsheet(1)_110: 5990340592299673838
+      mmx_xsheet(1)_111: 7045692702728368053
+      mmx_xsheet(1)_112: -7724198553881730087
+      mmx_xsheet(1)_113: 4287819956332510799
+      mmx_xsheet(1)_114: 2716383746954539580
+      mmx_xsheet(1)_115: 4867542409836433053
+      mmx_xsheet(1)_116: 2018704260433378227
+      mmx_xsheet(1)_117: -160267548583818739
+      mmx_xsheet(1)_118: 5747943948531457145
+      mmx_xsheet(1)_119: -1543680094717453752
+      mmx_xsheet(1)_12: 4787234082585316777
+      mmx_xsheet(1)_120: -6318037235058925866
+      mmx_xsheet(1)_121: -1332134957304798646
+      mmx_xsheet(1)_122: -2422203095188413154
+      mmx_xsheet(1)_123: -7461094607936367967
+      mmx_xsheet(1)_124: -5863176282665747913
+      mmx_xsheet(1)_125: 8753274720882658794
+      mmx_xsheet(1)_126: 1410895861350304984
+      mmx_xsheet(1)_127: 160509337087687464
+      mmx_xsheet(1)_128: -5044689590104085407
+      mmx_xsheet(1)_129: -1459154903321968714
+      mmx_xsheet(1)_13: -6527166334626028893
+      mmx_xsheet(1)_130: 8694042712338327987
+      mmx_xsheet(1)_131: 8995597475832738014
+      mmx_xsheet(1)_132: 7571197424554143350
+      mmx_xsheet(1)_133: -450596604395793211
+      mmx_xsheet(1)_134: -6631061043992575180
+      mmx_xsheet(1)_135: 6924746468726908552
+      mmx_xsheet(1)_136: 7517196135605534328
+      mmx_xsheet(1)_137: -5104471750342235451
+      mmx_xsheet(1)_138: -5836911387508558671
+      mmx_xsheet(1)_139: -4635788884262647481
+      mmx_xsheet(1)_14: -3343535980730307867
+      mmx_xsheet(1)_140: 7847935594119830689
+      mmx_xsheet(1)_141: -5461733224778909215
+      mmx_xsheet(1)_142: -1505265310382426010
+      mmx_xsheet(1)_143: 3312774394363073166
+      mmx_xsheet(1)_144: -7904468576005387756
+      mmx_xsheet(1)_145: -1843077945880998992
+      mmx_xsheet(1)_146: 5942659229250304072
+      mmx_xsheet(1)_147: -746180451910582779
+      mmx_xsheet(1)_148: -7050950307946260300
+      mmx_xsheet(1)_149: -3359064090422679181
+      mmx_xsheet(1)_15: -8651206159395054462
+      mmx_xsheet(1)_150: 6306366467341560360
+      mmx_xsheet(1)_151: -7217066809516378968
+      mmx_xsheet(1)_152: 5470692867201468092
+      mmx_xsheet(1)_153: -1034041919760215677
+      mmx_xsheet(1)_154: 7765490378471492627
+      mmx_xsheet(1)_155: 7371578728567833926
+      mmx_xsheet(1)_156: -5760839816589546857
+      mmx_xsheet(1)_157: 5254889465156845791
+      mmx_xsheet(1)_158: -4284416483840070040
+      mmx_xsheet(1)_159: -709829559745228490
+      mmx_xsheet(1)_16: -1181947917146074203
+      mmx_xsheet(1)_160: -3682432063653903222
+      mmx_xsheet(1)_161: 4411949820829701026
+      mmx_xsheet(1)_162: 7046903142422497570
+      mmx_xsheet(1)_163: -4418207863804983624
+      mmx_xsheet(1)_164: 7805070077714740567
+      mmx_xsheet(1)_165: 5411243567807061024
+      mmx_xsheet(1)_166: 5791166237768102709
+      mmx_xsheet(1)_167: -6567510178620441643
+      mmx_xsheet(1)_168: -8615900360167586498
+      mmx_xsheet(1)_169: -5364644757126674
+      mmx_xsheet(1)_17: -2760068261882591252
+      mmx_xsheet(1)_170: 5739590996566278771
+      mmx_xsheet(1)_18: 7727433353478462777
+      mmx_xsheet(1)_19: 8136231971438008316
+      mmx_xsheet(1)_2: -463304715470176106
+      mmx_xsheet(1)_20: -2698646996433632384
+      mmx_xsheet(1)_21: -7971685381255272592
+      mmx_xsheet(1)_22: 4441875625039483456
+      mmx_xsheet(1)_23: 1008874614484020274
+      mmx_xsheet(1)_24: 5685769546017649229
+      mmx_xsheet(1)_25: 4104393995739393739
+      mmx_xsheet(1)_26: 6549874155270024476
+      mmx_xsheet(1)_27: -4492419271371153276
+      mmx_xsheet(1)_28: -5986884018824220271
+      mmx_xsheet(1)_29: 2847392506256953229
+      mmx_xsheet(1)_3: -6825213582915721790
+      mmx_xsheet(1)_30: 8680551446370094209
+      mmx_xsheet(1)_31: -208286143574476375
+      mmx_xsheet(1)_32: 7559636190908025602
+      mmx_xsheet(1)_33: 6607219473679049007
+      mmx_xsheet(1)_34: 3391748611278588509
+      mmx_xsheet(1)_35: 1161393803206187579
+      mmx_xsheet(1)_36: -126735674392778122
+      mmx_xsheet(1)_37: -2695455703025579136
+      mmx_xsheet(1)_38: 8692043003999499941
+      mmx_xsheet(1)_39: 5771066968057830572
+      mmx_xsheet(1)_4: 7881615570250110387
+      mmx_xsheet(1)_40: 8526404598960020632
+      mmx_xsheet(1)_41: 1396526188069851367
+      mmx_xsheet(1)_42: -6107972258105599344
+      mmx_xsheet(1)_43: -640364872522230858
+      mmx_xsheet(1)_44: 6100468820934725555
+      mmx_xsheet(1)_45: -4671338596606799811
+      mmx_xsheet(1)_46: -1709343231202438217
+      mmx_xsheet(1)_47: 3799019872081127125
+      mmx_xsheet(1)_48: -2350175380451567452
+      mmx_xsheet(1)_49: 2437921230351514776
+      mmx_xsheet(1)_5: -6064896518327576022
+      mmx_xsheet(1)_50: -2491932496254987039
+      mmx_xsheet(1)_51: 7363767768287295836
+      mmx_xsheet(1)_52: 8749526415365606019
+      mmx_xsheet(1)_53: 2115241647091534949
+      mmx_xsheet(1)_54: -7360504517107670101
+      mmx_xsheet(1)_55: -285826388590967639
+      mmx_xsheet(1)_56: 7494900742480963406
+      mmx_xsheet(1)_57: -1954278404764249695
+      mmx_xsheet(1)_58: 8581683928650953354
+      mmx_xsheet(1)_59: -4159574191133358143
+      mmx_xsheet(1)_6: -374414088420353614
+      mmx_xsheet(1)_60: 4706478940624925169
+      mmx_xsheet(1)_61: 6694922091872676398
+      mmx_xsheet(1)_62: 5973883152086225550
+      mmx_xsheet(1)_63: -6047323820255713596
+      mmx_xsheet(1)_64: -6448601480941969328
+      mmx_xsheet(1)_65: 2594270651394388537
+      mmx_xsheet(1)_66: -7421583941509746994
+      mmx_xsheet(1)_67: 289673863184647602
+      mmx_xsheet(1)_68: -5430901849757076658
+      mmx_xsheet(1)_69: -8444017635474823368
+      mmx_xsheet(1)_7: -6510396385457985143
+      mmx_xsheet(1)_70: -6894308565008147267
+      mmx_xsheet(1)_71: 272498408640905776
+      mmx_xsheet(1)_72: 3037261702344811822
+      mmx_xsheet(1)_73: -1626791420177651212
+      mmx_xsheet(1)_74: -5695001184004245065
+      mmx_xsheet(1)_75: -202512744344530775
+      mmx_xsheet(1)_76: -5920124303660004904
+      mmx_xsheet(1)_77: -7673753636959795786
+      mmx_xsheet(1)_78: -7980423977641419297
+      mmx_xsheet(1)_79: -8982217527831091106
+      mmx_xsheet(1)_8: 1207932205833301998
+      mmx_xsheet(1)_80: 8223385303988134046
+      mmx_xsheet(1)_81: -2441659959477864861
+      mmx_xsheet(1)_82: 7748001276596760653
+      mmx_xsheet(1)_83: 1828629672425469572
+      mmx_xsheet(1)_84: 6705883491140744738
+      mmx_xsheet(1)_85: 7859794040882665174
+      mmx_xsheet(1)_86: -2753914801728875056
+      mmx_xsheet(1)_87: 9075544488917442025
+      mmx_xsheet(1)_88: 7820867739009743182
+      mmx_xsheet(1)_89: 2929591120015575483
+      mmx_xsheet(1)_9: -2882110079181538396
+      mmx_xsheet(1)_90: 1544420651598869416
+      mmx_xsheet(1)_91: -7438104145579987396
+      mmx_xsheet(1)_92: -4433274929380515545
+      mmx_xsheet(1)_93: 919483388263817678
+      mmx_xsheet(1)_94: -5168630227763546920
+      mmx_xsheet(1)_95: -8304516931394190634
+      mmx_xsheet(1)_96: 3180348619459361967
+      mmx_xsheet(1)_97: -89506913401474018
+      mmx_xsheet(1)_98: 7061557237903845889
+      mmx_xsheet(1)_99: -905776977592324711
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
