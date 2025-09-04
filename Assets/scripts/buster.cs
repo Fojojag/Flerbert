@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 public class buster : MonoBehaviour
 {
     public Rigidbody2D rb;
@@ -16,12 +16,14 @@ public class buster : MonoBehaviour
     [SerializeField] private GameObject ChargeShotDown;
     [SerializeField] private float chargeSpeed;
     [SerializeField] private float chargeTime;
+    public bool shot = false;
     private bool shotDown = false;
     public float KBCounter;
     public float KBTotalTime;
     collisiondetector CollisionDetector;
     playercontroller playerMain;
-    private bool isCharging;
+    public bool isCharging;
+    public float chargeLvl = 0;
     // Update is called once per frame
     private void Awake()
     {
@@ -31,28 +33,64 @@ public class buster : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKey(KeyCode.X) && chargeTime < 2)
+        if (chargeTime >= 2)
         {
-            isCharging = true;
-            if (isCharging == true)
-            {
-                chargeTime += Time.deltaTime * chargeSpeed;
-            }
+            chargeLvl = 1;
         }
-        if (Input.GetKeyDown(KeyCode.X))
+
+        if (chargeTime >= 4)
+        {
+            chargeLvl = 2;
+        }
+
+        if (isCharging == true && chargeTime < 4)
+        {
+
+            
+         chargeTime += Time.deltaTime * chargeSpeed;
+            
+        }
+        if (shot == true && chargeLvl < 2)
         {
             if (Input.GetKey(KeyCode.UpArrow))
-            { Instantiate(projectileUp, firepointUp.position, firepointUp.rotation); }
+            { Instantiate(projectileUp, firepointUp.position, firepointUp.rotation); shot = false; }
             else
             if (Input.GetKey(KeyCode.DownArrow) && CollisionDetector.IsGrounded == false)
-            { Instantiate(projectileDown, firepointDown.position, firepointDown.rotation); }
+            { Instantiate(projectileDown, firepointDown.position, firepointDown.rotation); shot = false; }
             else
-                Instantiate(projectile, firepoint.position, firepoint.rotation);
+                Instantiate(projectile, firepoint.position, firepoint.rotation); shot = false;
 
         }
-        else if (Input.GetKeyUp(KeyCode.X) && chargeTime >= 2)
+        if (shot == true && chargeLvl == 2)
         {
-            StartCoroutine (releaseCharge());
+            chargeLvl = 0;
+            StartCoroutine(releaseCharge());
+            
+        }
+    }
+
+    public void OnShoot(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            shot = true;
+            isCharging = true;
+
+        }
+
+        if (context.canceled)
+        {
+            if (chargeTime < 2)
+            {
+                shot = false;
+                isCharging = false;
+                chargeTime = 0;
+            }
+        else if (chargeTime >= 2)
+            {
+                
+                StartCoroutine (releaseCharge());
+            }
         }
     }
 
@@ -61,20 +99,30 @@ public class buster : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow))
         {
             Instantiate(ChargeShotUp, firepointUp.position, firepointUp.rotation);
+            shot = false;
+            isCharging = false;
+            chargeTime = 0;
             rb.AddForce(Vector2.up * (-force), ForceMode2D.Impulse);
         }
         else
         if (Input.GetKey(KeyCode.DownArrow))
         {
             Instantiate(ChargeShotDown, firepointDown.position, firepointDown.rotation);
+            shot = false;
+            isCharging = false;
+            chargeTime = 0;
             playerMain.rb.linearVelocity = new Vector2(rb.linearVelocity.x, force);
         }
         else
         {
             Instantiate(ChargeShot, firepoint.position, firepoint.rotation);
+            shot = false;
+            isCharging = false;
+            chargeTime = 0;
             if (playerMain.IsFacingRight && CollisionDetector.IsGrounded == false)
             {
-                playerMain.dash = -15;
+                shot = false;
+                playerMain.dash = -120;
                 yield return new WaitForSeconds(0.5f);
                 playerMain.dash = 0;
             }
@@ -83,14 +131,14 @@ public class buster : MonoBehaviour
             else
             if (playerMain.IsFacingRight == false && CollisionDetector.IsGrounded == false)
             {
-                playerMain.dash = 15;
+                shot = false;
+                playerMain.dash = 120;
                 yield return new WaitForSeconds(0.5f);
                 playerMain.dash = 0;
             }
-            
+
         }
-        isCharging = false;
-        chargeTime = 0;
+
     }
 
 
