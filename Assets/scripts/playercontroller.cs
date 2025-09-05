@@ -10,7 +10,12 @@ public class playercontroller : MonoBehaviour
     public float jumpImpulse = 10f;
     public float walkSpeed = 5f;
     public float dash = 0f;
+    public float KBForce;
+    public float KBCounter;
+    public float KBTotalTime;
     Vector2 moveInput;
+
+    public bool KnockFromRight;
     collisiondetector CollisionDetector;
     [SerializeField]
     private bool _isMoving = false;
@@ -57,10 +62,26 @@ public class playercontroller : MonoBehaviour
 
     private void FixedUpdate()
     {
-      rb.linearVelocity = new Vector2(dash + moveInput.x * walkSpeed, rb.linearVelocity.y);  
-      animator.SetFloat(AnimationStrings.yVelocity, rb.linearVelocity.y);
 
 
+        if (KBCounter <= 0 )
+        {
+        rb.linearVelocity = new Vector2(dash + moveInput.x * walkSpeed, rb.linearVelocity.y);  
+        animator.SetFloat(AnimationStrings.yVelocity, rb.linearVelocity.y);
+        }
+        else
+        {
+            if (KnockFromRight == true)
+            {
+                rb.linearVelocity = new Vector2(-KBForce, KBForce);
+            }
+            if (KnockFromRight == false)
+            {
+                rb.linearVelocity = new Vector2(KBForce, KBForce);
+            }
+
+            KBCounter -= Time.deltaTime;
+        }
         if(moveInput.x < 0 && IsFacingRight == true)
      {
         flip();

@@ -8,6 +8,9 @@ TagManager:
   - gunvolt
   - limao
   - chargeshot
+  - ground
+  - boss
+  - inimigo
   layers:
   - Default
   - TransparentFX

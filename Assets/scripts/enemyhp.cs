@@ -7,6 +7,7 @@ public class enemyhp : MonoBehaviour
     public float ENhealth;
     public float ENmaxhealth;
     public Animator anima;
+    public Enemybase corpo;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,13 +18,15 @@ public class enemyhp : MonoBehaviour
     {
                 if (ENhealth <= 0)
         {
-            anima.SetBool("ded", true);
+            corpo.Invoke("ded", 0.1f);
+            Destroy(gameObject);
+            
         }
     }
 
     // Update is called once per frame
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "limao")          
         {
@@ -35,10 +38,6 @@ public class enemyhp : MonoBehaviour
             ENhealth -= 10;
         }
         
-    }
-    void ded()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 

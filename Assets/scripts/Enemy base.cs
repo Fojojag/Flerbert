@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class projetil : MonoBehaviour
+public class Enemybase : MonoBehaviour
 {
 
     [SerializeField] private float damage;
@@ -18,37 +18,26 @@ public class projetil : MonoBehaviour
         else
         {rb.linearVelocity = transform.up * speed;}
 
-        Invoke("destroyProjectile", lifetime);
 
     }
 
-    void destroyProjectile()
+    void ded()
     {
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {   
         if(collision.gameObject.tag == "Player")
         {
             if(isEnemy == true)
         {
-            Destroy(gameObject);
+            
         }
         }
 
-        if(collision.gameObject.tag == "inimigo" || collision.gameObject.tag == "boss")
-        {
-            if(isEnemy == false)
-        {
-  
-            Destroy(gameObject);
-        }
-        }
+
         
     }
 
-    public class playerhp
-    {
-    }
 }
