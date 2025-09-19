@@ -37,7 +37,7 @@ public class projetil : MonoBehaviour
         }
         }
 
-        if(collision.gameObject.tag == "inimigo" || collision.gameObject.tag == "boss")
+        if(collision.gameObject.tag == "inimigo" || collision.gameObject.tag == "boss" || collision.gameObject.tag == "ground")
         {
             if(isEnemy == false)
         {
@@ -48,7 +48,14 @@ public class projetil : MonoBehaviour
         
     }
 
-    public class playerhp
+    void OnBecameInvisible()
+
     {
+       
+        
+        Destroy(gameObject);
+        
+
+
     }
 }

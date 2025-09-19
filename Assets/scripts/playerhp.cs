@@ -5,7 +5,8 @@ using System.Collections;
 
 public class playerhp : MonoBehaviour
 {
-
+    SpriteRenderer rend;
+    Color c;
     public playercontroller playercontrl;
     public int currenthealth;
     public int maxhealth = 20;
@@ -21,6 +22,9 @@ public class playerhp : MonoBehaviour
     public bool IsTakingDmg = false;
     void Start()
     {
+        Physics2D.IgnoreLayerCollision(6, 7, false);
+        rend = GetComponent<SpriteRenderer>();
+        c = rend.color;
         currenthealth = maxhealth;
         //healthBar.SetMaxHealth(maxhealth);
     }
@@ -65,7 +69,7 @@ public class playerhp : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "boss" && IsTakingDmg == false || collision.gameObject.tag == "enemy" && IsTakingDmg == false)
+        if (collision.gameObject.tag == "boss" && IsTakingDmg == false || collision.gameObject.tag == "inimigo" && IsTakingDmg == false)
         {
             playercontrl.KBCounter = playercontrl.KBTotalTime;
             if (collision.transform.position.x >= transform.position.x)
@@ -91,10 +95,10 @@ public class playerhp : MonoBehaviour
             ded();
         }
 
-        if (collision.gameObject.tag == "end")
+        if (collision.gameObject.tag == "kill")
         {
 
-            SceneManager.LoadScene("win");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
     }
@@ -103,7 +107,7 @@ public class playerhp : MonoBehaviour
         currenthealth -= damage;
         //healthBar.SetHealth(currenthealth);
         hit();
-        
+        StartCoroutine(DamageBoost());
 
 
     }
@@ -118,6 +122,8 @@ public class playerhp : MonoBehaviour
         }
         StartCoroutine(hit_Cor());
     }
+
+
     void dmgEnd()
     {
         IsTakingDmg = false;
@@ -129,6 +135,17 @@ public class playerhp : MonoBehaviour
         Destroy(gameObject);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+    IEnumerator DamageBoost()
+    {
+        Physics2D.IgnoreLayerCollision(6, 7, true);
+        c.a = 0.5f;
+        rend.color = c;
+        yield return new WaitForSeconds(1f);
+        Physics2D.IgnoreLayerCollision(6, 7, false);
+        c.a = 1f;
+        rend.color = c;
+
+        }
 
 
 

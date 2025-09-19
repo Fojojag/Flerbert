@@ -22,6 +22,8 @@ public class buster : MonoBehaviour
     public float KBTotalTime;
     collisiondetector CollisionDetector;
     playercontroller playerMain;
+    private float shootTimer;
+    [SerializeField] private float shootRate;
     public bool isCharging;
     public float chargeLvl = 0;
     // Update is called once per frame
@@ -33,6 +35,8 @@ public class buster : MonoBehaviour
     }
     void Update()
     {
+        shootTimer -= Time.deltaTime;
+
         if (chargeTime >= 2)
         {
             chargeLvl = 1;
@@ -50,8 +54,10 @@ public class buster : MonoBehaviour
          chargeTime += Time.deltaTime * chargeSpeed;
             
         }
-        if (shot == true && chargeLvl < 2)
+        if (shot == true && chargeLvl < 2 && shootTimer <= 0)
         {
+            shootTimer = shootRate;
+
             if (Input.GetKey(KeyCode.UpArrow))
             { Instantiate(projectileUp, firepointUp.position, firepointUp.rotation); shot = false; }
             else

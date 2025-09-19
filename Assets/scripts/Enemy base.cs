@@ -7,16 +7,30 @@ public class Enemybase : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float lifetime;
-
+    [SerializeField] private bool Respawn;
 
     [SerializeField] private bool isEnemy;
     [SerializeField] private bool isHorizontal;  
     void Start()
     {
+
+
+    }
+    void Update()
+    {
         if (isHorizontal)
-        {rb.linearVelocity = transform.right * speed;}
+           { rb.linearVelocity = Vector2.right * speed; }
         else
-        {rb.linearVelocity = transform.up * speed;}
+        { rb.linearVelocity = new Vector2(0, speed); }
+
+    }
+    void OnBecameInvisible()
+
+    {
+        if (Respawn)
+        {
+            Destroy(gameObject);
+        }
 
 
     }
@@ -26,14 +40,12 @@ public class Enemybase : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {   
-        if(collision.gameObject.tag == "Player")
+        if(collision.gameObject.tag == "Turn")
         {
-            if(isEnemy == true)
-        {
-            
-        }
+            transform.Rotate(0f, 180f, 0f);
+            speed = -speed;
         }
 
 
