@@ -1,30 +1,43 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-public class ProjectileAdvanced : MonoBehaviour
+public class puloBoss : MonoBehaviour
 {
+    [SerializeField] private GameObject alvo;
     private Transform target;
     [SerializeField] private Vector3 player;
     [SerializeField] private bool chegou = false;
     public bool podeCair;
-    public float playercorrectY;
-    private float moveSpeed;
-    private float moveSpeedY;
+    private float playercorrectY;
+    [SerializeField] private float moveSpeed;
+    [SerializeField] private float moveSpeedY;
     private float distanceToTargetToDestroyProjectile = 25f;
-    private AnimationCurve trajAnimCurv;
-    private AnimationCurve axisCorrectionAnimCurv;
-    private AnimationCurve projSpeedAnimCurv;
+    [SerializeField] private AnimationCurve trajAnimCurv;
+    [SerializeField] private AnimationCurve axisCorrectionAnimCurv;
+    [SerializeField] private AnimationCurve projSpeedAnimCurv;
+
 
     private Vector3 startPoint;
-    [SerializeField] private float trajMaxRealtiveHeight;
+    [SerializeField] private float trajMaxHeight;
+    private float trajMaxRealtiveHeight;
 
-    private void Start()
+    public void Awake()
     {
 
+
         startPoint = transform.position;
+        target = alvo.transform;
         playercorrectY = target.position.y;
+
         player = target.position;
 
+        float xDistanceToTarget = target.position.x - transform.position.x;
+        trajMaxRealtiveHeight = trajMaxHeight = Mathf.Abs(xDistanceToTarget) * trajMaxHeight;
+
+        if (target.position.x < transform.position.x)
+        {
+            moveSpeed = -moveSpeed;
+        }
     }
     private void Update()
     {
@@ -34,12 +47,14 @@ public class ProjectileAdvanced : MonoBehaviour
         if (Vector3.Distance(transform.position, player) <= distanceToTargetToDestroyProjectile)
         {
             chegou = true;
+            
 
         }
         if (chegou && podeCair)
         {
             player = new Vector3(player.x, playercorrectY -= moveSpeedY * Time.deltaTime, -20);
         }
+
 
 
     }
@@ -63,29 +78,14 @@ public class ProjectileAdvanced : MonoBehaviour
 
 
     }
-
-    public void InitializeProjectile(Transform target, float moveSpeed, float moveSpeedY, float trajMaxHeight)
+private void OnCollisionEnter2D(Collision2D collision)
     {
-        this.target = target;
-        this.moveSpeed = moveSpeed;
-        this.moveSpeedY = moveSpeedY;
-        float xDistanceToTarget = target.position.x - transform.position.x;
-        this.trajMaxRealtiveHeight = trajMaxHeight = Mathf.Abs(xDistanceToTarget) * trajMaxHeight;
-
-    }
-    public void InitializeAnimationCurve(AnimationCurve trajAnimCurv, AnimationCurve axisCorrectionAnimCurv, AnimationCurve projSpeedAnimCurv)
-    {
-        this.trajAnimCurv = trajAnimCurv;
-        this.axisCorrectionAnimCurv = axisCorrectionAnimCurv;
-        this.projSpeedAnimCurv = projSpeedAnimCurv;
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "ground")
+        if (collision.gameObject.tag == "ground" && chegou)
         {
-            Destroy(gameObject);
+            this.enabled = false;
 
         }
     }
+
 
 }
