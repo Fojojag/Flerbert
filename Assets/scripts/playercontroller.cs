@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -7,6 +8,7 @@ using UnityEngine.InputSystem;
 
 public class playercontroller : MonoBehaviour
 {
+    public static bool paused;
     public float jumpImpulse = 10f;
     public float walkSpeed = 5f;
     public float dash = 0f;
@@ -63,33 +65,34 @@ public class playercontroller : MonoBehaviour
     private void FixedUpdate()
     {
 
-
-        if (KBCounter <= 0 )
-        {
-        rb.linearVelocity = new Vector2(dash + moveInput.x * walkSpeed, rb.linearVelocity.y);  
-        animator.SetFloat(AnimationStrings.yVelocity, rb.linearVelocity.y);
-        }
-        else
-        {
-            if (KnockFromRight == true)
+            if (KBCounter <= 0)
             {
-                rb.linearVelocity = new Vector2(-KBForce, KBForce);
+                rb.linearVelocity = new Vector2(dash + moveInput.x * walkSpeed, rb.linearVelocity.y);
+                animator.SetFloat(AnimationStrings.yVelocity, rb.linearVelocity.y);
             }
-            if (KnockFromRight == false)
+            else
             {
-                rb.linearVelocity = new Vector2(KBForce, KBForce);
-            }
+                if (KnockFromRight == true)
+                {
+                    rb.linearVelocity = new Vector2(-KBForce, KBForce);
+                }
+                if (KnockFromRight == false)
+                {
+                    rb.linearVelocity = new Vector2(KBForce, KBForce);
+                }
 
-            KBCounter -= Time.deltaTime;
-        }
-        if(moveInput.x < 0 && IsFacingRight == true)
-     {
-        flip();
-         
-     }else if(moveInput.x > 0 && IsFacingRight == false)
-     {
-         flip();
-     }
+                KBCounter -= Time.deltaTime;
+            }
+            if (moveInput.x < 0 && IsFacingRight == true)
+            {
+                flip();
+
+            }
+            else if (moveInput.x > 0 && IsFacingRight == false)
+            {
+                flip();
+            }
+        
     }
 
     void flip()
@@ -98,14 +101,18 @@ public class playercontroller : MonoBehaviour
         IsFacingRight = !IsFacingRight;
     }
 
+    
     public void OnMove(InputAction.CallbackContext context)
     {
-        moveInput = context.ReadValue<Vector2>();
-
-        IsMoving = moveInput != Vector2.zero;
 
 
 
+            moveInput = context.ReadValue<Vector2>();
+
+            IsMoving = moveInput != Vector2.zero;
+
+
+        
     }
     public void OnJump(InputAction.CallbackContext context)
     {

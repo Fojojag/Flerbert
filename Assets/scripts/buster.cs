@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class buster : MonoBehaviour
 {
+    public static bool paused;
     public Rigidbody2D rb;
     public float force = 10f;
     [SerializeField] private GameObject projectile;
@@ -35,117 +36,123 @@ public class buster : MonoBehaviour
     }
     void Update()
     {
-        shootTimer -= Time.deltaTime;
+        
+            shootTimer -= Time.deltaTime;
 
-        if (chargeTime >= 2)
-        {
-            chargeLvl = 1;
+            if (chargeTime >= 2)
+            {
+                chargeLvl = 1;
+            }
+
+            if (chargeTime >= 4)
+            {
+                chargeLvl = 2;
+            }
+
+            if (isCharging == true && chargeTime < 4)
+            {
+
+
+                chargeTime += Time.deltaTime * chargeSpeed;
+
+            }
+            if (shot == true && chargeLvl < 2 && shootTimer <= 0)
+            {
+                shootTimer = shootRate;
+
+                if (Input.GetKey(KeyCode.UpArrow))
+                { Instantiate(projectileUp, firepointUp.position, firepointUp.rotation); shot = false; }
+                else
+                if (Input.GetKey(KeyCode.DownArrow) && CollisionDetector.IsGrounded == false)
+                { Instantiate(projectileDown, firepointDown.position, firepointDown.rotation); shot = false; }
+                else
+                    Instantiate(projectile, firepoint.position, firepoint.rotation); shot = false;
+
+            }
+            if (shot == true && chargeLvl == 2)
+            {
+                chargeLvl = 0;
+                StartCoroutine(releaseCharge());
+
+            }
         }
-
-        if (chargeTime >= 4)
-        {
-            chargeLvl = 2;
-        }
-
-        if (isCharging == true && chargeTime < 4)
-        {
-
-            
-         chargeTime += Time.deltaTime * chargeSpeed;
-            
-        }
-        if (shot == true && chargeLvl < 2 && shootTimer <= 0)
-        {
-            shootTimer = shootRate;
-
-            if (Input.GetKey(KeyCode.UpArrow))
-            { Instantiate(projectileUp, firepointUp.position, firepointUp.rotation); shot = false; }
-            else
-            if (Input.GetKey(KeyCode.DownArrow) && CollisionDetector.IsGrounded == false)
-            { Instantiate(projectileDown, firepointDown.position, firepointDown.rotation); shot = false; }
-            else
-                Instantiate(projectile, firepoint.position, firepoint.rotation); shot = false;
-
-        }
-        if (shot == true && chargeLvl == 2)
-        {
-            chargeLvl = 0;
-            StartCoroutine(releaseCharge());
-            
-        }
-    }
+    
 
     public void OnShoot(InputAction.CallbackContext context)
     {
-        if (context.started)
-        {
-            shot = true;
-            isCharging = true;
 
-        }
+        
+            if (context.started)
+            {
+                shot = true;
+                isCharging = true;
 
-        if (context.canceled)
-        {
-            if (chargeTime < 2)
-            {
-                shot = false;
-                isCharging = false;
-                chargeTime = 0;
             }
-        else if (chargeTime >= 2)
+
+            if (context.canceled)
             {
-                
-                StartCoroutine (releaseCharge());
+                if (chargeTime < 2)
+                {
+                    shot = false;
+                    isCharging = false;
+                    chargeTime = 0;
+                }
+                else if (chargeTime >= 2)
+                {
+
+                    StartCoroutine(releaseCharge());
+                }
             }
-        }
+        
     }
 
     private IEnumerator releaseCharge()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            Instantiate(ChargeShotUp, firepointUp.position, firepointUp.rotation);
-            shot = false;
-            isCharging = false;
-            chargeTime = 0;
-            rb.AddForce(Vector2.up * (-force), ForceMode2D.Impulse);
-        }
-        else
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            Instantiate(ChargeShotDown, firepointDown.position, firepointDown.rotation);
-            shot = false;
-            isCharging = false;
-            chargeTime = 0;
-            playerMain.rb.linearVelocity = new Vector2(rb.linearVelocity.x, force);
-        }
-        else
-        {
-            Instantiate(ChargeShot, firepoint.position, firepoint.rotation);
-            shot = false;
-            isCharging = false;
-            chargeTime = 0;
-            if (playerMain.IsFacingRight && CollisionDetector.IsGrounded == false)
+
+            if (Input.GetKey(KeyCode.UpArrow))
             {
+                Instantiate(ChargeShotUp, firepointUp.position, firepointUp.rotation);
                 shot = false;
-                playerMain.dash = -120;
-                yield return new WaitForSeconds(0.5f);
-                playerMain.dash = 0;
+                isCharging = false;
+                chargeTime = 0;
+                rb.AddForce(Vector2.up * (-force), ForceMode2D.Impulse);
             }
-
-
             else
-            if (playerMain.IsFacingRight == false && CollisionDetector.IsGrounded == false)
+            if (Input.GetKey(KeyCode.DownArrow))
             {
+                Instantiate(ChargeShotDown, firepointDown.position, firepointDown.rotation);
                 shot = false;
-                playerMain.dash = 120;
-                yield return new WaitForSeconds(0.5f);
-                playerMain.dash = 0;
+                isCharging = false;
+                chargeTime = 0;
+                playerMain.rb.linearVelocity = new Vector2(rb.linearVelocity.x, force);
             }
+            else
+            {
+                Instantiate(ChargeShot, firepoint.position, firepoint.rotation);
+                shot = false;
+                isCharging = false;
+                chargeTime = 0;
+                if (playerMain.IsFacingRight && CollisionDetector.IsGrounded == false)
+                {
+                    shot = false;
+                    playerMain.dash = -120;
+                    yield return new WaitForSeconds(0.5f);
+                    playerMain.dash = 0;
+                }
 
+
+                else
+                if (playerMain.IsFacingRight == false && CollisionDetector.IsGrounded == false)
+                {
+                    shot = false;
+                    playerMain.dash = 120;
+                    yield return new WaitForSeconds(0.5f);
+                    playerMain.dash = 0;
+                }
+
+            }
         }
 
     }
 
 
-}
