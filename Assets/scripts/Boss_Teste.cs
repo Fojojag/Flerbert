@@ -10,10 +10,14 @@ public class Boss_Teste : MonoBehaviour
     public Transform bolha_spawn;
     public GameObject tiro;
     public GameObject bolha;
-    public GameObject espinho;
+    public bool espinhoAtivo = false;
+    public GameObject player;
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private bool isJumping;
-    public puloBoss jumpScript; 
+    [SerializeField] public bool isJumping;
+    public puloBoss jumpScript;
+    public bool IsFacingRight = false;
+    public Espinhostart espinhos;
+    public BossEspinho espinho5;
 
     void Start()
     {
@@ -22,6 +26,15 @@ public class Boss_Teste : MonoBehaviour
 
     void Update()
     {
+        if (transform.position.x >= player.transform.position.x && !isJumping && IsFacingRight)
+        {
+            flip();
+        }
+        if (transform.position.x <= player.transform.position.x && !isJumping && !IsFacingRight)
+        {
+            flip();
+        }
+
         GameObject bolhaClone = GameObject.Find("bolha(Clone)");
 
         if (timer >= 0 || numero == 0)
@@ -43,8 +56,10 @@ public class Boss_Teste : MonoBehaviour
 
         }
         //Espinho
-        if (numero == 3)
+        if (numero == 3 && !espinhoAtivo)
         {
+            espinhos.iniciar();
+            espinhoAtivo = true;
             timer = 1f;
             numero = 0;
         }
@@ -61,15 +76,28 @@ public class Boss_Teste : MonoBehaviour
             numero = 0;
         }
         //Pulo
-        if (numero == 5)
+        if (numero == 5 && !espinhoAtivo)
         {
             isJumping = true;
             timer = 5.5f;
             numero = 0;
             jumpScript.enabled = true;
+            jumpScript.InitializePulo(player);
 
         }
 
+        if (espinho5.isActive == false)
+        {
+            espinhoAtivo = false;
+        }
 
+        
+
+
+    }
+    void flip()
+    {
+        transform.Rotate(0f, 180f, 0f);
+        IsFacingRight = !IsFacingRight;
     }
 }

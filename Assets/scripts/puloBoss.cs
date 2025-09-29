@@ -9,22 +9,24 @@ public class puloBoss : MonoBehaviour
     [SerializeField] private bool chegou = false;
     public bool podeCair;
     private float playercorrectY;
+    [SerializeField] private float moveSpeedBase;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float moveSpeedY;
     private float distanceToTargetToDestroyProjectile = 25f;
     [SerializeField] private AnimationCurve trajAnimCurv;
     [SerializeField] private AnimationCurve axisCorrectionAnimCurv;
     [SerializeField] private AnimationCurve projSpeedAnimCurv;
-
-
-    private Vector3 startPoint;
+    [SerializeField] private Vector3 startPoint;
     [SerializeField] private float trajMaxHeight;
     private float trajMaxRealtiveHeight;
+    public Boss_Teste bossMain;
+    
 
-    public void Awake()
+    public void InitializePulo(GameObject alvo)
     {
 
-
+        moveSpeed = moveSpeedBase;
+        this.alvo = alvo;
         startPoint = transform.position;
         target = alvo.transform;
         playercorrectY = target.position.y;
@@ -38,22 +40,31 @@ public class puloBoss : MonoBehaviour
         {
             moveSpeed = -moveSpeed;
         }
+
+
+    }
+    private void Onable()
+    {
+        
     }
     private void Update()
     {
 
         UpdateProjPos();
 
+
         if (Vector3.Distance(transform.position, player) <= distanceToTargetToDestroyProjectile)
         {
             chegou = true;
-            
+
 
         }
         if (chegou && podeCair)
         {
             player = new Vector3(player.x, playercorrectY -= moveSpeedY * Time.deltaTime, -20);
         }
+
+
 
 
 
@@ -78,14 +89,22 @@ public class puloBoss : MonoBehaviour
 
 
     }
-private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "ground" && chegou)
         {
+            chegou = false;
+            alvo = null;
+            target = null;
+            player = new Vector3(0, 0, 0);
+            trajMaxHeight = 2.56f;
             this.enabled = false;
+            bossMain.isJumping = false;
 
         }
     }
+
+
 
 
 }
