@@ -26,6 +26,11 @@ public class buster : MonoBehaviour
     [SerializeField] private float shootRate;
     public bool isCharging;
     public float chargeLvl = 0;
+    public bool up;
+    public bool down;
+    public SpriteRenderer sideRender;
+    public SpriteRenderer upRender;
+    public SpriteRenderer downRender;
     // Update is called once per frame
     private void Awake()
     {
@@ -35,6 +40,21 @@ public class buster : MonoBehaviour
     }
     void Update()
     {
+        if (down && CollisionDetector.IsGrounded == false)
+        {
+            upRender.enabled = false;
+            sideRender.enabled = false;
+            downRender.enabled = true;
+        }
+        else
+        if (down && CollisionDetector.IsGrounded == true)
+        {
+            
+            sideRender.enabled = true;
+            downRender.enabled = false;
+        }
+
+        
         shootTimer -= Time.deltaTime;
 
         if (chargeTime >= 2)
@@ -58,10 +78,10 @@ public class buster : MonoBehaviour
         {
             shootTimer = shootRate;
 
-            if (Input.GetKey(KeyCode.UpArrow))
+            if (up)
             { Instantiate(projectileUp, firepointUp.position, firepointUp.rotation); shot = false; }
             else
-            if (Input.GetKey(KeyCode.DownArrow) && CollisionDetector.IsGrounded == false)
+            if (down && CollisionDetector.IsGrounded == false)
             { Instantiate(projectileDown, firepointDown.position, firepointDown.rotation); shot = false; }
             else
                 Instantiate(projectile, firepoint.position, firepoint.rotation); shot = false;
@@ -99,10 +119,49 @@ public class buster : MonoBehaviour
             }
         }
     }
+    public void OnUp(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            up = true;
+            down = false;
+            upRender.enabled = true;
+            sideRender.enabled = false;
+            downRender.enabled = false;
+
+        }
+
+        if (context.canceled)
+        {
+            up = false;
+            upRender.enabled = false;
+            sideRender.enabled = true;
+            
+
+        }
+    }
+        public void OnDown(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            up = false;
+            down = true;
+
+        }
+
+        if (context.canceled)
+        {
+            down = false;
+            downRender.enabled = false;
+            sideRender.enabled = true;
+            
+
+        }
+    }
 
     private IEnumerator releaseCharge()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (up)
         {
             Instantiate(ChargeShotUp, firepointUp.position, firepointUp.rotation);
             shot = false;
@@ -111,7 +170,7 @@ public class buster : MonoBehaviour
             rb.AddForce(Vector2.up * (-force), ForceMode2D.Impulse);
         }
         else
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (down)
         {
             Instantiate(ChargeShotDown, firepointDown.position, firepointDown.rotation);
             shot = false;
