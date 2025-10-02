@@ -5,8 +5,7 @@ using UnityEngine;
 public class bolha : MonoBehaviour
 {
     [SerializeField] private float damage;
-    [SerializeField] private float xspeed;
-    [SerializeField] private float yspeed;
+    [SerializeField] private float speed;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float lifetime;
 
@@ -22,10 +21,6 @@ public class bolha : MonoBehaviour
     public int numero;
     void Start()
     {
-        if (boss.transform.position.x >= player.transform.position.x)
-        {
-            xspeed = -xspeed;
-        }
         Invoke("destroyProjectile", lifetime);
     
     }
@@ -48,15 +43,25 @@ public class bolha : MonoBehaviour
 
 
         //movimentação da bolha
-            if (numero == 0)
+            if (numero == 0 && boss.transform.position.x <= player.transform.position.x)
             {
-                rb.linearVelocity = new Vector2(xspeed, yspeed * 1 / 4);
+                rb.linearVelocity = new Vector2(speed, speed * 1 / 4);
             }
 
-            if (numero == 1)
-            {
-                rb.linearVelocity = new Vector2(xspeed, -yspeed * 1 / 6);
-            }
+        if (numero == 1 && boss.transform.position.x <= player.transform.position.x)
+        {
+            rb.linearVelocity = new Vector2(speed, -speed * 1 / 6);
+        }
+
+        if (numero == 0 && boss.transform.position.x >= player.transform.position.x)
+        {
+            rb.linearVelocity = new Vector2(-speed, speed * 1 / 4);
+        }
+
+        if (numero == 1 && boss.transform.position.x >= player.transform.position.x)
+        {
+            rb.linearVelocity = new Vector2(-speed, -speed * 1 / 6);
+        }    
 
     }
 
