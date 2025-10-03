@@ -79,10 +79,10 @@ public class buster : MonoBehaviour
             shootTimer = shootRate;
 
             if (up)
-            { Instantiate(projectileUp, firepointUp.position, firepointUp.rotation); shot = false; }
+            { Instantiate(projectileUp, firepointUp.position, projectileUp.transform.rotation); shot = false; }
             else
             if (down && CollisionDetector.IsGrounded == false)
-            { Instantiate(projectileDown, firepointDown.position, firepointDown.rotation); shot = false; }
+            { Instantiate(projectileDown, firepointDown.position, projectileDown.transform.rotation); shot = false; }
             else
                 Instantiate(projectile, firepoint.position, firepoint.rotation); shot = false;
 
@@ -163,7 +163,7 @@ public class buster : MonoBehaviour
     {
         if (up)
         {
-            Instantiate(ChargeShotUp, firepointUp.position, firepointUp.rotation);
+            Instantiate(ChargeShotUp, firepointUp.position, projectileUp.transform.rotation);
             shot = false;
             isCharging = false;
             chargeTime = 0;
@@ -172,7 +172,7 @@ public class buster : MonoBehaviour
         else
         if (down)
         {
-            Instantiate(ChargeShotDown, firepointDown.position, firepointDown.rotation);
+            Instantiate(ChargeShotDown, firepointDown.position, projectileDown.transform.rotation);
             shot = false;
             isCharging = false;
             chargeTime = 0;

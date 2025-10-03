@@ -9,7 +9,7 @@ public class playerhp : MonoBehaviour
     Color c;
     public playercontroller playercontrl;
     public int currenthealth;
-    public int maxhealth = 20;
+    public int maxhealth = 4;
     //public HealthBar healthBar;
     [SerializeField] private GameObject explosion;
     [SerializeField] SpriteRenderer spriteRenderer;
@@ -63,7 +63,13 @@ public class playerhp : MonoBehaviour
             }
             IsTakingDmg = true;
             anim.SetBool("isTakingDmg", true);
-            TakeDamage(10);
+            TakeDamage(1);
+        }
+        if (collision.gameObject.tag == "espinhos" && IsTakingDmg == false)
+        {
+            IsTakingDmg = true;
+            anim.SetBool("isTakingDmg", true);
+            TakeDamage(20);
         }
 
     }
@@ -82,7 +88,7 @@ public class playerhp : MonoBehaviour
             }
             IsTakingDmg = true;
             //anim.SetBool("isTakingDmg", true);
-            TakeDamage(10);
+            TakeDamage(1);
         }
         if (collision.gameObject.tag == "weak" && IsTakingDmg == false)
         {

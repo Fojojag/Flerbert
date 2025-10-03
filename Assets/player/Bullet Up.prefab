@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 500522198093452374}
   - component: {fileID: 2100710789506106546}
   - component: {fileID: 6305235806278770765}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Bullet Up
   m_TagString: limao
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ MonoBehaviour:
   rb: {fileID: 500522198093452374}
   lifetime: 5
   isEnemy: 0
-  isHorizontal: 0
+  isHorizontal: 1
 --- !u!61 &6305235806278770765
 BoxCollider2D:
   m_ObjectHideFlags: 0

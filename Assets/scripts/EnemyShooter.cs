@@ -4,11 +4,13 @@ using System.Collections.Generic;
 public class EnemyShooter : MonoBehaviour
 {
     public bool respawn;
+    public bool canShoot = true;
     [SerializeField] private float shootTimer;
     [SerializeField] private float shootRate;
     [SerializeField] private float projectileMaxHeight;
     [SerializeField] private GameObject player;
     [SerializeField] private Transform target;
+    [SerializeField] public Transform firepoint;
     [SerializeField] private GameObject bala;
     [SerializeField] private AnimationCurve trajAnimCurv;
     [SerializeField] private AnimationCurve axisCorrectionAnimCurv;
@@ -34,19 +36,19 @@ public class EnemyShooter : MonoBehaviour
 
         shootTimer -= Time.deltaTime;
 
-        if (shootTimer <= 0)
+        if (shootTimer <= 0 && canShoot)
         {
             if (target.position.x < transform.position.x)
             {
                 shootTimer = shootRate;
-                ProjectileAdvanced projectile = Instantiate(bala, transform.position, Quaternion.identity).GetComponent<ProjectileAdvanced>();
+                ProjectileAdvanced projectile = Instantiate(bala, firepoint.position, Quaternion.identity).GetComponent<ProjectileAdvanced>();
                 projectile.InitializeProjectile(target, -projectileMoveSpeed, projectileMoveSpeedY, projectileMaxHeight);
                 projectile.InitializeAnimationCurve(trajAnimCurv, axisCorrectionAnimCurv, projSpeedAnimCurv);
             }
             else
             {
                 shootTimer = shootRate;
-                ProjectileAdvanced projectile = Instantiate(bala, transform.position, Quaternion.identity).GetComponent<ProjectileAdvanced>();
+                ProjectileAdvanced projectile = Instantiate(bala, firepoint.position, Quaternion.identity).GetComponent<ProjectileAdvanced>();
                 projectile.InitializeProjectile(target, projectileMoveSpeed, projectileMoveSpeedY, projectileMaxHeight);
                 projectile.InitializeAnimationCurve(trajAnimCurv, axisCorrectionAnimCurv, projSpeedAnimCurv);
             }

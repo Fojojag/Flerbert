@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2337547199226208194}
   - component: {fileID: 2684845494240019507}
   - component: {fileID: 3260466579884909374}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Bullet
   m_TagString: limao
   m_Icon: {fileID: 0}
