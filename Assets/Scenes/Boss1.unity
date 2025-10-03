@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 84125778}
   - component: {fileID: 84125779}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Espinhos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   - component: {fileID: 189135009}
   - component: {fileID: 189135011}
   - component: {fileID: 189135012}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: espinho 2 (3)
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -3349,7 +3349,7 @@ GameObject:
   - component: {fileID: 575849442}
   - component: {fileID: 575849444}
   - component: {fileID: 575849445}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: tiro
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -3523,7 +3523,7 @@ GameObject:
   - component: {fileID: 577195877}
   - component: {fileID: 577195880}
   - component: {fileID: 577195881}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: tiroCair
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -4834,7 +4834,7 @@ GameObject:
   - component: {fileID: 1217978622}
   - component: {fileID: 1217978624}
   - component: {fileID: 1217978625}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: espinho 2 (1)
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -5118,7 +5118,7 @@ GameObject:
   - component: {fileID: 1440249237}
   - component: {fileID: 1440249239}
   - component: {fileID: 1440249240}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: espinho 2 (2)
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -5307,7 +5307,7 @@ GameObject:
   - component: {fileID: 1462578995}
   - component: {fileID: 1462578996}
   - component: {fileID: 1462578997}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: espinho 2
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -5835,7 +5835,7 @@ GameObject:
   - component: {fileID: 1591065875}
   - component: {fileID: 1591065877}
   - component: {fileID: 1591065876}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: espinho 1
   m_TagString: inimigo
   m_Icon: {fileID: 0}

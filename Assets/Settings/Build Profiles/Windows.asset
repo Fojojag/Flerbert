@@ -20,10 +20,12 @@ MonoBehaviour:
     rid: 4606716298954539008
   m_OverrideGlobalSceneList: 1
   m_Scenes:
-  - m_enabled: 0
-    m_path: Assets/Scenes/Boss1.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Stroryboard.unity
   - m_enabled: 1
     m_path: Assets/Scenes/Fase1.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Boss1.unity
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
     m_Settings: []
