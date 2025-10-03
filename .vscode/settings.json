@@ -66,5 +66,5 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj"
     },
-    "dotnet.defaultSolution": "Flerbert.sln"
+    "dotnet.defaultSolution": "Flerbert-Al-m-da-Mente.sln"
 }
