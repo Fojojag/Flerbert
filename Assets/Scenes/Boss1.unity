@@ -5641,6 +5641,10 @@ PrefabInstance:
       propertyPath: explosion
       value: 
       objectReference: {fileID: 1792215816}
+    - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: maxhealth
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4057277753715163313, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: m_Name
       value: player

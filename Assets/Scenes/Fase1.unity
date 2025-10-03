@@ -1148,7 +1148,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 254.56343, y: 3.26262, z: -30.78}
+  m_LocalPosition: {x: 254.53004, y: 3.2626, z: -30.78}
   m_LocalScale: {x: 1, y: 1, z: 3.55}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27192,10 +27192,6 @@ PrefabInstance:
       propertyPath: menu
       value: 
       objectReference: {fileID: 171906395}
-    - target: {fileID: 1609586679297197315, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
-      propertyPath: shootRate
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 1682576241174569087, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: m_SortingOrder
       value: 1
