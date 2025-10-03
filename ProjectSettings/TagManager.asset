@@ -15,6 +15,7 @@ TagManager:
   - Turn
   - trigger
   - espinhos
+  - FimFase
   layers:
   - Default
   - TransparentFX

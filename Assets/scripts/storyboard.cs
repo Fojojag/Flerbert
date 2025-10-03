@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class storyboard : MonoBehaviour
 {
@@ -16,35 +17,35 @@ public class storyboard : MonoBehaviour
 
 
 
-    public  void frente()
+    public void frente()
     {
         //segundo quadro 2
         if (numeroQuadro == 1f)
         {
-                FadeOut();
-                if (timer <= 0)
-                {
-                    timer = 0.1f;
-                    newSprite = quadros[+1];
-                    gameObject.GetComponent<Image>().sprite = newSprite;
-                    FadeIn();
-                    numeroQuadro++;
-                }
+            FadeOut();
+            if (timer <= 0)
+            {
+                timer = 0.1f;
+                newSprite = quadros[+1];
+                gameObject.GetComponent<Image>().sprite = newSprite;
+                FadeIn();
+                numeroQuadro++;
+            }
         }
 
 
         //terceiro quadro 3
         if (numeroQuadro == 2f)
         {
-                FadeOut();
-                if (timer <= 0)
-                {
-                    timer = 0.1f;
-                    newSprite = quadros[+2];
-                    gameObject.GetComponent<Image>().sprite = newSprite;
-                    FadeIn();
-                    numeroQuadro++;
-                }
+            FadeOut();
+            if (timer <= 0)
+            {
+                timer = 0.1f;
+                newSprite = quadros[+2];
+                gameObject.GetComponent<Image>().sprite = newSprite;
+                FadeIn();
+                numeroQuadro++;
+            }
         }
 
 
@@ -52,29 +53,29 @@ public class storyboard : MonoBehaviour
         //terceiro quadro 4
         if (numeroQuadro == 3f)
         {
-                FadeOut();
-                if (timer <= 0)
-                {
-                    timer = 0.1f;
-                    newSprite = quadros[+3];
-                    gameObject.GetComponent<Image>().sprite = newSprite;
-                    FadeIn();
-                    numeroQuadro++;
-                }
+            FadeOut();
+            if (timer <= 0)
+            {
+                timer = 0.1f;
+                newSprite = quadros[+3];
+                gameObject.GetComponent<Image>().sprite = newSprite;
+                FadeIn();
+                numeroQuadro++;
+            }
         }
 
 
         //terceiro quadro 5
         if (numeroQuadro == 4f)
         {
-                FadeOut();
-                if (timer <= 0)
-                {
-                    timer = 0.1f;
-                    newSprite = quadros[+4];
-                    gameObject.GetComponent<Image>().sprite = newSprite;
-                    FadeIn();
-                    numeroQuadro++;
+            FadeOut();
+            if (timer <= 0)
+            {
+                timer = 0.1f;
+                newSprite = quadros[+4];
+                gameObject.GetComponent<Image>().sprite = newSprite;
+                FadeIn();
+                numeroQuadro++;
             }
         }
 
@@ -82,134 +83,149 @@ public class storyboard : MonoBehaviour
         //terceiro quadro 6
         if (numeroQuadro == 5f)
         {
-                FadeOut();
-                if (timer <= 0)
-                {
-                    timer = 0.1f;
-                    newSprite = quadros[+5];
-                    gameObject.GetComponent<Image>().sprite = newSprite;
-                    FadeIn();
-                    numeroQuadro++;
-                }
+            FadeOut();
+            if (timer <= 0)
+            {
+                timer = 0.1f;
+                newSprite = quadros[+5];
+                gameObject.GetComponent<Image>().sprite = newSprite;
+                FadeIn();
+                numeroQuadro++;
+            }
         }
 
 
         //terceiro quadro 7
         if (numeroQuadro == 6f)
         {
-                FadeOut();
-                if (timer <= 0)
-                {
-                    timer = 0.1f;
-                    newSprite = quadros[+6];
-                    gameObject.GetComponent<Image>().sprite = newSprite;
-                    FadeIn();
-                    numeroQuadro++;
-                }
+            FadeOut();
+            if (timer <= 0)
+            {
+                timer = 0.1f;
+                newSprite = quadros[+6];
+                gameObject.GetComponent<Image>().sprite = newSprite;
+                FadeIn();
+                numeroQuadro++;
+            }
         }
 
 
         //terceiro quadro 8
         if (numeroQuadro == 7f)
         {
-                FadeOut();
-                if (timer <= 0)
-                {
-                    timer = 0.1f;
-                    newSprite = quadros[+7];
-                    gameObject.GetComponent<Image>().sprite = newSprite;
-                    FadeIn();
-                    numeroQuadro++;
-                }
+            FadeOut();
+            if (timer <= 0)
+            {
+                timer = 0.1f;
+                newSprite = quadros[+7];
+                gameObject.GetComponent<Image>().sprite = newSprite;
+                FadeIn();
+                numeroQuadro++;
+            }
         }
 
 
         //terceiro quadro 9
         if (numeroQuadro == 8f)
         {
-                FadeOut();
-                if (timer <= 0)
-                {
-                    timer = 0.1f;
-                    newSprite = quadros[+8];
-                    gameObject.GetComponent<Image>().sprite = newSprite;
-                    FadeIn();
-                    numeroQuadro++;
-                }
+            FadeOut();
+            if (timer <= 0)
+            {
+                timer = 0.1f;
+                newSprite = quadros[+8];
+                gameObject.GetComponent<Image>().sprite = newSprite;
+                FadeIn();
+                numeroQuadro++;
+            }
         }
 
 
         //terceiro quadro 10
         if (numeroQuadro == 9f)
         {
-                FadeOut();
-                if (timer <= 0)
-                {
-                    timer = 0.1f;
-                    newSprite = quadros[+9];
-                    gameObject.GetComponent<Image>().sprite = newSprite;
-                    FadeIn();
-                    numeroQuadro++;
-                }
+            FadeOut();
+            if (timer <= 0)
+            {
+                timer = 0.1f;
+                newSprite = quadros[+9];
+                gameObject.GetComponent<Image>().sprite = newSprite;
+                FadeIn();
+                numeroQuadro++;
+            }
         }
 
 
         //terceiro quadro 11
         if (numeroQuadro == 10f)
         {
-                FadeOut();
-                if (timer <= 0)
-                {
-                    timer = 0.1f;
-                    newSprite = quadros[+10];
-                    gameObject.GetComponent<Image>().sprite = newSprite;
-                    FadeIn();
-                    numeroQuadro++;
-                }
+            FadeOut();
+            if (timer <= 0)
+            {
+                timer = 0.1f;
+                newSprite = quadros[+10];
+                gameObject.GetComponent<Image>().sprite = newSprite;
+                FadeIn();
+                numeroQuadro++;
+            }
         }
 
 
         //terceiro quadro 12
         if (numeroQuadro == 11f)
         {
-                FadeOut();
-                if (timer <= 0)
-                {
-                    timer = 0.1f;
-                    newSprite = quadros[+11];
-                    gameObject.GetComponent<Image>().sprite = newSprite;
-                    FadeIn();
-                    numeroQuadro++;
-                }
+            FadeOut();
+            if (timer <= 0)
+            {
+                timer = 0.1f;
+                newSprite = quadros[+11];
+                gameObject.GetComponent<Image>().sprite = newSprite;
+                FadeIn();
+                numeroQuadro++;
+            }
         }
 
 
         //terceiro quadro 13
         if (numeroQuadro == 12f)
         {
-                FadeOut();
-                if (timer <= 0)
-                {
-                    timer = 0.1f;
-                    newSprite = quadros[+12];
-                    gameObject.GetComponent<Image>().sprite = newSprite;
-                    FadeIn();
-                    numeroQuadro++;
-                }
+            FadeOut();
+            if (timer <= 0)
+            {
+                timer = 0.1f;
+                newSprite = quadros[+12];
+                gameObject.GetComponent<Image>().sprite = newSprite;
+                FadeIn();
+                numeroQuadro++;
+            }
         }
-        
+
 
         //terceiro quadro 14
         if (numeroQuadro == 13f)
+        {
+            FadeOut();
+            if (timer <= 0)
+            {
+                timer = 0.1f;
+                newSprite = quadros[+13];
+                gameObject.GetComponent<Image>().sprite = newSprite;
+                FadeIn();
+                numeroQuadro++;
+            }
+        }
+        
+
+        //troca de scene
+        if (numeroQuadro == 14f)
         {
                 FadeOut();
                 if (timer <= 0)
                 {
                     timer = 0.1f;
-                    newSprite = quadros[+13];
-                    gameObject.GetComponent<Image>().sprite = newSprite;
+                SceneManager.LoadScene("Fase1");
+                    
                     FadeIn();
-                    numeroQuadro++;
+                    
                 }
         }
         
