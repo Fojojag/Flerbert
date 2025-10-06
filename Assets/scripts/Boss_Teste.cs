@@ -63,14 +63,19 @@ public class Boss_Teste : MonoBehaviour
             timer = 1f;
             numero = 0;
         }
+        if (numero == 3 && espinhoAtivo)
+        {
+            timer = 1f;
+            numero = 0;
+        }
         //Bolha
-        if (numero == 4 && bolhaClone == null)
+        if (numero == 4 && bolhaClone == null || numero == 4 && bolhaClone == null  )
         {
             Instantiate(bolha, bolha_spawn.position, bolha_spawn.rotation);
             timer = 3.5f;
             numero = 0;
         }
-        if (numero == 4 && bolhaClone != null)
+        if (numero == 4 && bolhaClone == null || numero == 4 && bolhaClone != null  )
         {
             timer = 1f;
             numero = 0;
@@ -83,6 +88,12 @@ public class Boss_Teste : MonoBehaviour
             numero = 0;
             jumpScript.enabled = true;
             jumpScript.InitializePulo(player);
+
+        }
+        if (numero == 5 && espinhoAtivo)
+        {
+            timer = 1f;
+            numero = 0;
 
         }
 

@@ -22,7 +22,7 @@ public class AvisoMegaMente : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "inimigo")
+        if (collision.gameObject.name == "tiro(Clone)")
         {
             Instantiate(tiroCair, boo1.position, boo1.rotation);
             Instantiate(tiroCair, boo2.position, boo2.rotation);

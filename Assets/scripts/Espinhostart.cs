@@ -27,7 +27,7 @@ public class Espinhostart : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (boss.IsFacingRight == true && !isFlipped)
         {
