@@ -3,7 +3,7 @@ using UnityEngine;
 public class collisiondetector : MonoBehaviour
 {
     public ContactFilter2D castFilter;
-    public float groundDistance = 0.05f;
+    public float groundDistance = 0.09f;
     BoxCollider2D touchingCol;
     Animator animator;
     RaycastHit2D[] groundHits = new RaycastHit2D[5];

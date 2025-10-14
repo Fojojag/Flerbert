@@ -7,6 +7,8 @@ using UnityEngine.InputSystem;
 
 public class playercontroller : MonoBehaviour
 {
+    public bool canChange = true;
+    public int wpn = 1;
     public float jumpImpulse = 10f;
     public float walkSpeed = 5f;
     public float dash = 0f;
@@ -17,16 +19,21 @@ public class playercontroller : MonoBehaviour
 
     public bool KnockFromRight;
     collisiondetector CollisionDetector;
+    buster wpn1;
+    Arma2 wpn2;
     [SerializeField]
     private bool _isMoving = false;
-    public bool IsMoving { get 
+    public bool IsMoving
     {
-        return _isMoving; 
-    } private set
-    {
-        _isMoving = value;
-        animator.SetBool(AnimationStrings.isMoving, value);
-    }
+        get
+        {
+            return _isMoving;
+        }
+        private set
+        {
+            _isMoving = value;
+            animator.SetBool(AnimationStrings.isMoving, value);
+        }
     }
     public bool IsFacingRight = true;
 
@@ -39,35 +46,37 @@ public class playercontroller : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         CollisionDetector = GetComponent<collisiondetector>();
+        wpn1 = GetComponent<buster>();
+        wpn2 = GetComponent<Arma2>();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     //void Update()
     //{
-           //if(moveInput.x < 0)
-     //{
-         //transform.localScale = new Vector3(-1, 1, 1);
-         
+    //if(moveInput.x < 0)
+    //{
+    //transform.localScale = new Vector3(-1, 1, 1);
+
     // }else if(moveInput.x > 0)
     // {
-        // transform.localScale = Vector3.one;
-     //}
+    // transform.localScale = Vector3.one;
+    //}
     //}
 
     private void FixedUpdate()
     {
 
 
-        if (KBCounter <= 0 )
+        if (KBCounter <= 0)
         {
-        rb.linearVelocity = new Vector2(dash + moveInput.x * walkSpeed, rb.linearVelocity.y);  
-        animator.SetFloat(AnimationStrings.yVelocity, rb.linearVelocity.y);
+            rb.linearVelocity = new Vector2(dash + moveInput.x * walkSpeed, rb.linearVelocity.y);
+            animator.SetFloat(AnimationStrings.yVelocity, rb.linearVelocity.y);
         }
         else
         {
@@ -82,14 +91,15 @@ public class playercontroller : MonoBehaviour
 
             KBCounter -= Time.deltaTime;
         }
-        if(moveInput.x < 0 && IsFacingRight == true)
-     {
-        flip();
-         
-     }else if(moveInput.x > 0 && IsFacingRight == false)
-     {
-         flip();
-     }
+        if (moveInput.x < 0 && IsFacingRight == true)
+        {
+            flip();
+
+        }
+        else if (moveInput.x > 0 && IsFacingRight == false)
+        {
+            flip();
+        }
     }
 
     void flip()
@@ -109,11 +119,37 @@ public class playercontroller : MonoBehaviour
     }
     public void OnJump(InputAction.CallbackContext context)
     {
-        if(context.started && CollisionDetector.IsGrounded)
+        if (context.started && CollisionDetector.IsGrounded)
         {
             animator.SetTrigger(AnimationStrings.jump);
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpImpulse);
         }
+    }
+
+    public void OnChange(InputAction.CallbackContext context)
+    {
+        if (context.started && wpn == 1 && canChange)
+        {
+            wpn1.enabled = false;
+            wpn2.enabled = true;
+            wpn = 2;
+            canChange = false;
+        }
+        if (context.started && wpn == 2 && canChange)
+        {
+            wpn1.enabled = true;
+            wpn2.enabled = false;
+            wpn = 1;
+            canChange = false;
+        }
+        if (context.canceled)
+        {
+            canChange = true;
+        }
+
+
+
+
     }
 
 }

@@ -1,0 +1,375 @@
+fileFormatVersion: 2
+guid: ea8e338d78b58fd4598961529ca8e39a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: chao fase2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 676
+        width: 609
+        height: 338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 304.5, y: 169}
+        - {x: -304.5, y: 169}
+        - {x: -304.5, y: -169}
+        - {x: 304.5, y: -169}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 359ab97135ffc1a4f858a74acdbb5664
+      internalID: 918096899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chao fase2_1
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 676
+        width: 609
+        height: 338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 304.5, y: 169}
+        - {x: -304.5, y: 169}
+        - {x: -304.5, y: -169}
+        - {x: 304.5, y: -169}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a31cf59155dba2147bcb8ad955a77365
+      internalID: -123087735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chao fase2_2
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 676
+        width: 609
+        height: 338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 304.5, y: 169}
+        - {x: -304.5, y: 169}
+        - {x: -304.5, y: -169}
+        - {x: 304.5, y: -169}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c17a21058f86240b2a22dc0c199cb2
+      internalID: 1524343255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chao fase2_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 338
+        width: 609
+        height: 338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 304.5, y: 169}
+        - {x: -304.5, y: 169}
+        - {x: -304.5, y: -169}
+        - {x: 304.5, y: -169}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2422ee77156f3c7468c525b8db00e1d1
+      internalID: 312306632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chao fase2_4
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 338
+        width: 609
+        height: 338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 304.5, y: 169}
+        - {x: -304.5, y: 169}
+        - {x: -304.5, y: -169}
+        - {x: 304.5, y: -169}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b24f3a3109c12724da48c0bd56ea98b4
+      internalID: -678447133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chao fase2_5
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 338
+        width: 609
+        height: 338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 304.5, y: 169}
+        - {x: -304.5, y: 169}
+        - {x: -304.5, y: -169}
+        - {x: 304.5, y: -169}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aec03a3627892f4c8dad846198a0ecd
+      internalID: -2129844682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chao fase2_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 609
+        height: 338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 304.5, y: 169}
+        - {x: -304.5, y: 169}
+        - {x: -304.5, y: -169}
+        - {x: 304.5, y: -169}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90f6698723c662647ae8dd81a100bcac
+      internalID: 558101270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chao fase2_7
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 0
+        width: 609
+        height: 338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 304.5, y: 169}
+        - {x: -304.5, y: 169}
+        - {x: -304.5, y: -169}
+        - {x: 304.5, y: -169}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fcc263104e19e64e82a808208479325
+      internalID: 958648348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chao fase2_8
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 0
+        width: 609
+        height: 338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 304.5, y: 169}
+        - {x: -304.5, y: 169}
+        - {x: -304.5, y: -169}
+        - {x: 304.5, y: -169}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b8a2f1d4eee8204fbae117fbcb77a0f
+      internalID: 1497386817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":609.0,"y":338.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      chao fase2_0: 918096899
+      chao fase2_1: -123087735
+      chao fase2_2: 1524343255
+      chao fase2_3: 312306632
+      chao fase2_4: -678447133
+      chao fase2_5: -2129844682
+      chao fase2_6: 558101270
+      chao fase2_7: 958648348
+      chao fase2_8: 1497386817
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

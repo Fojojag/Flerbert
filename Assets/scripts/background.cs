@@ -20,7 +20,7 @@ public class background : MonoBehaviour
         // Calculate distance background move based on cam movement
         float distance = cam.transform.position.x * parallaxEffect; // = move with cam || 1 = won't move || 0.5 = half float movement cam.transform.position.x (1 parallaxEffect);
         float movement = cam.transform.position.x * (1 - parallaxEffect);
-        transform.position = new Vector3(startPos + distance, transform.position.y , transform.position.z);
+        transform.position = new Vector3(startPos + distance, startPosY + cam.transform.position.y , transform.position.z);
         // if background has reached the end of its length adjust its position for infinite scrolling if (movement > startPos + length)
         if (movement > startPos + length)
         {
