@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using System.Collections;
 
 public class enemyhp : MonoBehaviour
 {
+    SpriteRenderer rend;
+    Color c;
+    [SerializeField] SpriteRenderer spriteRenderer;
     public float ENhealth;
     public float ENmaxhealth;
     public Animator anima;
@@ -12,6 +15,8 @@ public class enemyhp : MonoBehaviour
     void Start()
     {
         ENhealth = ENmaxhealth;    
+        rend = GetComponent<SpriteRenderer>();
+        c = rend.color;
     }
 
     void Update()
@@ -28,16 +33,29 @@ public class enemyhp : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "limao")          
+        if (collision.gameObject.tag == "limao")
         {
             ENhealth -= 3;
+            hit();
         }
-        
-                if(collision.gameObject.tag == "chargeshot")          
+
+        if (collision.gameObject.tag == "chargeshot")
         {
             ENhealth -= 10;
+            hit();
         }
-        
+
+    }
+    void hit()
+    {
+        IEnumerator hit_Cor()
+        {
+            spriteRenderer.material.SetInt("_hit", 1);
+            yield return new WaitForSeconds(0.15f);
+            spriteRenderer.material.SetInt("_hit", 0);
+           
+        }
+        StartCoroutine(hit_Cor());
     }
 
 

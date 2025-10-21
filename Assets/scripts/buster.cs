@@ -31,15 +31,51 @@ public class buster : MonoBehaviour
     public SpriteRenderer sideRender;
     public SpriteRenderer upRender;
     public SpriteRenderer downRender;
+    public ParticleSystem particle;
+    public ParticleSystem upParticle;
+    public ParticleSystem downParticle;
     // Update is called once per frame
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         CollisionDetector = GetComponent<collisiondetector>();
         playerMain = GetComponent<playercontroller>();
+        particle.Stop();
+        upParticle.Stop();
+        downParticle.Stop();
     }
+
     void Update()
     {
+        if (isCharging && !down && !up)
+        {
+            particle.Play();
+            upParticle.Stop();
+            downParticle.Stop();
+        }
+        if (isCharging && down && !up && CollisionDetector.IsGrounded == false)
+        {
+            particle.Stop();
+            upParticle.Stop();
+            downParticle.Play();
+        }
+        if (CollisionDetector.IsGrounded == true)
+        {
+            downParticle.Stop();
+        }
+        if (isCharging && !down && up)
+        {
+            particle.Stop();
+            upParticle.Play();
+            downParticle.Stop();
+        }
+        if (!isCharging)
+        {
+            particle.Stop();
+            upParticle.Stop();
+            downParticle.Stop();
+        }
+        
         if (down && CollisionDetector.IsGrounded == false)
         {
             upRender.enabled = false;
@@ -52,6 +88,7 @@ public class buster : MonoBehaviour
             
             sideRender.enabled = true;
             downRender.enabled = false;
+    
         }
 
         
@@ -62,7 +99,7 @@ public class buster : MonoBehaviour
             chargeLvl = 1;
         }
 
-        if (chargeTime >= 4)
+        if (chargeTime >= 3.2f)
         {
             chargeLvl = 2;
         }
@@ -136,7 +173,8 @@ public class buster : MonoBehaviour
             up = false;
             upRender.enabled = false;
             sideRender.enabled = true;
-            
+
+
 
         }
     }
@@ -156,6 +194,7 @@ public class buster : MonoBehaviour
             sideRender.enabled = true;
             
 
+
         }
     }
 
@@ -168,6 +207,11 @@ public class buster : MonoBehaviour
             isCharging = false;
             chargeTime = 0;
             rb.AddForce(Vector2.up * (-force), ForceMode2D.Impulse);
+            if (chargeLvl == 1)
+            {
+                chargeLvl = 0;
+            }
+            
         }
         else
         if (down)
@@ -177,6 +221,10 @@ public class buster : MonoBehaviour
             isCharging = false;
             chargeTime = 0;
             playerMain.rb.linearVelocity = new Vector2(rb.linearVelocity.x, force);
+            if (chargeLvl == 1)
+            {
+                chargeLvl = 0;
+            }
         }
         else
         {
@@ -184,6 +232,11 @@ public class buster : MonoBehaviour
             shot = false;
             isCharging = false;
             chargeTime = 0;
+            if (chargeLvl == 1)
+            {
+                chargeLvl = 0;
+            }
+
             if (playerMain.IsFacingRight && CollisionDetector.IsGrounded == false)
             {
                 shot = false;

@@ -306,7 +306,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 7c7140c96e37a7248886a09a5a6fe4d8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -483,6 +483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3421a875906434b428b5deffdbb6e62b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::enemyhp
+  spriteRenderer: {fileID: 269822295454999746}
   ENhealth: 0
   ENmaxhealth: 10
   anima: {fileID: 4692592351950192605}

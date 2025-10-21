@@ -12,6 +12,7 @@ public class sombra : MonoBehaviour
     public float chegou = 0;
     public float speed;
     public bool isHorizontal;
+    public float timerSumir;
     public void Start()
     {
         startPoint = transform.position;
@@ -36,7 +37,7 @@ public class sombra : MonoBehaviour
             if (isActive && transform.position.y == atarget.y && chegou == 0)
             {
 
-                chegou = 3;
+                chegou = timerSumir;
             }
         }
 
@@ -53,7 +54,7 @@ public class sombra : MonoBehaviour
             if (isActive && transform.position.x == atarget.x && chegou == 0)
             {
 
-                chegou = 3;
+                chegou = timerSumir;
             }
         }
 

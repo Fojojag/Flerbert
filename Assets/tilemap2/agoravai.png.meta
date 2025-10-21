@@ -1,0 +1,375 @@
+fileFormatVersion: 2
+guid: 394b05f247a12c343ae95d0db9270aca
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: agoravai_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 676
+        width: 609
+        height: 338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -304.5, y: 100}
+        - {x: 304.5, y: 95}
+        - {x: 304.5, y: 169}
+        - {x: -304.5, y: 169}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f12029c2929c1f4ea7011b234580a39
+      internalID: 382325459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agoravai_1
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 676
+        width: 609
+        height: 338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -304.5, y: 100}
+        - {x: 304.5, y: 95}
+        - {x: 304.5, y: 169}
+        - {x: -304.5, y: 169}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 340c4d8edb4074f458f5975cb59d547c
+      internalID: -2078206480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agoravai_2
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 676
+        width: 609
+        height: 338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -304.5, y: 100}
+        - {x: 304.5, y: 95}
+        - {x: 304.5, y: 169}
+        - {x: -304.5, y: 169}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 317ba69d3bd7de94280eac87aefaef39
+      internalID: 415004948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agoravai_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 338
+        width: 609
+        height: 338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -304.5, y: 100}
+        - {x: 304.5, y: 95}
+        - {x: 304.5, y: 169}
+        - {x: -304.5, y: 169}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 717859f70fb01f4409b4bd7bcc0ad50d
+      internalID: -1485230577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agoravai_4
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 338
+        width: 609
+        height: 338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -304.5, y: 100}
+        - {x: 304.5, y: 95}
+        - {x: 304.5, y: 169}
+        - {x: -304.5, y: 169}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc3917f28825ec54880293c17b7fec4a
+      internalID: -1194736832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agoravai_5
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 338
+        width: 609
+        height: 338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -304.5, y: 100}
+        - {x: 304.5, y: 95}
+        - {x: 304.5, y: 169}
+        - {x: -304.5, y: 169}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c199cab93f8009a408f65519e6754eec
+      internalID: 820239641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agoravai_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 609
+        height: 338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -304.5, y: 100}
+        - {x: 304.5, y: 95}
+        - {x: 304.5, y: 169}
+        - {x: -304.5, y: 169}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2d4a7f1796edbe48b14a5ce301f382e
+      internalID: 166551080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agoravai_7
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 0
+        width: 609
+        height: 338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -304.5, y: 100}
+        - {x: 304.5, y: 95}
+        - {x: 304.5, y: 169}
+        - {x: -304.5, y: 169}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59df3da3dd1959346a0e407c75049de1
+      internalID: -1194120987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agoravai_8
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 0
+        width: 609
+        height: 338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -304.5, y: 100}
+        - {x: 304.5, y: 95}
+        - {x: 304.5, y: 169}
+        - {x: -304.5, y: 169}
+      tessellationDetail: 0
+      bones: []
+      spriteID: efad32d177463d547afc78068ca4a4e7
+      internalID: -355802118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":609.0,"y":338.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      agoravai_0: 382325459
+      agoravai_1: -2078206480
+      agoravai_2: 415004948
+      agoravai_3: -1485230577
+      agoravai_4: -1194736832
+      agoravai_5: 820239641
+      agoravai_6: 166551080
+      agoravai_7: -1194120987
+      agoravai_8: -355802118
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
