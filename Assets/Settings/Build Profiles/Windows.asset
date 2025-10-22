@@ -23,9 +23,15 @@ MonoBehaviour:
   - m_enabled: 1
     m_path: Assets/Scenes/Stroryboard.unity
   - m_enabled: 1
+    m_path: Assets/Scenes/Tutorial.unity
+  - m_enabled: 1
     m_path: Assets/Scenes/Fase1.unity
   - m_enabled: 1
     m_path: Assets/Scenes/Boss1.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Fase2.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Boss2.unity
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
     m_Settings: []

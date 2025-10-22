@@ -14572,7 +14572,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 262.52185, y: -41.632217, z: -4.28}
+  m_LocalPosition: {x: 262.58063, y: -41.632248, z: -4.28}
   m_LocalScale: {x: 1, y: 1, z: 3.55}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18584,7 +18584,7 @@ SpriteRenderer:
   m_Size: {x: 88.6875, y: 83.625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1542548618
@@ -18912,7 +18912,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 67adf0a1edf510e4c9747f71f06ed918, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -36543,6 +36543,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 66289514106497186, guid: 60ba58182fe4d1441b0833771dbb024d, type: 3}
+      propertyPath: stage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 66289514106497186, guid: 60ba58182fe4d1441b0833771dbb024d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1603997438}
     - target: {fileID: 2468563113080502813, guid: 60ba58182fe4d1441b0833771dbb024d, type: 3}
       propertyPath: m_Name
       value: Fade

@@ -132,7 +132,7 @@
                 {
                     "name": "left",
                     "id": "134a0f7b-d463-4b52-be82-79a49ac0aef0",
-                    "path": "<Joystick>/stick/left",
+                    "path": "<Gamepad>/leftStick/left",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad;Joystick",
@@ -154,7 +154,7 @@
                 {
                     "name": "Right",
                     "id": "e7f54295-9a36-47ce-9da3-34cb8902e706",
-                    "path": "<Joystick>/stick/right",
+                    "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad;Joystick",
@@ -165,7 +165,7 @@
                 {
                     "name": "Down",
                     "id": "aa1618fd-ece0-4dd8-a449-262690227884",
-                    "path": "<Joystick>/stick/down",
+                    "path": "<Gamepad>/leftStick/down",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad;Joystick",
@@ -494,6 +494,17 @@
                 },
                 {
                     "name": "",
+                    "id": "b9fc842f-9a4f-4928-a741-81276846b94b",
+                    "path": "<Gamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Look Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "047e0a49-836f-4bc3-a589-8024d6b76537",
                     "path": "<Gamepad>/dpad/up",
                     "interactions": "",
@@ -510,6 +521,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
+                    "action": "Look Down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0ab5ab9b-426a-4426-b247-945c87b8421e",
+                    "path": "<Gamepad>/leftStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
                     "action": "Look Down",
                     "isComposite": false,
                     "isPartOfComposite": false

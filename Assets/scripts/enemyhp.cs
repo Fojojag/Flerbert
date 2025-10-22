@@ -11,6 +11,7 @@ public class enemyhp : MonoBehaviour
     public float ENmaxhealth;
     public Animator anima;
     public Enemybase corpo;
+    public bool boss = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,7 +25,12 @@ public class enemyhp : MonoBehaviour
                 if (ENhealth <= 0)
         {
             corpo.Invoke("ded", 0.1f);
+                if (boss)
+            {
+                FadeFases.FadeIn();
+            }
             Destroy(gameObject);
+
             
         }
     }
