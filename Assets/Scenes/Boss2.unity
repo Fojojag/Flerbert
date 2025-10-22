@@ -1756,6 +1756,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1000855364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1000855365}
+  m_Layer: 0
+  m_Name: SpawnPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1000855365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000855364}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -40.3, y: 73.4, z: -23.5}
+  m_LocalScale: {x: 9.3175, y: 9.3175, z: 9.3175}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1022125851 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 3405367446753465115, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
@@ -2554,6 +2585,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 4882726042428790376, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: spawn
+      value: 
+      objectReference: {fileID: 1000855364}
     - target: {fileID: 6169054559677812648, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -39.8
@@ -4210,6 +4245,8 @@ SpriteRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1000855365}
+  - {fileID: 1431734917}
   - {fileID: 483200862}
   - {fileID: 607533998}
   - {fileID: 2004954427}
@@ -4233,7 +4270,6 @@ SceneRoots:
   - {fileID: 670378619}
   - {fileID: 407209305}
   - {fileID: 798624191}
-  - {fileID: 1431734917}
   - {fileID: 1927810765}
   - {fileID: 1714793241}
   - {fileID: 1032301371}

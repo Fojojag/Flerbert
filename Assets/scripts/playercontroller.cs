@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 
 public class playercontroller : MonoBehaviour
 {
+    public GameObject spawn;
     public bool canChange = true;
     public int wpn = 1;
     public float jumpImpulse = 10f;
@@ -43,6 +44,8 @@ public class playercontroller : MonoBehaviour
 
     private void Awake()
     {
+        GameObject spawn = GameObject.Find("SpawnPlayer");
+        transform.position = spawn.transform.position;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         CollisionDetector = GetComponent<collisiondetector>();
@@ -53,7 +56,7 @@ public class playercontroller : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame

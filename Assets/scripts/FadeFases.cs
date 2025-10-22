@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class FadeFases : MonoBehaviour
 {
+    public GameObject spawn;
     public CanvasGroup canvasgroup;
     [SerializeField] public static bool fadeIn;
     [SerializeField] public bool fadeOut;
@@ -14,6 +15,10 @@ public class FadeFases : MonoBehaviour
     public float stage; //1 = fase 1, 1.5 = boss 1, 2 = fase 2, 2.5 = boss 2
     public float timer = 1f;
 
+    void Awake()
+    {
+        GameObject spawn = GameObject.Find("SpawnPlayer");
+    }
     public static void FadeIn()
     {
         fadeIn = true;
@@ -43,8 +48,10 @@ public class FadeFases : MonoBehaviour
 
         if (timer <= 0)
         {
+            Destroy(spawn);
             if (stage == 1)
             {
+                
                 SceneManager.LoadScene("Fase1");
             }
             if (stage == 1.5)
