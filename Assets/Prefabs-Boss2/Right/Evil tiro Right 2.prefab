@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7241662907050343726}
   m_Layer: 0
   m_Name: Evil tiro Right 2
-  m_TagString: Untagged
+  m_TagString: inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
