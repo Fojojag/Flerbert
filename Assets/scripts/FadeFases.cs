@@ -17,7 +17,7 @@ public class FadeFases : MonoBehaviour
 
     void Awake()
     {
-        GameObject spawn = GameObject.Find("SpawnPlayer");
+        
     }
     public static void FadeIn()
     {

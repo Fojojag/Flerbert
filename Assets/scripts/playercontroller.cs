@@ -44,7 +44,7 @@ public class playercontroller : MonoBehaviour
 
     private void Awake()
     {
-        GameObject spawn = GameObject.Find("SpawnPlayer");
+       
         transform.position = spawn.transform.position;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();

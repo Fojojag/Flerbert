@@ -7,7 +7,7 @@ public class checkpoint : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        GameObject spawn = GameObject.Find("SpawnPlayer");
+        
     }
 
     // Update is called once per frame
