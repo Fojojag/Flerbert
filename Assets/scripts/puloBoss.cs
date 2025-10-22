@@ -98,8 +98,9 @@ public class puloBoss : MonoBehaviour
             target = null;
             player = new Vector3(0, 0, 0);
             trajMaxHeight = 2.56f;
+            bossMain.isActing = false;
             this.enabled = false;
-            bossMain.isJumping = false;
+            
 
         }
     }

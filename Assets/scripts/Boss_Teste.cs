@@ -13,11 +13,12 @@ public class Boss_Teste : MonoBehaviour
     public bool espinhoAtivo = false;
     public GameObject player;
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] public bool isJumping;
+    [SerializeField] public bool isActing;
     public puloBoss jumpScript;
     public bool IsFacingRight = false;
     public Espinhostart espinhos;
     public BossEspinho espinho5;
+    public Animator _anim;
 
     void Start()
     {
@@ -26,11 +27,11 @@ public class Boss_Teste : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.x >= player.transform.position.x && !isJumping && IsFacingRight)
+        if (transform.position.x >= player.transform.position.x && !isActing && IsFacingRight)
         {
             flip();
         }
-        if (transform.position.x <= player.transform.position.x && !isJumping && !IsFacingRight)
+        if (transform.position.x <= player.transform.position.x && !isActing && !IsFacingRight)
         {
             flip();
         }
@@ -47,21 +48,27 @@ public class Boss_Teste : MonoBehaviour
             numero = Random.Range(0, 6);
         }
 
-        //Tiro pra cima
-        if (numero == 1 || numero == 2)
+        if (timer <= 0 && isActing == true)
         {
-            Instantiate(tiro, tiro_spawn.position, tiro_spawn.rotation);
-            timer = 2f;
-            numero = 0;
+            isActing = false;
+        }
+
+        //Tiro pra cima
+        if (numero == 1 && !isActing || numero == 2 && !isActing)
+        {
+            isActing = true;
+            _anim.SetBool("Fogo", true);
+            
+
 
         }
         //Espinho
-        if (numero == 3 && !espinhoAtivo)
+        if (numero == 3 && !espinhoAtivo && !isActing)
         {
-            espinhos.iniciar();
-            espinhoAtivo = true;
-            timer = 1f;
-            numero = 0;
+            isActing = true;
+            _anim.SetBool("Espinho", true);
+            
+
         }
         if (numero == 3 && espinhoAtivo)
         {
@@ -69,21 +76,22 @@ public class Boss_Teste : MonoBehaviour
             numero = 0;
         }
         //Bolha
-        if (numero == 4 && bolhaClone == null || numero == 4 && bolhaClone == null  )
+        if (numero == 4 && bolhaClone == null && !isActing)
         {
-            Instantiate(bolha, bolha_spawn.position, bolha_spawn.rotation);
-            timer = 3.5f;
-            numero = 0;
+            isActing = true;
+            _anim.SetBool("Bolha", true);
+            
+
         }
-        if (numero == 4 && bolhaClone == null || numero == 4 && bolhaClone != null  )
+        if (numero == 4 && bolhaClone != null)
         {
             timer = 1f;
             numero = 0;
         }
         //Pulo
-        if (numero == 5 && !espinhoAtivo)
+        if (numero == 5 && !espinhoAtivo && !isActing)
         {
-            isJumping = true;
+            isActing = true;
             timer = 5.5f;
             numero = 0;
             jumpScript.enabled = true;
@@ -110,5 +118,33 @@ public class Boss_Teste : MonoBehaviour
     {
         transform.Rotate(0f, 180f, 0f);
         IsFacingRight = !IsFacingRight;
+    }
+    void fogo()
+    {
+        Instantiate(tiro, tiro_spawn.position, tiro_spawn.rotation);
+        timer = 2f;
+        numero = 0;
+        _anim.SetBool("Fogo", false);
+    }
+
+    void espinho()
+    {
+        espinhos.iniciar();
+        espinhoAtivo = true;
+        timer = 1f;
+        numero = 0;
+        _anim.SetBool("Espinho", false);
+    }
+    void Bolha()
+    {
+        Instantiate(bolha, bolha_spawn.position, bolha_spawn.rotation);
+        timer = 3.5f;
+        numero = 0;
+        _anim.SetBool("Bolha", false);
+    }
+
+    void done()
+    {
+        isActing = false;
     }
 }
