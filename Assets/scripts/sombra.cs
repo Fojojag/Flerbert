@@ -28,13 +28,13 @@ public class sombra : MonoBehaviour
 
         {
             Vector3 atarget = new Vector3(startPoint.x, target.transform.position.y, 0);
-            if (isActive && transform.position.y < target.transform.position.y && chegou == 0)
+            if (isActive && transform.position != target.transform.position && chegou == 0)
             {
                 transform.position = Vector3.MoveTowards(transform.position, atarget, speed);
 
             }
 
-            if (isActive && transform.position.y == atarget.y && chegou == 0)
+            if (isActive && transform.position == atarget && chegou == 0)
             {
 
                 chegou = timerSumir;
