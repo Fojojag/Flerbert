@@ -19,6 +19,8 @@ public class Boss_Teste : MonoBehaviour
     public Espinhostart espinhos;
     public BossEspinho espinho5;
     public Animator _anim;
+    [SerializeField] public static bool TrocarFase;
+
 
     void Start()
     {

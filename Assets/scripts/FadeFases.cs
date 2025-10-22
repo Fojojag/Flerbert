@@ -11,6 +11,7 @@ public class FadeFases : MonoBehaviour
     [SerializeField] public static bool fadeinFinal;
     [SerializeField] public GameObject player;
     [SerializeField] public static bool TrocarFase;
+    [SerializeField] public string Fase;
     public float timer = 1f;
 
     public static void FadeIn()
@@ -42,7 +43,7 @@ public class FadeFases : MonoBehaviour
 
         if (timer <= 0)
         {
-            SceneManager.LoadScene("Boss1");
+            SceneManager.LoadScene(Fase);
         }
 
 

@@ -222,7 +222,7 @@ public class storyboard : MonoBehaviour
                 if (timer <= 0)
                 {
                     timer = 0.1f;
-                SceneManager.LoadScene("Fase1");
+                SceneManager.LoadScene("Tutorial");
                     
                     FadeIn();
                     
