@@ -85,6 +85,18 @@ public class boss2 : MonoBehaviour
 
     void Update()
     {
+
+
+        if (transform.position.x >= player.transform.position.x && IsFacingRight)
+                {
+                    //olhando pra esquerda
+                    flip();
+                }
+                if (transform.position.x <= player.transform.position.x && !IsFacingRight)
+                {
+                    //olhando pra direita
+                    flip();
+                }
         //Seleção de ataques
         //O máximo no range nunca será selecionado
         if (TimerAtaques <= 0)
