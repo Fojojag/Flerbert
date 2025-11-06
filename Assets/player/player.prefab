@@ -14848,7 +14848,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 54aa7a7f8d09a7243bb261955ee19003, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -14899,6 +14899,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2fe38b4841b1046a617c0cbb0765a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawn: {fileID: 0}
+  spawnScript: {fileID: 0}
   canChange: 1
   wpn: 1
   jumpImpulse: 149.4
@@ -14911,6 +14913,7 @@ MonoBehaviour:
   _isMoving: 0
   IsFacingRight: 1
   rb: {fileID: 0}
+  endedJumpEarly: 0
 --- !u!114 &1815047954564310635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15171,6 +15174,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5edab24c0421c40458fef2bdcebe5619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida1: {fileID: 0}
+  vida2: {fileID: 0}
+  vida3: {fileID: 0}
+  vida4: {fileID: 0}
   playercontrl: {fileID: 4882726042428790376}
   currenthealth: 0
   maxhealth: 4

@@ -44,8 +44,8 @@ public class FinalBoss : MonoBehaviour
         }
         if (speen2)
         {
-            firepoint2Esqu.eulerAngles = new Vector3(0f, 0f, firepoint2Esqu.eulerAngles.z + 0.5f);
-            firepoint2Dir.eulerAngles = new Vector3(0f, 0f, firepoint2Dir.eulerAngles.z - 0.5f);
+            firepoint2Esqu.eulerAngles = new Vector3(0f, 0f, firepoint2Esqu.eulerAngles.z + 0.4f);
+            firepoint2Dir.eulerAngles = new Vector3(0f, 0f, firepoint2Dir.eulerAngles.z - 0.4f);
 
 
         }
@@ -171,6 +171,7 @@ public class FinalBoss : MonoBehaviour
         firepoint2Dir.eulerAngles = new Vector3(0, 0, 5);
         speen2 = false;
         speen3 = false;
+        ataque2 = false;
         yield return new WaitForSeconds(1);
         StartCoroutine(wait());
     }
@@ -205,7 +206,7 @@ public class FinalBoss : MonoBehaviour
         tentAnim2.SetBool("surgir", false);
         yield return new WaitForSeconds(1.5f);
         tentAnim2.SetBool("attack", false);
-
+        StartCoroutine(wait());
 
     }
 }

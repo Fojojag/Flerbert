@@ -1228,6 +1228,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &430052276 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9114440346871216160, guid: a5fa1aa2bc5696542836a11a16c10186, type: 3}
+  m_PrefabInstance: {fileID: 2094000685}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &468950888
 GameObject:
   m_ObjectHideFlags: 0
@@ -14367,6 +14372,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1239608017}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &977584904 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7296952806720249023, guid: a5fa1aa2bc5696542836a11a16c10186, type: 3}
+  m_PrefabInstance: {fileID: 2094000685}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1090574201
 GameObject:
   m_ObjectHideFlags: 0
@@ -15847,6 +15857,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1559109892 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2811967961963354342, guid: a5fa1aa2bc5696542836a11a16c10186, type: 3}
+  m_PrefabInstance: {fileID: 2094000685}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1597307442 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5541989481486729521, guid: 39df18a836b80a54b8b3ffa9519dd352, type: 3}
@@ -16214,6 +16229,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 108712114}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1767439282 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8443172872981814942, guid: a5fa1aa2bc5696542836a11a16c10186, type: 3}
+  m_PrefabInstance: {fileID: 2094000685}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1768921715 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3500420955558713840, guid: 775c30ce437361440986a5c0eb8808c5, type: 3}
@@ -31997,6 +32017,22 @@ PrefabInstance:
       propertyPath: m_ExcludeLayers.m_Bits
       value: 4096
       objectReference: {fileID: 0}
+    - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: vida1
+      value: 
+      objectReference: {fileID: 1767439282}
+    - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: vida2
+      value: 
+      objectReference: {fileID: 977584904}
+    - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: vida3
+      value: 
+      objectReference: {fileID: 1559109892}
+    - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: vida4
+      value: 
+      objectReference: {fileID: 430052276}
     - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: explosion
       value: 

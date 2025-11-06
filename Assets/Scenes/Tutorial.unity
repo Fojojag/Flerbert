@@ -18728,6 +18728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3421a875906434b428b5deffdbb6e62b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::enemyhp
+  spawn: {fileID: 0}
   spriteRenderer: {fileID: 1565243588}
   ENhealth: 10
   ENmaxhealth: 10
@@ -19979,6 +19980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3421a875906434b428b5deffdbb6e62b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::enemyhp
+  spawn: {fileID: 0}
   spriteRenderer: {fileID: 1909831212}
   ENhealth: 0
   ENmaxhealth: 999
@@ -21089,6 +21091,26 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5fa1aa2bc5696542836a11a16c10186, type: 3}
+--- !u!95 &2094000686 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9114440346871216160, guid: a5fa1aa2bc5696542836a11a16c10186, type: 3}
+  m_PrefabInstance: {fileID: 2094000685}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2094000687 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2811967961963354342, guid: a5fa1aa2bc5696542836a11a16c10186, type: 3}
+  m_PrefabInstance: {fileID: 2094000685}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2094000688 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7296952806720249023, guid: a5fa1aa2bc5696542836a11a16c10186, type: 3}
+  m_PrefabInstance: {fileID: 2094000685}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2094000689 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8443172872981814942, guid: a5fa1aa2bc5696542836a11a16c10186, type: 3}
+  m_PrefabInstance: {fileID: 2094000685}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2099411179
 GameObject:
   m_ObjectHideFlags: 0
@@ -36418,6 +36440,22 @@ PrefabInstance:
       propertyPath: m_ExcludeLayers.m_Bits
       value: 4096
       objectReference: {fileID: 0}
+    - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: vida1
+      value: 
+      objectReference: {fileID: 2094000689}
+    - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: vida2
+      value: 
+      objectReference: {fileID: 2094000688}
+    - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: vida3
+      value: 
+      objectReference: {fileID: 2094000687}
+    - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: vida4
+      value: 
+      objectReference: {fileID: 2094000686}
     - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: explosion
       value: 

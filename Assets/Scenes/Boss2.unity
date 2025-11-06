@@ -372,6 +372,26 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5fa1aa2bc5696542836a11a16c10186, type: 3}
+--- !u!95 &211949578 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9114440346871216160, guid: a5fa1aa2bc5696542836a11a16c10186, type: 3}
+  m_PrefabInstance: {fileID: 211949577}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &211949579 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2811967961963354342, guid: a5fa1aa2bc5696542836a11a16c10186, type: 3}
+  m_PrefabInstance: {fileID: 211949577}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &211949580 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7296952806720249023, guid: a5fa1aa2bc5696542836a11a16c10186, type: 3}
+  m_PrefabInstance: {fileID: 211949577}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &211949581 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8443172872981814942, guid: a5fa1aa2bc5696542836a11a16c10186, type: 3}
+  m_PrefabInstance: {fileID: 211949577}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &214399859 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3253870081290223185, guid: 043363f7646d413498fc4a0a44da6f31, type: 3}
@@ -2578,6 +2598,22 @@ PrefabInstance:
       propertyPath: menu
       value: 
       objectReference: {fileID: 873889959}
+    - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: vida1
+      value: 
+      objectReference: {fileID: 211949581}
+    - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: vida2
+      value: 
+      objectReference: {fileID: 211949580}
+    - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: vida3
+      value: 
+      objectReference: {fileID: 211949579}
+    - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: vida4
+      value: 
+      objectReference: {fileID: 211949578}
     - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: explosion
       value: 

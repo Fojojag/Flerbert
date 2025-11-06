@@ -3875,10 +3875,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &693733128 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2811967961963354342, guid: a5fa1aa2bc5696542836a11a16c10186, type: 3}
+  m_PrefabInstance: {fileID: 1911286566}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &699588981 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6511390965385792205, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
   m_PrefabInstance: {fileID: 1518571214}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &768812710 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9114440346871216160, guid: a5fa1aa2bc5696542836a11a16c10186, type: 3}
+  m_PrefabInstance: {fileID: 1911286566}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &842747462
 GameObject:
@@ -5129,6 +5139,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
+--- !u!95 &1241227317 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8443172872981814942, guid: a5fa1aa2bc5696542836a11a16c10186, type: 3}
+  m_PrefabInstance: {fileID: 1911286566}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1278005782
 GameObject:
   m_ObjectHideFlags: 0
@@ -5610,6 +5625,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 918527565}
     - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: vida1
+      value: 
+      objectReference: {fileID: 1241227317}
+    - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: vida2
+      value: 
+      objectReference: {fileID: 1557534587}
+    - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: vida3
+      value: 
+      objectReference: {fileID: 693733128}
+    - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: vida4
+      value: 
+      objectReference: {fileID: 768812710}
+    - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: explosion
       value: 
       objectReference: {fileID: 1792215816}
@@ -5670,6 +5701,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+--- !u!95 &1557534587 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7296952806720249023, guid: a5fa1aa2bc5696542836a11a16c10186, type: 3}
+  m_PrefabInstance: {fileID: 1911286566}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1591065872
 GameObject:
   m_ObjectHideFlags: 0

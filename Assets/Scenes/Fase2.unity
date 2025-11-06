@@ -70904,6 +70904,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1988896875}
     - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: vida1
+      value: 
+      objectReference: {fileID: 4350018856146179118}
+    - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: vida2
+      value: 
+      objectReference: {fileID: 4350018856146179117}
+    - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: vida3
+      value: 
+      objectReference: {fileID: 4350018856146179116}
+    - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: vida4
+      value: 
+      objectReference: {fileID: 4350018856146179115}
+    - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: explosion
       value: 
       objectReference: {fileID: 509193277}
@@ -109223,6 +109239,26 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5fa1aa2bc5696542836a11a16c10186, type: 3}
+--- !u!95 &4350018856146179115 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9114440346871216160, guid: a5fa1aa2bc5696542836a11a16c10186, type: 3}
+  m_PrefabInstance: {fileID: 4350018856146179114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4350018856146179116 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2811967961963354342, guid: a5fa1aa2bc5696542836a11a16c10186, type: 3}
+  m_PrefabInstance: {fileID: 4350018856146179114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4350018856146179117 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7296952806720249023, guid: a5fa1aa2bc5696542836a11a16c10186, type: 3}
+  m_PrefabInstance: {fileID: 4350018856146179114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4350018856146179118 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8443172872981814942, guid: a5fa1aa2bc5696542836a11a16c10186, type: 3}
+  m_PrefabInstance: {fileID: 4350018856146179114}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -5,10 +5,10 @@ using System.Collections;
 
 public class playerhp : MonoBehaviour
 {
-    public GameObject vida1;
-    public GameObject vida2;
-    public GameObject vida3;
-    public GameObject vida4;
+    public Animator vida1;
+    public Animator vida2;
+    public Animator vida3;
+    public Animator vida4;
 
     SpriteRenderer rend;
     Color c;
@@ -50,15 +50,19 @@ public class playerhp : MonoBehaviour
 
         if (currenthealth == 3)
         {
-            Destroy(vida4);
+            vida4.SetBool("fechar", true);
         }
         if (currenthealth == 2)
         {
-            Destroy(vida3);
+            vida3.SetBool("fechar", true);
         }
         if (currenthealth == 1)
         {
-            Destroy(vida2);
+            vida2.SetBool("fechar", true);
+        }
+        if (currenthealth == 0)
+        {
+            vida1.SetBool("fechar", true);
         }
 
 
