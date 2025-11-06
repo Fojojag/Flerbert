@@ -4,6 +4,7 @@ using System.Collections;
 
 public class enemyhp : MonoBehaviour
 {
+    public GameObject spawn;
     SpriteRenderer rend;
     Color c;
     [SerializeField] SpriteRenderer spriteRenderer;
@@ -15,9 +16,13 @@ public class enemyhp : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        ENhealth = ENmaxhealth;    
+        ENhealth = ENmaxhealth;
         rend = GetComponent<SpriteRenderer>();
         c = rend.color;
+    }
+    void Awake()
+    {
+        spawn = GameObject.Find("SpawnPlayer");
     }
 
     void Update()
@@ -27,6 +32,8 @@ public class enemyhp : MonoBehaviour
             corpo.Invoke("ded", 0.1f);
                 if (boss)
             {
+                spawn.transform.position = new Vector3(211.6f, -1.4f, -23.5f);
+
                 FadeFases.FadeIn();
             }
             Destroy(gameObject);

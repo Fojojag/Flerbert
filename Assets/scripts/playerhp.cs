@@ -5,6 +5,11 @@ using System.Collections;
 
 public class playerhp : MonoBehaviour
 {
+    public GameObject vida1;
+    public GameObject vida2;
+    public GameObject vida3;
+    public GameObject vida4;
+
     SpriteRenderer rend;
     Color c;
     public playercontroller playercontrl;
@@ -42,6 +47,20 @@ public class playerhp : MonoBehaviour
 
             currenthealth = maxhealth;
         }
+
+        if (currenthealth == 3)
+        {
+            Destroy(vida4);
+        }
+        if (currenthealth == 2)
+        {
+            Destroy(vida3);
+        }
+        if (currenthealth == 1)
+        {
+            Destroy(vida2);
+        }
+
 
 
 
@@ -146,7 +165,7 @@ public class playerhp : MonoBehaviour
         Physics2D.IgnoreLayerCollision(6, 7, true);
         c.a = 0.5f;
         rend.color = c;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.3f);
         Physics2D.IgnoreLayerCollision(6, 7, false);
         c.a = 1f;
         rend.color = c;

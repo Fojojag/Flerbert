@@ -29,14 +29,14 @@ public class Espinhostart : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (boss.IsFacingRight == true && !isFlipped)
+        if (boss.IsFacingRight == true && !isFlipped && !boss.espinhoAtivo)
         {
             flip();
             transform.position = new Vector3(-45.2f, -31.5f, 0);
 
         }
         else
-        if (boss.IsFacingRight == false && isFlipped)
+        if (boss.IsFacingRight == false && isFlipped && !boss.espinhoAtivo)
         {
             flip();
             transform.position = new Vector3(45.2f, -31.5f, 0);

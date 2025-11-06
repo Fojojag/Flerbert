@@ -17,7 +17,8 @@ public class puloBoss : MonoBehaviour
     [SerializeField] private AnimationCurve axisCorrectionAnimCurv;
     [SerializeField] private AnimationCurve projSpeedAnimCurv;
     [SerializeField] private Vector3 startPoint;
-    [SerializeField] private float trajMaxHeight;
+    [SerializeField] private float MaxHeight;
+    private float trajMaxHeight;
     private float trajMaxRealtiveHeight;
     public Boss_Teste bossMain;
     
@@ -33,8 +34,11 @@ public class puloBoss : MonoBehaviour
 
         player = target.position;
 
+        trajMaxHeight = MaxHeight;
+
         float xDistanceToTarget = target.position.x - transform.position.x;
         trajMaxRealtiveHeight = trajMaxHeight = Mathf.Abs(xDistanceToTarget) * trajMaxHeight;
+
 
         if (target.position.x < transform.position.x)
         {
@@ -61,7 +65,7 @@ public class puloBoss : MonoBehaviour
         }
         if (chegou && podeCair)
         {
-            player = new Vector3(player.x, playercorrectY -= moveSpeedY * Time.deltaTime, -20);
+            player = new Vector3(player.x, playercorrectY -= moveSpeedY * Time.deltaTime, 0);
         }
 
 
@@ -84,7 +88,7 @@ public class puloBoss : MonoBehaviour
         float nextPosYCorrectionAbsolute = nextPosYCorrectionNormalized * trajectoryRange.y;
         float nextPosY = startPoint.y + nextPosYNormalized * trajMaxRealtiveHeight + nextPosYCorrectionAbsolute;
 
-        Vector3 newPosition = new Vector3(nextPosX, nextPosY, -20);
+        Vector3 newPosition = new Vector3(nextPosX, nextPosY, 0);
         transform.position = newPosition;
 
 
@@ -97,7 +101,7 @@ public class puloBoss : MonoBehaviour
             alvo = null;
             target = null;
             player = new Vector3(0, 0, 0);
-            trajMaxHeight = 2.56f;
+            trajMaxHeight = MaxHeight;
             bossMain.isActing = false;
             this.enabled = false;
             

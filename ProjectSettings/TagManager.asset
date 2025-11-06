@@ -16,6 +16,7 @@ TagManager:
   - trigger
   - espinhos
   - FimFase
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

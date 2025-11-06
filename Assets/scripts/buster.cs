@@ -151,7 +151,7 @@ public class buster : MonoBehaviour
             }
         else if (chargeTime >= 2)
             {
-                
+                isCharging = false;
                 StartCoroutine (releaseCharge());
             }
         }
@@ -204,7 +204,7 @@ public class buster : MonoBehaviour
         {
             Instantiate(ChargeShotUp, firepointUp.position, projectileUp.transform.rotation);
             shot = false;
-            isCharging = false;
+            
             chargeTime = 0;
             rb.AddForce(Vector2.up * (-force), ForceMode2D.Impulse);
             if (chargeLvl == 1)
@@ -218,7 +218,7 @@ public class buster : MonoBehaviour
         {
             Instantiate(ChargeShotDown, firepointDown.position, projectileDown.transform.rotation);
             shot = false;
-            isCharging = false;
+            
             chargeTime = 0;
             playerMain.rb.linearVelocity = new Vector2(rb.linearVelocity.x, force);
             if (chargeLvl == 1)
@@ -230,7 +230,7 @@ public class buster : MonoBehaviour
         {
             Instantiate(ChargeShot, firepoint.position, firepoint.rotation);
             shot = false;
-            isCharging = false;
+            
             chargeTime = 0;
             if (chargeLvl == 1)
             {

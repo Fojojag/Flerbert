@@ -201,7 +201,7 @@ Transform:
   m_GameObject: {fileID: 128902536}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 0.8994, z: -0.27}
+  m_LocalPosition: {x: -0.3, y: 8.5, z: -0.27}
   m_LocalScale: {x: 1.9399999, y: 1.9399999, z: 1.9399999}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -278,7 +278,7 @@ GameObject:
   - component: {fileID: 189135009}
   - component: {fileID: 189135011}
   - component: {fileID: 189135012}
-  m_Layer: 10
+  m_Layer: 7
   m_Name: espinho 2 (3)
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -3365,7 +3365,8 @@ GameObject:
   - component: {fileID: 575849442}
   - component: {fileID: 575849444}
   - component: {fileID: 575849445}
-  m_Layer: 10
+  - component: {fileID: 575849446}
+  m_Layer: 7
   m_Name: tiro
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -3419,7 +3420,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 62496658fa8ab2941b1186ae92b78ae1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 89e02e83d2e551040b260848a72cfe84, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3439,9 +3440,9 @@ Transform:
   m_GameObject: {fileID: 575849439}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -169.7, y: -36.5, z: -0.38}
-  m_LocalScale: {x: 0.07224015, y: 0.07224015, z: 0.07224015}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -150.3, y: -35.2, z: -0.38}
+  m_LocalScale: {x: 0.41, y: 0.41, z: 0.41}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3524,8 +3525,30 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 54.66443
+  m_Offset: {x: -1.8206899, y: -6.429028}
+  m_Radius: 7.7195516
+--- !u!95 &575849446
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575849439}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 914020e3439d202408081b2dc40b53c2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &577195874
 GameObject:
   m_ObjectHideFlags: 0
@@ -3539,7 +3562,8 @@ GameObject:
   - component: {fileID: 577195877}
   - component: {fileID: 577195881}
   - component: {fileID: 577195882}
-  m_Layer: 10
+  - component: {fileID: 577195883}
+  m_Layer: 7
   m_Name: tiroCair
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -3620,7 +3644,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 62496658fa8ab2941b1186ae92b78ae1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 106c8fdb6232bce4c800168eef863cd7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3640,8 +3664,8 @@ Transform:
   m_GameObject: {fileID: 577195874}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -180.3, y: -37, z: -0.38}
-  m_LocalScale: {x: 0.07488219, y: 0.07488219, z: 0.07488219}
+  m_LocalPosition: {x: -171.63, y: -35.66, z: -0.38}
+  m_LocalScale: {x: 0.41, y: 0.41, z: 0.41}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -3680,8 +3704,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.75980335, y: 0}
-  m_Radius: 52.87978
+  m_Offset: {x: -1.8206899, y: -6.429028}
+  m_Radius: 7.7195516
 --- !u!114 &577195882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3700,6 +3724,28 @@ MonoBehaviour:
   lifetime: 1e+12
   isEnemy: 0
   isHorizontal: 0
+--- !u!95 &577195883
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577195874}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 914020e3439d202408081b2dc40b53c2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -3813,6 +3859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31949a7c805a94c4e85bdcd19408c6fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::playerSpawn
+  checkpoint: {fileID: 0}
 --- !u!4 &620978194
 Transform:
   m_ObjectHideFlags: 0
@@ -3998,7 +4045,7 @@ Transform:
   m_GameObject: {fileID: 842747462}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 42, y: 8.7, z: 0}
+  m_LocalPosition: {x: 49, y: 15.2, z: 0}
   m_LocalScale: {x: 1.3006628, y: 1.3006628, z: 1.3006628}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -4018,6 +4065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3421a875906434b428b5deffdbb6e62b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::enemyhp
+  spawn: {fileID: 0}
   spriteRenderer: {fileID: 842747467}
   ENhealth: 0
   ENmaxhealth: 200
@@ -4092,6 +4140,8 @@ MonoBehaviour:
   espinhos: {fileID: 84125779}
   espinho5: {fileID: 189135011}
   _anim: {fileID: 842747470}
+  xDistanceToTarget: 0
+  canJump: 0
 --- !u!114 &842747473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4175,7 +4225,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   startPoint: {x: 0, y: 0, z: 0}
-  trajMaxHeight: 2.56
+  MaxHeight: 2.56
   bossMain: {fileID: 842747472}
 --- !u!60 &842747474
 PolygonCollider2D:
@@ -4300,7 +4350,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: a713a03f56c95074c861d3da9bd68a3c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4367,8 +4417,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
-  xspeed: 0
-  yspeed: 0
+  xspeed: -5
+  yspeed: 5
   rb: {fileID: 955795243}
   lifetime: 10000000
   isEnemy: 1
@@ -4903,7 +4953,7 @@ GameObject:
   - component: {fileID: 1217978622}
   - component: {fileID: 1217978624}
   - component: {fileID: 1217978625}
-  m_Layer: 10
+  m_Layer: 7
   m_Name: espinho 2 (1)
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -5182,7 +5232,7 @@ GameObject:
   - component: {fileID: 1440249237}
   - component: {fileID: 1440249239}
   - component: {fileID: 1440249240}
-  m_Layer: 10
+  m_Layer: 7
   m_Name: espinho 2 (2)
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -5371,7 +5421,7 @@ GameObject:
   - component: {fileID: 1462578995}
   - component: {fileID: 1462578996}
   - component: {fileID: 1462578997}
-  m_Layer: 10
+  m_Layer: 7
   m_Name: espinho 2
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -5563,6 +5613,10 @@ PrefabInstance:
       propertyPath: explosion
       value: 
       objectReference: {fileID: 1792215816}
+    - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: maxhealth
+      value: 999
+      objectReference: {fileID: 0}
     - target: {fileID: 4057277753715163313, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: m_Name
       value: player
@@ -5573,11 +5627,11 @@ PrefabInstance:
       objectReference: {fileID: 620978192}
     - target: {fileID: 6169054559677812648, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -41.3
+      value: -27.2
       objectReference: {fileID: 0}
     - target: {fileID: 6169054559677812648, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.8366
+      value: 10.9
       objectReference: {fileID: 0}
     - target: {fileID: 6169054559677812648, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5629,7 +5683,7 @@ GameObject:
   - component: {fileID: 1591065875}
   - component: {fileID: 1591065877}
   - component: {fileID: 1591065876}
-  m_Layer: 10
+  m_Layer: 7
   m_Name: espinho 1
   m_TagString: inimigo
   m_Icon: {fileID: 0}

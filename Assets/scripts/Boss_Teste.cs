@@ -19,14 +19,27 @@ public class Boss_Teste : MonoBehaviour
     public Espinhostart espinhos;
     public BossEspinho espinho5;
     public Animator _anim;
-
+    [SerializeField] private float xDistanceToTarget;
+    [SerializeField] private bool canJump;
+  
     void Start()
     {
-
+        
     }
 
     void Update()
     {
+        xDistanceToTarget = player.transform.position.x - transform.position.x;
+
+        if (IsFacingRight && xDistanceToTarget < 30 || !IsFacingRight && xDistanceToTarget > -30)
+        {
+            canJump = false;
+        }
+        else
+        {
+            canJump = true;
+        }
+
         if (transform.position.x >= player.transform.position.x && !isActing && IsFacingRight)
         {
             flip();
@@ -38,12 +51,12 @@ public class Boss_Teste : MonoBehaviour
 
         GameObject bolhaClone = GameObject.Find("bolha(Clone)");
 
-        if (timer >= 0 || numero == 0)
+        if (timer >= 0 && !isActing|| numero == 0 && !isActing)
         {
             timer -= Time.deltaTime;
 
         }
-        if (timer <= 0)
+        if (timer <= 0 && !isActing)
         {
             numero = Random.Range(0, 6);
         }
@@ -66,6 +79,7 @@ public class Boss_Teste : MonoBehaviour
         if (numero == 3 && !espinhoAtivo && !isActing)
         {
             isActing = true;
+            numero = 0;
             _anim.SetBool("Espinho", true);
             
 
@@ -79,6 +93,7 @@ public class Boss_Teste : MonoBehaviour
         if (numero == 4 && bolhaClone == null && !isActing)
         {
             isActing = true;
+            numero = 0;
             _anim.SetBool("Bolha", true);
             
 
@@ -89,10 +104,9 @@ public class Boss_Teste : MonoBehaviour
             numero = 0;
         }
         //Pulo
-        if (numero == 5 && !espinhoAtivo && !isActing)
+        if (numero == 5 && !espinhoAtivo && !isActing && canJump)
         {
             isActing = true;
-            timer = 5.5f;
             numero = 0;
             jumpScript.enabled = true;
             jumpScript.InitializePulo(player);
@@ -122,29 +136,31 @@ public class Boss_Teste : MonoBehaviour
     void fogo()
     {
         Instantiate(tiro, tiro_spawn.position, tiro_spawn.rotation);
-        timer = 2f;
-        numero = 0;
-        _anim.SetBool("Fogo", false);
+
+       
     }
 
     void espinho()
     {
         espinhos.iniciar();
         espinhoAtivo = true;
-        timer = 1f;
-        numero = 0;
-        _anim.SetBool("Espinho", false);
+
+        
     }
     void Bolha()
     {
         Instantiate(bolha, bolha_spawn.position, bolha_spawn.rotation);
-        timer = 3.5f;
-        numero = 0;
-        _anim.SetBool("Bolha", false);
+
+        
     }
 
     void done()
     {
+         _anim.SetBool("Fogo", false);
+        _anim.SetBool("Espinho", false);
+        _anim.SetBool("Bolha", false);
         isActing = false;
+        timer = 2f;
+        numero = 0;
     }
 }

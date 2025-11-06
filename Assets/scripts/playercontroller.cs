@@ -8,6 +8,7 @@ using UnityEngine.InputSystem;
 public class playercontroller : MonoBehaviour
 {
     public GameObject spawn;
+    public playerSpawn spawnScript;
     public bool canChange = true;
     public int wpn = 1;
     public float jumpImpulse = 10f;
@@ -41,10 +42,12 @@ public class playercontroller : MonoBehaviour
     public Rigidbody2D rb;
     Animator animator;
 
+    public bool endedJumpEarly;
 
     private void Awake()
     {
-       
+        spawn = GameObject.Find("SpawnPlayer");
+        spawnScript = spawn.GetComponent<playerSpawn>();
         transform.position = spawn.transform.position;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -127,6 +130,10 @@ public class playercontroller : MonoBehaviour
             animator.SetTrigger(AnimationStrings.jump);
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpImpulse);
         }
+        if (context.canceled && rb.linearVelocityY > 0 && !endedJumpEarly)
+        {
+            endedJumpEarly = true;
+        }
     }
 
     public void OnChange(InputAction.CallbackContext context)
@@ -153,6 +160,14 @@ public class playercontroller : MonoBehaviour
 
 
 
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Checkpoint")
+        {
+            spawnScript.newPos(collision.gameObject);
+            
+        }
     }
 
 }
