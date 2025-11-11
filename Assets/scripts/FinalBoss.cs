@@ -4,146 +4,193 @@ using System.Collections.Generic;
 
 public class FinalBoss : MonoBehaviour
 {
+
+//CORPO--------------------------------------------------------------
     public Animator headAnim;
     public Animator bodyAnim;
+//TENTACULOS--------------------------------------------------------------
     public Animator tentAnim1;
     public Animator tentAnim2;
     public GameObject tentacu1;
     public GameObject tentacu2;
+//FIREPOINTS--------------------------------------------------------------
     public Transform firepoint;
     public Transform firepoint2Esqu;
     public Transform firepoint2Dir;
+//BALAS--------------------------------------------------------------
     public GameObject bala;
     public GameObject bala2;
+    public GameObject bala3;
+    public GameObject olho;
+//LASER--------------------------------------------------------------
+    public GameObject flashLaser;
+    public SpriteRenderer flashrend;
+    public GameObject laser;
+//FOGO--------------------------------------------------------------
+    public GameObject fogo1;
+    public GameObject fogo2;
+    public GameObject fogo3;
+//PAREDES--------------------------------------------------------------
+    public GameObject paredes;
+
+//VARIAVEIS--------------------------------------------------------------
     [SerializeField] private float timer;
     private bool startTimer = false;
     public float shootRate;
     private bool speen = false;
+    public bool podeAtacar;
     [SerializeField] private bool speen2 = false;
     [SerializeField] private bool speen3 = false;
     public float pattern1Timer;
     public float pattern1Speed;
     public float pattern2Timer;
     public float pattern2Speed;
+    public float pattern5Speed;
     public int PickedMove;
     int PickedMoveIndex;
-    private bool ataque2 = false;
-
+   [SerializeField] private bool ataque2 = false;
+    Color c;
     [SerializeField] List<int> MovePicker;
+//------------------------------------------------
 
     void Start()
     {
+
+        c = flashrend.color;
+        flashrend.color = c;
+        c.a = 0; 
         makeList();
     }
 
-    void Update()
+    void FixedUpdate()
     {
+        flashrend.color = c;   
+        flashLaser.transform.eulerAngles = new Vector3(0f, 0f, flashLaser.transform.eulerAngles.z + 5);
         if (speen)
         {
             firepoint.eulerAngles = new Vector3(0f, 0f, firepoint.eulerAngles.z + 1);
         }
         if (speen2)
         {
-            firepoint2Esqu.eulerAngles = new Vector3(0f, 0f, firepoint2Esqu.eulerAngles.z + 0.4f);
-            firepoint2Dir.eulerAngles = new Vector3(0f, 0f, firepoint2Dir.eulerAngles.z - 0.4f);
-
-
+            firepoint2Esqu.eulerAngles = new Vector3(0f, 0f, firepoint2Esqu.eulerAngles.z + 0.5f);
+            firepoint2Dir.eulerAngles = new Vector3(0f, 0f, firepoint2Dir.eulerAngles.z - 0.5f);
         }
         if (speen3)
         {
-            
             firepoint2Esqu.eulerAngles = new Vector3(0f, 0f, firepoint2Esqu.eulerAngles.z - 0.5f);
             firepoint2Dir.eulerAngles = new Vector3(0f, 0f, firepoint2Dir.eulerAngles.z + 0.5f);
-
         }
     }
-//RESETAR A LISTA -------------------------------------------------------
+    //RESETAR A LISTA -------------------------------------------------------
     void makeList()
     {
         Debug.Log("make list");
         MovePicker = new List<int>();
-        for (int i = 1; i <= 3; ++i)
+        for (int i = 1; i <= 5; ++i)
         {
             MovePicker.Add(i);
         }
         StartCoroutine(wait());
         return;
     }
-//ESPERAR -------------------------------------------------------
+    //ESPERAR -------------------------------------------------------
     IEnumerator wait()
     {
         Debug.Log("wait");
         yield return new WaitForSeconds(1);
         randomMove();
     }
-    
-//RANDOMIZAÇÃO -------------------------------------------------------
+
+    //RANDOMIZAÇÃO -------------------------------------------------------
     void randomMove()
     {
-    Debug.Log("randomMove");
-    
-    // Return a bad card if the list wasn't made yet
-    if (MovePicker == null) PickedMove = 0;
+        Debug.Log("randomMove");
 
-    // Return a bad card if the list is already empty
-    if (MovePicker.Count <= 0)
-    {
-        makeList();
+        // Return a bad card if the list wasn't made yet
+        if (MovePicker == null) PickedMove = 0;
+
+        // Return a bad card if the list is already empty
+        if (MovePicker.Count <= 0)
+        {
+            makeList();
+            return;
+        }
+        // Return a random card that's left and remove it so we don't pick it again
+        PickedMoveIndex = Random.Range(0, MovePicker.Count);
+        PickedMove = MovePicker[PickedMoveIndex];
+        MovePicker.RemoveAt(PickedMoveIndex);
+        StartCoroutine(Select());
         return;
     }
-    // Return a random card that's left and remove it so we don't pick it again
-    PickedMoveIndex = Random.Range(0, MovePicker.Count);
-    PickedMove = MovePicker[PickedMoveIndex];
-    MovePicker.RemoveAt(PickedMoveIndex);
-    Select();
-    return;
-    }
-//SELEÇÃO DE ATAQUE -------------------------------------------------------
-    void Select()
+    //SELEÇÃO DE ATAQUE -------------------------------------------------------
+    IEnumerator Select()
     {
         if (PickedMove == 1)
         {
+            headAnim.SetBool("bullet", true);
+            yield return new WaitForSeconds(1);
             StartCoroutine(Pattern1());
-            return;
+            yield break;
         }
         else
         if (PickedMove == 2)
         {
+            headAnim.SetBool("bullet", true);
+            yield return new WaitForSeconds(1);
             StartCoroutine(Pattern2());
             StartCoroutine(Pattern22());
-            return;
+            yield break;
         }
         if (PickedMove == 3)
         {
             StartCoroutine(Pattern3());
-            return;
+            yield break;
+        }
+        if (PickedMove == 4)
+        {
+            headAnim.SetBool("bullet", true);
+            yield return new WaitForSeconds(1);
+            StartCoroutine(Pattern4());
+            yield break;
+        }
+        if (PickedMove == 5)
+        {
+
+            yield return new WaitForSeconds(1);
+            StartCoroutine(Pattern5());
+            yield break;
         }
 
+
     }
-//ATAQUE 1 --------------------------------------------------
+    //ATAQUE 1 --------------------------------------------------
     IEnumerator Pattern1()
     {
-        
+
         Debug.Log("1");
-        firepoint.eulerAngles = new Vector3(0, 0, 45);
+        firepoint.eulerAngles = new Vector3(0, 0, 30);
         speen = true;
         for (float i = pattern1Timer; i > 0; i--)
         {
-
-            projetil2 tiro1 = Instantiate(bala, firepoint.position, firepoint.rotation).GetComponent<projetil2>();
-            tiro1.GetComponent<projetil2>().speed = -pattern1Speed;
-            projetil2 tiro2 = Instantiate(bala, firepoint.position, firepoint.rotation).GetComponent<projetil2>();
-            tiro2.GetComponent<projetil2>().speed = pattern1Speed;
-            projetil2 tiro3 = Instantiate(bala, firepoint.position, firepoint.rotation).GetComponent<projetil2>();
-            tiro3.GetComponent<projetil2>().speed = -pattern1Speed;
-            tiro3.GetComponent<projetil2>().isHorizontal = true;
-            projetil2 tiro4 = Instantiate(bala, firepoint.position, firepoint.rotation).GetComponent<projetil2>();
-            tiro4.GetComponent<projetil2>().speed = pattern1Speed;
-            tiro4.GetComponent<projetil2>().isHorizontal = true;
-            yield return new WaitForSeconds(shootRate);
+            if (podeAtacar )
+            {
+                projetil2 tiro1 = Instantiate(bala, firepoint.position, firepoint.rotation).GetComponent<projetil2>();
+                tiro1.GetComponent<projetil2>().speed = -pattern1Speed;
+                projetil2 tiro2 = Instantiate(bala, firepoint.position, firepoint.rotation).GetComponent<projetil2>();
+                tiro2.GetComponent<projetil2>().speed = pattern1Speed;
+                projetil2 tiro3 = Instantiate(bala, firepoint.position, firepoint.rotation).GetComponent<projetil2>();
+                tiro3.GetComponent<projetil2>().speed = -pattern1Speed;
+                tiro3.GetComponent<projetil2>().isHorizontal = true;
+                projetil2 tiro4 = Instantiate(bala, firepoint.position, firepoint.rotation).GetComponent<projetil2>();
+                tiro4.GetComponent<projetil2>().speed = pattern1Speed;
+                tiro4.GetComponent<projetil2>().isHorizontal = true;
+            }
+                yield return new WaitForSeconds(shootRate);
+            
 
         }
-        firepoint.eulerAngles = new Vector3(0, 0, 45);
+        headAnim.SetBool("bullet", false);
+        firepoint.eulerAngles = new Vector3(0, 0, 40);
         speen = false;
         yield return new WaitForSeconds(1);
         StartCoroutine(wait());
@@ -153,38 +200,61 @@ public class FinalBoss : MonoBehaviour
     {
         Debug.Log("2");
         ataque2 = true;
-
+        firepoint.eulerAngles = new Vector3(0, 0, 0);
         for (float i = pattern2Timer; i > 0; i--)
         {
+
             if (i == 0 || i == 40) { speen2 = true; speen3 = false; }
             if (i == 20 || i == 60) { speen2 = false; speen3 = true; }
+            if (podeAtacar)
+            {
             projetilbounce tiro1 = Instantiate(bala2, firepoint2Esqu.position, firepoint2Esqu.rotation).GetComponent<projetilbounce>();
             tiro1.GetComponent<projetilbounce>().speed = -pattern1Speed;
             tiro1.GetComponent<projetilbounce>().isHorizontal = true;
             projetilbounce tiro2 = Instantiate(bala2, firepoint2Dir.position, firepoint2Dir.rotation).GetComponent<projetilbounce>();
             tiro2.GetComponent<projetilbounce>().speed = pattern1Speed;
             tiro2.GetComponent<projetilbounce>().isHorizontal = true;
+            }
+
             yield return new WaitForSeconds(shootRate);
 
         }
+        ataque2 = false;
+        headAnim.SetBool("bullet", false);
         firepoint2Esqu.eulerAngles = new Vector3(0, 0, 355);
         firepoint2Dir.eulerAngles = new Vector3(0, 0, 5);
         speen2 = false;
         speen3 = false;
-        ataque2 = false;
+
         yield return new WaitForSeconds(1);
         StartCoroutine(wait());
     }
     IEnumerator Pattern22()
     {
-        Debug.Log("2");
+        float angle = 0;
 
 
         while (ataque2 == true)
         {
-            projetil2 tiro1 = Instantiate(bala, firepoint.position, firepoint.rotation).GetComponent<projetil2>();
-            tiro1.GetComponent<projetil2>().speed = -pattern1Speed;
-            yield return new WaitForSeconds(3);
+
+        if (angle == 1) { firepoint.eulerAngles = new Vector3(0f, 0f, firepoint.eulerAngles.z + 10); }
+        if (angle == 2) { firepoint.eulerAngles = new Vector3(0f, 0f, firepoint.eulerAngles.z - 20); }
+         yield return new WaitForSeconds(1.5f);
+            if (ataque2 == true)
+            {
+                projetil2 tiro1 = Instantiate(bala3, firepoint.position, firepoint.rotation).GetComponent<projetil2>();
+                tiro1.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, firepoint.eulerAngles.z);
+                tiro1.GetComponent<projetil2>().speed = -pattern1Speed;
+                projetil2 tiro2 = Instantiate(bala3, firepoint.position, firepoint.rotation).GetComponent<projetil2>();
+                tiro2.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, firepoint.eulerAngles.z + 20);
+                tiro2.GetComponent<projetil2>().speed = -pattern1Speed;
+                projetil2 tiro3 = Instantiate(bala3, firepoint.position, firepoint.rotation).GetComponent<projetil2>();
+                tiro3.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, firepoint.eulerAngles.z - 20);
+                tiro3.GetComponent<projetil2>().speed = -pattern1Speed;
+                angle++;
+            }
+            yield return null;
+
         }
         yield break;
 
@@ -198,15 +268,84 @@ public class FinalBoss : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         tentAnim1.SetBool("surgir", false);
         tentAnim1.SetBool("attack", true);
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
         tentAnim2.SetBool("attack", true);
-        tentAnim1.SetBool("attack", false);
-        
+
+
         tentAnim1.SetBool("surgir", false);
         tentAnim2.SetBool("surgir", false);
         yield return new WaitForSeconds(1.5f);
         tentAnim2.SetBool("attack", false);
+        tentAnim1.SetBool("attack", false);
         StartCoroutine(wait());
 
+    }
+
+    //ATAQUE 4 --------------------------------------------------
+    IEnumerator Pattern4()
+    {
+        c.a = 1;
+        while (c.a > 0)
+        {
+            c.a -= 0.07f;
+
+            yield return null;
+        }
+        yield return new WaitForSeconds(0.5f);
+        laser.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+
+        fogo1.SetActive(true);
+        fogo1.GetComponent<Animator>().SetBool("fogo", true);
+        fogo2.SetActive(true);
+        fogo2.GetComponent<Animator>().SetBool("fogo", true);
+        fogo3.SetActive(true);
+        fogo3.GetComponent<Animator>().SetBool("fogo", true);
+        
+        yield return new WaitForSeconds(2);
+        headAnim.SetBool("bullet", false);
+        laser.SetActive(false);
+        yield return new WaitForSeconds(1);
+
+
+        fogo1.GetComponent<Animator>().SetBool("fogo", false);
+
+        fogo2.GetComponent<Animator>().SetBool("fogo", false);
+
+        fogo3.GetComponent<Animator>().SetBool("fogo", false);
+
+        yield return new WaitForSeconds(1);
+
+        fogo1.SetActive(false);
+        fogo2.SetActive(false);
+        fogo3.SetActive(false);
+
+        StartCoroutine(wait());
+
+    }
+    //ATAQUE 5 --------------------------------------------------
+    IEnumerator Pattern5()
+    {
+        paredes.GetComponent<Rigidbody2D>().gravityScale = 30;
+
+        Debug.Log("5");
+        firepoint.eulerAngles = new Vector3(0, 0, 0);
+        for (float i = 5; i > 0; i--)
+        {
+
+            olho tiro = Instantiate(olho, firepoint.position, Quaternion.identity).GetComponent<olho>();
+            tiro.GetComponent<olho>().speed = -pattern5Speed;           
+            yield return new WaitForSeconds(2);
+            
+
+        }
+        paredes.GetComponent<Rigidbody2D>().gravityScale = -30;
+        yield return new WaitForSeconds(1);
+        StartCoroutine(wait());
+    }
+
+    public void attackControl (bool trigger)
+    {
+        podeAtacar = trigger;
     }
 }

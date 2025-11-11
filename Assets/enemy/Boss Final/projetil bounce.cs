@@ -49,12 +49,12 @@ public class projetilbounce : MonoBehaviour
         {
             if (transform.position.x < 0)
             {
-                transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z + 136);
+                transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z + 130);
                 rb.linearVelocity = transform.right * speed;
             }
             if (transform.position.x > 0)
             {
-            transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z - 136);
+            transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z - 130);
             rb.linearVelocity = transform.right * speed;
             }
 

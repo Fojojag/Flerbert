@@ -17,6 +17,7 @@ TagManager:
   - espinhos
   - FimFase
   - Checkpoint
+  - chao
   layers:
   - Default
   - TransparentFX
