@@ -22,6 +22,7 @@ public class FinalBoss : MonoBehaviour
     public GameObject bala2;
     public GameObject bala3;
     public GameObject olho;
+    public GameObject linha;
 //LASER--------------------------------------------------------------
     public GameObject flashLaser;
     public SpriteRenderer flashrend;
@@ -32,11 +33,24 @@ public class FinalBoss : MonoBehaviour
     public GameObject fogo3;
 //PAREDES--------------------------------------------------------------
     public GameObject paredes;
+//DEDOS--------------------------------------------------------------
+    public GameObject Esqu1;
+    public GameObject Esqu2;
+    public GameObject Esqu3;
+    public GameObject Esqu4;
+    public GameObject Esqu5;
+
+    public GameObject Dir1;
+    public GameObject Dir2;
+    public GameObject Dir3;
+    public GameObject Dir4;
+    public GameObject Dir5;
 
 //VARIAVEIS--------------------------------------------------------------
     [SerializeField] private float timer;
     private bool startTimer = false;
     public float shootRate;
+    public float shootRate6;
     private bool speen = false;
     public bool podeAtacar;
     [SerializeField] private bool speen2 = false;
@@ -44,8 +58,10 @@ public class FinalBoss : MonoBehaviour
     public float pattern1Timer;
     public float pattern1Speed;
     public float pattern2Timer;
+    public float pattern6Timer;
     public float pattern2Speed;
     public float pattern5Speed;
+    public float pattern6Speed;
     public int PickedMove;
     int PickedMoveIndex;
    [SerializeField] private bool ataque2 = false;
@@ -86,7 +102,7 @@ public class FinalBoss : MonoBehaviour
     {
         Debug.Log("make list");
         MovePicker = new List<int>();
-        for (int i = 1; i <= 5; ++i)
+        for (int i = 1; i <= 6; ++i)
         {
             MovePicker.Add(i);
         }
@@ -158,6 +174,13 @@ public class FinalBoss : MonoBehaviour
 
             yield return new WaitForSeconds(1);
             StartCoroutine(Pattern5());
+            yield break;
+        }
+        if (PickedMove == 6)
+        {
+
+            yield return new WaitForSeconds(1);
+            StartCoroutine(Pattern6());
             yield break;
         }
 
@@ -344,8 +367,91 @@ public class FinalBoss : MonoBehaviour
         StartCoroutine(wait());
     }
 
-    public void attackControl (bool trigger)
+    public void attackControl(bool trigger)
     {
         podeAtacar = trigger;
+    }
+    //ATAQUE 6 --------------------------------------------------
+    IEnumerator Pattern6()
+    {
+        firepoint.eulerAngles = new Vector3(0, 0, 0);
+        Debug.Log("6");
+
+        GameObject linha1 = Instantiate(linha, Esqu1.transform.position, firepoint.rotation);
+        linha1.transform.eulerAngles = new Vector3(0, 0, firepoint.transform.eulerAngles.z + 90);
+        GameObject linha2 = Instantiate(linha, Esqu2.transform.position, firepoint.rotation);
+        linha2.transform.eulerAngles = new Vector3(0, 0, firepoint.transform.eulerAngles.z + 40);
+        GameObject linha3 = Instantiate(linha, Esqu3.transform.position, firepoint.rotation);
+        linha3.transform.eulerAngles = new Vector3(0, 0, firepoint.transform.eulerAngles.z + 30);
+        GameObject linha4 = Instantiate(linha, Esqu4.transform.position, firepoint.rotation);
+        linha4.transform.eulerAngles = new Vector3(0, 0, firepoint.transform.eulerAngles.z + 10);
+        GameObject linha5 = Instantiate(linha, Esqu5.transform.position, firepoint.rotation);
+        linha5.transform.eulerAngles = new Vector3(0, 0, firepoint.transform.eulerAngles.z - 5);
+        
+        GameObject linha6 = Instantiate(linha, Dir1.transform.position, Quaternion.identity);
+        linha6.transform.eulerAngles = new Vector3(0, 0, firepoint.transform.eulerAngles.z - 90);
+        GameObject linha7 = Instantiate(linha, Dir2.transform.position, Quaternion.identity);
+        linha7.transform.eulerAngles = new Vector3(0, 0, firepoint.transform.eulerAngles.z - 40);
+        GameObject linha8 = Instantiate(linha, Dir3.transform.position, Quaternion.identity);
+        linha8.transform.eulerAngles = new Vector3(0, 0, firepoint.transform.eulerAngles.z - 30);
+        GameObject linha9 = Instantiate(linha, Dir4.transform.position, Quaternion.identity);
+        linha9.transform.eulerAngles = new Vector3(0, 0, firepoint.transform.eulerAngles.z - 10);
+        GameObject linha10 = Instantiate(linha, Dir5.transform.position, Quaternion.identity);
+        linha10.transform.eulerAngles = new Vector3(0, 0, firepoint.transform.eulerAngles.z + 5);
+        yield return new WaitForSeconds(1);
+
+        for (float i = pattern6Timer; i > 0; i--)
+        {
+
+            projetil2 tiro1 = Instantiate(bala, Esqu1.transform.position, firepoint.rotation).GetComponent<projetil2>();
+            tiro1.GetComponent<projetil2>().speed = -pattern6Speed;
+            tiro1.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, firepoint.eulerAngles.z + 90);
+            projetil2 tiro2 = Instantiate(bala, Esqu2.transform.position, firepoint.rotation).GetComponent<projetil2>();
+            tiro2.GetComponent<projetil2>().speed = -pattern6Speed;
+            tiro2.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, firepoint.eulerAngles.z + 40);
+            projetil2 tiro3 = Instantiate(bala, Esqu3.transform.position, firepoint.rotation).GetComponent<projetil2>();
+            tiro3.GetComponent<projetil2>().speed = -pattern6Speed;
+            tiro3.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, firepoint.eulerAngles.z + 30);
+            projetil2 tiro4 = Instantiate(bala, Esqu4.transform.position, firepoint.rotation).GetComponent<projetil2>();
+            tiro4.GetComponent<projetil2>().speed = -pattern6Speed;
+            tiro4.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, firepoint.eulerAngles.z + 10);
+            projetil2 tiro5 = Instantiate(bala, Esqu5.transform.position, firepoint.rotation).GetComponent<projetil2>();
+            tiro5.GetComponent<projetil2>().speed = -pattern6Speed;
+            tiro5.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, firepoint.eulerAngles.z - 5);
+
+            projetil2 tiro6 = Instantiate(bala, Dir1.transform.position, firepoint.rotation).GetComponent<projetil2>();
+            tiro6.GetComponent<projetil2>().speed = -pattern6Speed;
+            tiro6.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, firepoint.eulerAngles.z - 90);
+            projetil2 tiro7 = Instantiate(bala, Dir2.transform.position, firepoint.rotation).GetComponent<projetil2>();
+            tiro7.GetComponent<projetil2>().speed = -pattern6Speed;
+            tiro7.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, firepoint.eulerAngles.z - 40);
+            projetil2 tiro8 = Instantiate(bala, Dir3.transform.position, firepoint.rotation).GetComponent<projetil2>();
+            tiro8.GetComponent<projetil2>().speed = -pattern6Speed;
+            tiro8.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, firepoint.eulerAngles.z - 30);
+            projetil2 tiro9 = Instantiate(bala, Dir4.transform.position, firepoint.rotation).GetComponent<projetil2>();
+            tiro9.GetComponent<projetil2>().speed = -pattern6Speed;
+            tiro9.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, firepoint.eulerAngles.z - 10);
+            projetil2 tiro10 = Instantiate(bala, Dir5.transform.position, firepoint.rotation).GetComponent<projetil2>();
+            tiro10.GetComponent<projetil2>().speed = -pattern6Speed;
+            tiro10.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, firepoint.eulerAngles.z + 5);
+
+            yield return new WaitForSeconds(shootRate6);
+        }
+        Destroy(linha1);
+        Destroy(linha2);
+        Destroy(linha3);
+        Destroy(linha4);
+        Destroy(linha5);
+        Destroy(linha6);
+        Destroy(linha7);
+        Destroy(linha8);
+        Destroy(linha9);
+        Destroy(linha10);
+
+
+
+
+        yield return new WaitForSeconds(1);
+        StartCoroutine(wait());
     }
 }

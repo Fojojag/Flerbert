@@ -95,7 +95,7 @@ public class puloBoss : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "ground" && chegou)
+        if (collision.gameObject.tag == "ground" && chegou ||collision.gameObject.tag == "ground" )
         {
             chegou = false;
             alvo = null;
