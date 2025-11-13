@@ -76,6 +76,8 @@ public class boss2 : MonoBehaviour
     [SerializeField] float TimerAtaques = 0;
     [SerializeField] float ataqueSelecionado = 5;
 
+
+
     void Start()
     {
         podeTrocar = false;
