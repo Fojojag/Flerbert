@@ -148,7 +148,7 @@ public class FinalBoss : MonoBehaviour
         {
             headAnim.SetBool("bullet", true);
             yield return new WaitForSeconds(1);
-            StartCoroutine(Pattern6());
+            StartCoroutine(Pattern1());
             yield break;
         }
         else
@@ -156,27 +156,27 @@ public class FinalBoss : MonoBehaviour
         {
             headAnim.SetBool("bullet", true);
             yield return new WaitForSeconds(1);
-            StartCoroutine(Pattern6());
+            StartCoroutine(Pattern2());
             StartCoroutine(Pattern22());
             yield break;
         }
         if (PickedMove == 3)
         {
-            StartCoroutine(Pattern6());
+            StartCoroutine(Pattern3());
             yield break;
         }
         if (PickedMove == 4)
         {
             headAnim.SetBool("bullet", true);
             yield return new WaitForSeconds(1);
-            StartCoroutine(Pattern6());
+            StartCoroutine(Pattern4());
             yield break;
         }
         if (PickedMove == 5)
         {
 
             yield return new WaitForSeconds(1);
-            StartCoroutine(Pattern6());
+            StartCoroutine(Pattern5());
             yield break;
         }
         if (PickedMove == 6)
@@ -352,39 +352,65 @@ public class FinalBoss : MonoBehaviour
     //ATAQUE 5 --------------------------------------------------
     IEnumerator Pattern5()
     {
+        headAnim.SetTrigger("olhar");
         paredes.GetComponent<Rigidbody2D>().gravityScale = 30;
 
+        yield return new WaitForSeconds(1);
         Debug.Log("5");
         firepoint.eulerAngles = new Vector3(0, 0, 0);
         for (float i = 5; i > 0; i--)
         {
-
-            olho tiro = Instantiate(olho, firepoint.position, Quaternion.identity).GetComponent<olho>();
-            tiro.GetComponent<olho>().speed = -pattern5Speed;           
+            headAnim.SetTrigger("cuspe");
             yield return new WaitForSeconds(2);
-            
+
 
         }
+        headAnim.SetTrigger("idle");
         paredes.GetComponent<Rigidbody2D>().gravityScale = -30;
         yield return new WaitForSeconds(1);
         StartCoroutine(wait());
     }
-
-    public void attackControl(bool trigger)
+    void cuspe()
     {
-        podeAtacar = trigger;
+        olho tiro = Instantiate(olho, firepoint.position, Quaternion.identity).GetComponent<olho>();
+        tiro.GetComponent<olho>().speed = -pattern5Speed;
+        headAnim.SetTrigger("idle");
     }
+
+
     //ATAQUE 6 --------------------------------------------------
     IEnumerator Pattern6()
     {
+
+        float posDir;
+        float posEsqu;
+        posDir = Random.Range(1, 5);
+        posEsqu = Random.Range(1, 5);
+
         firepoint.eulerAngles = new Vector3(0, 0, 0);
         Debug.Log("6");
         for (float o = 3; o > 0; o--)
         {
+            posDir = Random.Range(1, 5);
+            posEsqu = Random.Range(1, 5);
+
+            if (posDir == 1) { maoDir.transform.position = new Vector3(77, 64, 0); }
+            if (posEsqu == 1) { maoEsq.transform.position = new Vector3(-73, 64, 0); }
+            if (posDir == 2) { maoDir.transform.position = new Vector3(77, 37, 0); }
+            if (posEsqu == 2) { maoEsq.transform.position = new Vector3(-73, 37, 0); }
+            if (posDir == 3) { maoDir.transform.position = new Vector3(57, 58, 0); }
+            if (posEsqu == 3) { maoEsq.transform.position = new Vector3(-53, 58, 0); }
+            if (posDir == 4) { maoDir.transform.position = new Vector3(77, 17, 0); }
+            if (posEsqu == 4) { maoEsq.transform.position = new Vector3(-73, 17, 0); }
+            if (posDir == 5) { maoDir.transform.position = new Vector3(53, 35, 0); }
+            if (posEsqu == 5) { maoEsq.transform.position = new Vector3(-49, 35, 0); }
+
             if (o == 3) { maoDir.transform.eulerAngles = new Vector3(0f, 0f, 27); }
             if (o == 3) { maoEsq.transform.eulerAngles = new Vector3(0f, 0, -27); }
-            if (o == 2) { maoDir.transform.eulerAngles = new Vector3(0f, 0f,  -20); }
-            if (o == 2) { maoEsq.transform.eulerAngles = new Vector3(0f, 0, + 20); }
+            if (o == 2) { maoDir.transform.eulerAngles = new Vector3(0f, 0f, +16); }
+            if (o == 2) { maoEsq.transform.eulerAngles = new Vector3(0f, 0, -16); }
+            if (o == 1) { maoDir.transform.eulerAngles = new Vector3(0f, 0f, -38); }
+            if (o == 1) { maoEsq.transform.eulerAngles = new Vector3(0f, 0, +38); }
 
             GameObject linha1 = Instantiate(linha, Esqu1.transform.position, Esqu1.transform.rotation);
             linha1.transform.eulerAngles = new Vector3(0, 0, maoEsq.transform.eulerAngles.z + 117);
@@ -407,8 +433,17 @@ public class FinalBoss : MonoBehaviour
             linha9.transform.eulerAngles = new Vector3(0, 0, maoDir.transform.eulerAngles.z - 37);
             GameObject linha10 = Instantiate(linha, Dir5.transform.position, Quaternion.identity);
             linha10.transform.eulerAngles = new Vector3(0, 0, maoDir.transform.eulerAngles.z - 22);
-            yield return new WaitForSeconds(1);
-
+            yield return new WaitForSeconds(1f);
+            Destroy(linha1);
+            Destroy(linha2);
+            Destroy(linha3);
+            Destroy(linha4);
+            Destroy(linha5);
+            Destroy(linha6);
+            Destroy(linha7);
+            Destroy(linha8);
+            Destroy(linha9);
+            Destroy(linha10);
             for (float i = pattern6Timer; i > 0; i--)
             {
 
@@ -426,42 +461,38 @@ public class FinalBoss : MonoBehaviour
                 tiro4.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, maoEsq.transform.eulerAngles.z + 37);
                 projetil2 tiro5 = Instantiate(bala, Esqu5.transform.position, firepoint.rotation).GetComponent<projetil2>();
                 tiro5.GetComponent<projetil2>().speed = -pattern6Speed;
-                tiro5.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, maoEsq.transform.eulerAngles.z +22);
+                tiro5.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, maoEsq.transform.eulerAngles.z + 22);
 
                 projetil2 tiro6 = Instantiate(bala, Dir1.transform.position, firepoint.rotation).GetComponent<projetil2>();
                 tiro6.GetComponent<projetil2>().speed = -pattern6Speed;
                 tiro6.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, maoDir.transform.eulerAngles.z - 117);
                 projetil2 tiro7 = Instantiate(bala, Dir2.transform.position, firepoint.rotation).GetComponent<projetil2>();
                 tiro7.GetComponent<projetil2>().speed = -pattern6Speed;
-                tiro7.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, maoDir.transform.eulerAngles.z -67);
+                tiro7.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, maoDir.transform.eulerAngles.z - 67);
                 projetil2 tiro8 = Instantiate(bala, Dir3.transform.position, firepoint.rotation).GetComponent<projetil2>();
                 tiro8.GetComponent<projetil2>().speed = -pattern6Speed;
-                tiro8.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, maoDir.transform.eulerAngles.z -57);
+                tiro8.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, maoDir.transform.eulerAngles.z - 57);
                 projetil2 tiro9 = Instantiate(bala, Dir4.transform.position, firepoint.rotation).GetComponent<projetil2>();
                 tiro9.GetComponent<projetil2>().speed = -pattern6Speed;
-                tiro9.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, maoDir.transform.eulerAngles.z -37);
+                tiro9.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, maoDir.transform.eulerAngles.z - 37);
                 projetil2 tiro10 = Instantiate(bala, Dir5.transform.position, firepoint.rotation).GetComponent<projetil2>();
                 tiro10.GetComponent<projetil2>().speed = -pattern6Speed;
-                tiro10.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, maoDir.transform.eulerAngles.z -22);
+                tiro10.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, maoDir.transform.eulerAngles.z - 22);
 
                 yield return new WaitForSeconds(shootRate6);
             }
-            Destroy(linha1);
-            Destroy(linha2);
-            Destroy(linha3);
-            Destroy(linha4);
-            Destroy(linha5);
-            Destroy(linha6);
-            Destroy(linha7);
-            Destroy(linha8);
-            Destroy(linha9);
-            Destroy(linha10);
+
+
         }
 
 
-
-
         yield return new WaitForSeconds(1);
+        maoDir.transform.position = new Vector3(200, 64, 0);
+        maoEsq.transform.position = new Vector3(-200, 64, 0);
         StartCoroutine(wait());
+    }
+    public void attackControl(bool trigger)
+    {
+        podeAtacar = trigger;
     }
 }
