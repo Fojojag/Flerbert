@@ -62,9 +62,13 @@ public class FadeFases : MonoBehaviour
             {
                 SceneManager.LoadScene("Fase2");
             }
-            if(stage == 2.5) 
+            if (stage == 2.5)
             {
-                SceneManager.LoadScene("Boss2");  
+                SceneManager.LoadScene("Boss2");
+            }
+            if(stage == 3)
+            {
+                SceneManager.LoadScene("BossFinal");
             }
 
         }

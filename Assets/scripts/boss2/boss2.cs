@@ -76,6 +76,8 @@ public class boss2 : MonoBehaviour
     [SerializeField] float TimerAtaques = 0;
     [SerializeField] float ataqueSelecionado = 5;
 
+
+
     void Start()
     {
         podeTrocar = false;
@@ -87,11 +89,12 @@ public class boss2 : MonoBehaviour
     {
 
 
+
         if (transform.position.x >= player.transform.position.x && IsFacingRight)
-                {
-                    //olhando pra esquerda
-                    flip();
-                }
+        {
+            //olhando pra esquerda
+            flip();
+        }
                 if (transform.position.x <= player.transform.position.x && !IsFacingRight)
                 {
                     //olhando pra direita
