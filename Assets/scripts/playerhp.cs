@@ -85,18 +85,53 @@ public class playerhp : MonoBehaviour
                 playercontrl.KnockFromRight = false;
             }
             IsTakingDmg = true;
-            anim.SetBool("isTakingDmg", true);
+            
             TakeDamage(1);
         }
         if (collision.gameObject.tag == "espinhos" && IsTakingDmg == false)
         {
             IsTakingDmg = true;
-            anim.SetBool("isTakingDmg", true);
+            
             TakeDamage(20);
         }
 
     }
     void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "boss" && IsTakingDmg == false || collision.gameObject.tag == "inimigo" && IsTakingDmg == false)
+        {
+            playercontrl.KBCounter = playercontrl.KBTotalTime;
+            if (collision.transform.position.x >= transform.position.x)
+            {
+                playercontrl.KnockFromRight = true;
+            }
+            if (collision.transform.position.x <= transform.position.x)
+            {
+                playercontrl.KnockFromRight = false;
+            }
+            IsTakingDmg = true;
+            //anim.SetBool("isTakingDmg", true);
+            TakeDamage(1);
+        }
+        if (collision.gameObject.tag == "weak" && IsTakingDmg == false)
+        {
+
+            TakeDamage(2);
+        }
+        if (collision.gameObject.tag == "death")
+        {
+
+            ded();
+        }
+
+        if (collision.gameObject.tag == "kill")
+        {
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
+    }
+    void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "boss" && IsTakingDmg == false || collision.gameObject.tag == "inimigo" && IsTakingDmg == false)
         {
@@ -156,7 +191,7 @@ public class playerhp : MonoBehaviour
     void dmgEnd()
     {
         IsTakingDmg = false;
-        anim.SetBool("isTakingDmg", false);
+        
     }
     void ded()
     {
