@@ -33,9 +33,11 @@ public class FinalBoss : MonoBehaviour
     public GameObject fogo3;
 //PAREDES--------------------------------------------------------------
     public GameObject paredes;
-    //MÃOS--------------------------------------------------------------
+//MÃOS--------------------------------------------------------------
     public GameObject maoEsq;
     public GameObject maoDir;
+    private Animator maoEsqu_Anim;
+    private Animator maoDir_Anim;
 //DEDOS--------------------------------------------------------------
     public GameObject Esqu1;
     public GameObject Esqu2;
@@ -74,6 +76,8 @@ public class FinalBoss : MonoBehaviour
 
     void Start()
     {
+        maoDir_Anim = maoDir.GetComponent<Animator>();
+        maoEsqu_Anim = maoEsq.GetComponent<Animator>();
 
         c = flashrend.color;
         flashrend.color = c;
@@ -352,6 +356,7 @@ public class FinalBoss : MonoBehaviour
     //ATAQUE 5 --------------------------------------------------
     IEnumerator Pattern5()
     {
+        firepoint.localPosition = new Vector3(0, -17.6f, 0);
         headAnim.SetTrigger("olhar");
         paredes.GetComponent<Rigidbody2D>().gravityScale = 30;
 
@@ -361,20 +366,28 @@ public class FinalBoss : MonoBehaviour
         for (float i = 5; i > 0; i--)
         {
             headAnim.SetTrigger("cuspe");
-            yield return new WaitForSeconds(2);
+            while (podeAtacar == false)
+            {
+                yield return null;
+            }
+            olho tiro = Instantiate(olho, firepoint.position, Quaternion.identity).GetComponent<olho>();
+            tiro.GetComponent<olho>().speed = -pattern5Speed;
+            headAnim.SetTrigger("olhar");
+            yield return new WaitForSeconds(1);
+
 
 
         }
         headAnim.SetTrigger("idle");
         paredes.GetComponent<Rigidbody2D>().gravityScale = -30;
         yield return new WaitForSeconds(1);
+        headAnim.SetTrigger("idle");
+        firepoint.localPosition = new Vector3(0,0, 0);
         StartCoroutine(wait());
     }
     void cuspe()
     {
-        olho tiro = Instantiate(olho, firepoint.position, Quaternion.identity).GetComponent<olho>();
-        tiro.GetComponent<olho>().speed = -pattern5Speed;
-        headAnim.SetTrigger("idle");
+
     }
 
 
@@ -389,6 +402,8 @@ public class FinalBoss : MonoBehaviour
 
         firepoint.eulerAngles = new Vector3(0, 0, 0);
         Debug.Log("6");
+        maoDir_Anim.SetTrigger("tiro");
+        maoEsqu_Anim.SetTrigger("tiro");
         for (float o = 3; o > 0; o--)
         {
             posDir = Random.Range(1, 5);
@@ -487,8 +502,13 @@ public class FinalBoss : MonoBehaviour
 
 
         yield return new WaitForSeconds(1);
-        maoDir.transform.position = new Vector3(200, 64, 0);
-        maoEsq.transform.position = new Vector3(-200, 64, 0);
+        maoDir.transform.eulerAngles = new Vector3(0f, 0f, 0);
+        maoEsq.transform.eulerAngles = new Vector3(0f, 0f, 0);
+        maoDir_Anim.SetTrigger("idle");
+        maoEsqu_Anim.SetTrigger("idle");
+        maoDir.transform.position = new Vector3(50.9f, 25.8f, 0);
+        maoEsq.transform.position = new Vector3(-47.3f, 25.8f, 0);
+
         StartCoroutine(wait());
     }
     public void attackControl(bool trigger)
