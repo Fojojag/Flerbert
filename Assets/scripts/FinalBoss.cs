@@ -38,6 +38,7 @@ public class FinalBoss : MonoBehaviour
     public GameObject maoDir;
     private Animator maoEsqu_Anim;
     private Animator maoDir_Anim;
+    public GameObject maoAndano;
 //DEDOS--------------------------------------------------------------
     public GameObject Esqu1;
     public GameObject Esqu2;
@@ -69,6 +70,7 @@ public class FinalBoss : MonoBehaviour
     public float pattern6Speed;
     public int PickedMove;
     int PickedMoveIndex;
+    public bool ativado = true;
    [SerializeField] private bool ataque2 = false;
     Color c;
     [SerializeField] List<int> MovePicker;
@@ -109,7 +111,7 @@ public class FinalBoss : MonoBehaviour
     {
         Debug.Log("make list");
         MovePicker = new List<int>();
-        for (int i = 1; i <= 6; ++i)
+        for (int i = 1; i <= 7; ++i)
         {
             MovePicker.Add(i);
         }
@@ -127,6 +129,7 @@ public class FinalBoss : MonoBehaviour
     //RANDOMIZAÇÃO -------------------------------------------------------
     void randomMove()
     {
+        if(!ativado) return;
         Debug.Log("randomMove");
 
         // Return a bad card if the list wasn't made yet
@@ -148,6 +151,7 @@ public class FinalBoss : MonoBehaviour
     //SELEÇÃO DE ATAQUE -------------------------------------------------------
     IEnumerator Select()
     {
+        if(!ativado) yield break;
         if (PickedMove == 1)
         {
             headAnim.SetBool("bullet", true);
@@ -171,7 +175,7 @@ public class FinalBoss : MonoBehaviour
         }
         if (PickedMove == 4)
         {
-            headAnim.SetBool("bullet", true);
+            headAnim.SetTrigger("laser");
             yield return new WaitForSeconds(1);
             StartCoroutine(Pattern4());
             yield break;
@@ -190,12 +194,20 @@ public class FinalBoss : MonoBehaviour
             StartCoroutine(Pattern6());
             yield break;
         }
+        if (PickedMove == 7)
+        {
+
+            yield return new WaitForSeconds(1);
+            StartCoroutine(Pattern7());
+            yield break;
+        }
 
 
     }
     //ATAQUE 1 --------------------------------------------------
     IEnumerator Pattern1()
     {
+        if(!ativado) yield break;
 
         Debug.Log("1");
         firepoint.eulerAngles = new Vector3(0, 0, 30);
@@ -228,6 +240,7 @@ public class FinalBoss : MonoBehaviour
     //ATAQUE 2 --------------------------------------------------
     IEnumerator Pattern2()
     {
+        if(!ativado) yield break;
         Debug.Log("2");
         ataque2 = true;
         firepoint.eulerAngles = new Vector3(0, 0, 0);
@@ -261,6 +274,7 @@ public class FinalBoss : MonoBehaviour
     }
     IEnumerator Pattern22()
     {
+        if(!ativado) yield break;
         float angle = 0;
 
 
@@ -292,6 +306,7 @@ public class FinalBoss : MonoBehaviour
     //ATAQUE 3 --------------------------------------------------
     IEnumerator Pattern3()
     {
+        if(!ativado) yield break;
         tentAnim1.SetBool("surgir", true);
         yield return new WaitForSeconds(1);
         tentAnim2.SetBool("surgir", true);
@@ -314,6 +329,7 @@ public class FinalBoss : MonoBehaviour
     //ATAQUE 4 --------------------------------------------------
     IEnumerator Pattern4()
     {
+        if(!ativado) yield break;
         c.a = 1;
         while (c.a > 0)
         {
@@ -333,7 +349,7 @@ public class FinalBoss : MonoBehaviour
         fogo3.GetComponent<Animator>().SetBool("fogo", true);
         
         yield return new WaitForSeconds(2);
-        headAnim.SetBool("bullet", false);
+        headAnim.SetTrigger("laserOff");
         laser.SetActive(false);
         yield return new WaitForSeconds(1);
 
@@ -356,6 +372,7 @@ public class FinalBoss : MonoBehaviour
     //ATAQUE 5 --------------------------------------------------
     IEnumerator Pattern5()
     {
+        if(!ativado) yield break;
         firepoint.localPosition = new Vector3(0, -17.6f, 0);
         headAnim.SetTrigger("olhar");
         paredes.GetComponent<Rigidbody2D>().gravityScale = 30;
@@ -385,15 +402,12 @@ public class FinalBoss : MonoBehaviour
         firepoint.localPosition = new Vector3(0,0, 0);
         StartCoroutine(wait());
     }
-    void cuspe()
-    {
-
-    }
 
 
     //ATAQUE 6 --------------------------------------------------
     IEnumerator Pattern6()
     {
+        if(!ativado) yield break;
 
         float posDir;
         float posEsqu;
@@ -502,8 +516,8 @@ public class FinalBoss : MonoBehaviour
 
 
         yield return new WaitForSeconds(1);
-        maoDir.transform.eulerAngles = new Vector3(0f, 0f, 0);
-        maoEsq.transform.eulerAngles = new Vector3(0f, 0f, 0);
+        maoDir.transform.eulerAngles = new Vector3(0f, 0f, -15.06f);
+        maoEsq.transform.eulerAngles = new Vector3(0f, 0f, 15.06f);
         maoDir_Anim.SetTrigger("idle");
         maoEsqu_Anim.SetTrigger("idle");
         maoDir.transform.position = new Vector3(50.9f, 25.8f, 0);
@@ -511,6 +525,31 @@ public class FinalBoss : MonoBehaviour
 
         StartCoroutine(wait());
     }
+//ATAQUE 7 --------------------------------------------------
+    IEnumerator Pattern7()
+    {
+        maoDir.transform.position = new Vector3(250.9f, 25.8f, 0);
+        maoEsq.transform.position = new Vector3(-247.3f, 25.8f, 0);
+        yield return new WaitForSeconds(1);
+        firepoint.position = new Vector3(-124.4f, 2.1f, 0f);
+        Enemybase mao1 = Instantiate(maoAndano, firepoint.position, firepoint.rotation).GetComponent<Enemybase>();
+        mao1.GetComponent<Enemybase>().speed = 150;
+
+        yield return new WaitForSeconds(1);
+
+        firepoint.position = new Vector3(124.4f, 2.1f, 0f);
+        Enemybase mao2 = Instantiate(maoAndano, firepoint.position, firepoint.rotation).GetComponent<Enemybase>();
+        mao2.GetComponent<Enemybase>().transform.eulerAngles = new Vector3(0, 180, 0);
+        mao2.GetComponent<Enemybase>().speed = -150;
+        firepoint.position = new Vector3(0.5f, 57.9625f, 0f);
+        yield return new WaitForSeconds(3);
+        maoDir.transform.position = new Vector3(50.9f, 25.8f, 0);
+        maoEsq.transform.position = new Vector3(-47.3f, 25.8f, 0);
+
+
+        StartCoroutine(wait());
+    }
+
     public void attackControl(bool trigger)
     {
         podeAtacar = trigger;

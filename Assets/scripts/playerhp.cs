@@ -123,6 +123,12 @@ public class playerhp : MonoBehaviour
 
             ded();
         }
+        if (collision.gameObject.tag == "espinhos" && IsTakingDmg == false)
+        {
+            IsTakingDmg = true;
+            
+            TakeDamage(20);
+        }
 
         if (collision.gameObject.tag == "kill")
         {

@@ -4,7 +4,7 @@ public class Enemybase : MonoBehaviour
 {
 
     [SerializeField] private float damage;
-    [SerializeField] private float speed;
+    [SerializeField] public float speed;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float lifetime;
     [SerializeField] private bool Respawn;

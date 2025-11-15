@@ -124,7 +124,7 @@ public class buster : MonoBehaviour
                 Instantiate(projectile, firepoint.position, firepoint.rotation); shot = false;
 
         }
-        if (shot == true && chargeLvl == 2)
+        if (shot == true && chargeLvl == 2 && chargeTime < 1)
         {
             chargeLvl = 0;
             StartCoroutine(releaseCharge());
@@ -143,20 +143,80 @@ public class buster : MonoBehaviour
 
         if (context.canceled)
         {
+            Debug.Log("asasasa");
             if (chargeTime < 2)
             {
                 shot = false;
                 isCharging = false;
                 chargeTime = 0;
             }
-        else if (chargeTime >= 2)
+            else 
+            if (chargeTime >= 2)
             {
+                isCharging = false;
+                StartCoroutine (releaseCharge());
+                return;
+            }
+            
+            if (chargeTime == 0 && chargeLvl == 2)
+            {
+                chargeLvl = 0;
                 isCharging = false;
                 StartCoroutine (releaseCharge());
             }
         }
     }
-    public void OnUp(InputAction.CallbackContext context)
+    public void OnQuickShotL(InputAction.CallbackContext context)
+    {
+
+        if (context.started)
+        {
+        if ( playerMain.IsFacingRight == true)
+        {
+            playerMain.flip();
+
+        }
+
+        if (chargeTime >= 2)
+            {
+                isCharging = false;
+                StartCoroutine (QuickShot());
+            }
+            else
+            if (chargeTime == 0 && chargeLvl == 2)
+            {
+                chargeLvl = 0;
+                isCharging = false;
+                StartCoroutine (QuickShot());
+            }
+        }
+    }
+    public void OnQuickShotR(InputAction.CallbackContext context)
+    {
+
+        if (context.started)
+        {
+        if (playerMain.IsFacingRight == false)
+        {
+            playerMain.flip();
+
+        }
+
+        if (chargeTime >= 2)
+            {
+                isCharging = false;
+                StartCoroutine (QuickShot());
+            }
+            else
+            if (chargeTime == 0 && chargeLvl == 2)
+            {
+                chargeLvl = 0;
+                isCharging = false;
+                StartCoroutine (QuickShot());
+            }
+        }
+    }
+        public void OnUp(InputAction.CallbackContext context)
     {
         if (context.started)
         {
@@ -220,11 +280,16 @@ public class buster : MonoBehaviour
             shot = false;
             
             chargeTime = 0;
-            playerMain.rb.linearVelocity = new Vector2(rb.linearVelocity.x, force);
+
             if (chargeLvl == 1)
             {
                 chargeLvl = 0;
             }
+            playerMain.isDJumping = true;
+            playerMain.rb.linearVelocity = new Vector2(rb.linearVelocity.x, force);
+            playerMain.force = force;
+            
+
         }
         else
         {
@@ -236,6 +301,7 @@ public class buster : MonoBehaviour
             {
                 chargeLvl = 0;
             }
+
 
             if (playerMain.IsFacingRight && CollisionDetector.IsGrounded == false)
             {
@@ -257,6 +323,36 @@ public class buster : MonoBehaviour
 
         }
 
+    }
+    private IEnumerator QuickShot()
+    {
+        Instantiate(ChargeShot, firepoint.position, firepoint.rotation);
+            shot = false;
+            
+             chargeTime = 0;
+            if (chargeLvl == 1)
+            {
+                chargeLvl = 0;
+            }
+
+
+            if (playerMain.IsFacingRight && CollisionDetector.IsGrounded == false)
+            {
+                shot = false;
+                playerMain.dash = -120;
+                yield return new WaitForSeconds(0.5f);
+                playerMain.dash = 0;
+            }
+
+
+            else
+            if (playerMain.IsFacingRight == false && CollisionDetector.IsGrounded == false)
+            {
+                shot = false;
+                playerMain.dash = 120;
+                yield return new WaitForSeconds(0.5f);
+                playerMain.dash = 0;
+            }
     }
 
 

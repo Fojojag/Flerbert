@@ -5,10 +5,11 @@ public class FinalBossHP : MonoBehaviour
 {
     public SpriteRenderer rend;
     Color c;
-
+    public Animator headAnim;
     public float ENhealth;
     public float ENmaxhealth;
-    public FinalBoss corpo;
+    public FinalBoss main;
+    public GameObject espinhos;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,7 +25,15 @@ public class FinalBossHP : MonoBehaviour
         rend.color = c;
                 if (ENhealth <= 0)
         {
+            Destroy(main);
 
+            Destroy(espinhos);
+            GameObject[] gameObjects = GameObject.FindGameObjectsWithTag ("inimigo");
+            foreach (GameObject target in gameObjects)
+            {
+                GameObject.Destroy(target);
+            }
+            headAnim.SetTrigger("ded");
 
             
         }
