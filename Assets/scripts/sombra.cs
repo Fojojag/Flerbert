@@ -12,6 +12,8 @@ public class sombra : MonoBehaviour
     public float chegou = 0;
     public float speed;
     public bool isHorizontal;
+    
+    public bool isDiagonal;
     public float timerSumir;
     public void Start()
     {
@@ -23,6 +25,39 @@ public class sombra : MonoBehaviour
     void FixedUpdate()
     {
         rend.color = c;
+        if (isDiagonal)
+
+        {
+            Vector3 atarget = new Vector3(target.transform.position.x, target.transform.position.y, 0);
+            if (isActive && transform.position != target.transform.position && chegou == 0)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, atarget, speed);
+
+            }
+
+            if (isActive && transform.position == atarget && chegou == 0)
+            {
+
+                chegou = timerSumir;
+            }
+        if (chegou > 0)
+        {
+            chegou -= Time.deltaTime;
+        }
+
+        if (chegou < 0)
+        {
+            StartCoroutine(fadeOut());
+
+
+        }
+        if (c.a <= 0)
+        {
+            Destroy(gameObject);
+        }
+
+        }
+        else
 
         if (!isHorizontal)
 

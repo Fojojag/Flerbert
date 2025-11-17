@@ -375,8 +375,17 @@ public class FinalBoss : MonoBehaviour
         if(!ativado) yield break;
         firepoint.localPosition = new Vector3(0, -17.6f, 0);
         headAnim.SetTrigger("olhar");
+        GameObject avisoR = GameObject.Find("AvisoR");
+        GameObject avisoL = GameObject.Find("AvisoL");
+        GameObject NovoAviso = Instantiate(avisoL, avisoL.transform.position,avisoR.transform.rotation);
+        NovoAviso.GetComponent<SpriteRenderer>().enabled = true;
+        GameObject NovoAviso2 = Instantiate(avisoR, avisoR.transform.position,avisoR.transform.rotation);
+        NovoAviso2.GetComponent<SpriteRenderer>().enabled = true;
+        yield return new WaitForSeconds(1);
         paredes.GetComponent<Rigidbody2D>().gravityScale = 30;
-
+        yield return new WaitForSeconds(0.5f);
+        Destroy(NovoAviso);
+        Destroy(NovoAviso2);
         yield return new WaitForSeconds(1);
         Debug.Log("5");
         firepoint.eulerAngles = new Vector3(0, 0, 0);

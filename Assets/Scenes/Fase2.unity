@@ -1371,7 +1371,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 93858595}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -1539,7 +1539,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 101490542}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -2019,6 +2019,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a84bb92b97439df47832e971bdcc0bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPos: 0
+  length: 0
+  startPosY: 0
+  height: 0
   cam: {fileID: 276931993}
   parallaxEffect: 0
 --- !u!212 &113300203
@@ -2088,7 +2092,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 116711773}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -2123,7 +2127,7 @@ GameObject:
   - component: {fileID: 119713201}
   - component: {fileID: 119713200}
   - component: {fileID: 119713199}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bicho-do-buraco-Longo2
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -2238,6 +2242,7 @@ MonoBehaviour:
   chegou: 0
   speed: 13
   isHorizontal: 1
+  isDiagonal: 0
   timerSumir: 0.3
 --- !u!212 &119713202
 SpriteRenderer:
@@ -2306,7 +2311,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 122450629}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -2701,7 +2706,7 @@ GameObject:
   - component: {fileID: 165944730}
   - component: {fileID: 165944729}
   - component: {fileID: 165944728}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bicho-do-buraco-Longo2
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -2816,6 +2821,7 @@ MonoBehaviour:
   chegou: 0
   speed: 13
   isHorizontal: 1
+  isDiagonal: 0
   timerSumir: 0.3
 --- !u!212 &165944731
 SpriteRenderer:
@@ -3079,6 +3085,7 @@ MonoBehaviour:
   chegou: 0
   speed: 12
   isHorizontal: 0
+  isDiagonal: 0
   timerSumir: 0.13
 --- !u!61 &182048176
 BoxCollider2D:
@@ -3193,7 +3200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 211021202}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -3544,7 +3551,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 234606807}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -18332,6 +18339,7 @@ MonoBehaviour:
   chegou: 0
   speed: 12
   isHorizontal: 0
+  isDiagonal: 0
   timerSumir: 0.13
 --- !u!61 &251850839
 BoxCollider2D:
@@ -19406,6 +19414,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a84bb92b97439df47832e971bdcc0bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPos: 0
+  length: 0
+  startPosY: 0
+  height: 0
   cam: {fileID: 276931993}
   parallaxEffect: 0.5
 --- !u!212 &336060727
@@ -53715,6 +53727,7 @@ MonoBehaviour:
   chegou: 0
   speed: 7
   isHorizontal: 0
+  isDiagonal: 0
   timerSumir: 0.3
 --- !u!61 &357855255
 BoxCollider2D:
@@ -53802,7 +53815,7 @@ GameObject:
   - component: {fileID: 362678717}
   - component: {fileID: 362678716}
   - component: {fileID: 362678715}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bicho-do-buraco-Longo2
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -53917,6 +53930,7 @@ MonoBehaviour:
   chegou: 0
   speed: 10
   isHorizontal: 1
+  isDiagonal: 0
   timerSumir: 0.3
 --- !u!212 &362678718
 SpriteRenderer:
@@ -54739,6 +54753,7 @@ MonoBehaviour:
   chegou: 0
   speed: 12
   isHorizontal: 0
+  isDiagonal: 0
   timerSumir: 0.13
 --- !u!61 &378011271
 BoxCollider2D:
@@ -55250,7 +55265,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 410815781}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -55545,7 +55560,7 @@ GameObject:
   - component: {fileID: 429593020}
   - component: {fileID: 429593023}
   - component: {fileID: 429593022}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bicho-do-buraco-Longo2
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -55572,6 +55587,7 @@ MonoBehaviour:
   chegou: 0
   speed: 12
   isHorizontal: 1
+  isDiagonal: 0
   timerSumir: 0.1
 --- !u!212 &429593021
 SpriteRenderer:
@@ -56129,7 +56145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 458057976}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -56682,7 +56698,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 473849721}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -56984,7 +57000,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 498509549}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -57304,6 +57320,7 @@ MonoBehaviour:
   chegou: 0
   speed: 7
   isHorizontal: 0
+  isDiagonal: 0
   timerSumir: 0.3
 --- !u!212 &525157401
 SpriteRenderer:
@@ -57916,7 +57933,7 @@ GameObject:
   - component: {fileID: 554187017}
   - component: {fileID: 554187020}
   - component: {fileID: 554187019}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bicho-do-buraco-Longo2
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -57943,6 +57960,7 @@ MonoBehaviour:
   chegou: 0
   speed: 12
   isHorizontal: 1
+  isDiagonal: 0
   timerSumir: 0.3
 --- !u!212 &554187018
 SpriteRenderer:
@@ -58236,7 +58254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 591522101}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -58462,6 +58480,7 @@ MonoBehaviour:
   chegou: 0
   speed: 12
   isHorizontal: 0
+  isDiagonal: 0
   timerSumir: 0.13
 --- !u!61 &619400199
 BoxCollider2D:
@@ -59372,6 +59391,7 @@ MonoBehaviour:
   chegou: 0
   speed: 12
   isHorizontal: 0
+  isDiagonal: 0
   timerSumir: 0.13
 --- !u!61 &660739076
 BoxCollider2D:
@@ -59486,7 +59506,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 673078488}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -59819,7 +59839,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 687232700}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -60687,6 +60707,7 @@ MonoBehaviour:
   chegou: 0
   speed: 7
   isHorizontal: 0
+  isDiagonal: 0
   timerSumir: 0
 --- !u!212 &728709097
 SpriteRenderer:
@@ -61262,6 +61283,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a84bb92b97439df47832e971bdcc0bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPos: 0
+  length: 0
+  startPosY: 0
+  height: 0
   cam: {fileID: 276931993}
   parallaxEffect: 0
 --- !u!212 &805027225
@@ -63289,6 +63314,7 @@ MonoBehaviour:
   chegou: 0
   speed: 12
   isHorizontal: 0
+  isDiagonal: 0
   timerSumir: 0.13
 --- !u!61 &832581329
 BoxCollider2D:
@@ -63540,7 +63566,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 848430909}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -63740,7 +63766,7 @@ GameObject:
   - component: {fileID: 873925593}
   - component: {fileID: 873925592}
   - component: {fileID: 873925591}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bicho-do-buraco-Longo2
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -63855,6 +63881,7 @@ MonoBehaviour:
   chegou: 0
   speed: 12
   isHorizontal: 1
+  isDiagonal: 0
   timerSumir: 0.3
 --- !u!212 &873925594
 SpriteRenderer:
@@ -63923,7 +63950,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 879859680}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -63954,7 +63981,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 901295627}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sombras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64087,6 +64114,7 @@ MonoBehaviour:
   chegou: 0
   speed: 12
   isHorizontal: 0
+  isDiagonal: 0
   timerSumir: 0.13
 --- !u!61 &903492572
 BoxCollider2D:
@@ -64549,7 +64577,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 931643400}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -64655,6 +64683,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a84bb92b97439df47832e971bdcc0bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPos: 0
+  length: 0
+  startPosY: 0
+  height: 0
   cam: {fileID: 276931993}
   parallaxEffect: 0.59
 --- !u!212 &951262531
@@ -64760,6 +64792,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a84bb92b97439df47832e971bdcc0bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPos: 0
+  length: 0
+  startPosY: 0
+  height: 0
   cam: {fileID: 276931993}
   parallaxEffect: 0
 --- !u!212 &954523433
@@ -64923,7 +64959,7 @@ GameObject:
   - component: {fileID: 965045632}
   - component: {fileID: 965045631}
   - component: {fileID: 965045630}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bicho-do-buraco-Longo2
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -65038,6 +65074,7 @@ MonoBehaviour:
   chegou: 0
   speed: 13
   isHorizontal: 1
+  isDiagonal: 0
   timerSumir: 0.3
 --- !u!212 &965045633
 SpriteRenderer:
@@ -65196,7 +65233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 988873259}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -65475,7 +65512,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1016468048}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -66065,7 +66102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1040604882}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -66169,6 +66206,7 @@ MonoBehaviour:
   chegou: 0
   speed: 12
   isHorizontal: 0
+  isDiagonal: 0
   timerSumir: 0.13
 --- !u!61 &1045857417
 BoxCollider2D:
@@ -67214,7 +67252,7 @@ GameObject:
   - component: {fileID: 1084434720}
   - component: {fileID: 1084434723}
   - component: {fileID: 1084434722}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bicho-do-buraco-Longo2
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -67241,6 +67279,7 @@ MonoBehaviour:
   chegou: 0
   speed: 12
   isHorizontal: 1
+  isDiagonal: 0
   timerSumir: 0.3
 --- !u!212 &1084434721
 SpriteRenderer:
@@ -67397,7 +67436,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1091772207}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -67929,7 +67968,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1142951982}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -68033,6 +68072,7 @@ MonoBehaviour:
   chegou: 0
   speed: 12
   isHorizontal: 0
+  isDiagonal: 0
   timerSumir: 0.13
 --- !u!61 &1148576597
 BoxCollider2D:
@@ -68242,7 +68282,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1165429813}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -68625,7 +68665,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1185573785}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -68660,7 +68700,7 @@ GameObject:
   - component: {fileID: 1194821030}
   - component: {fileID: 1194821029}
   - component: {fileID: 1194821028}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bicho-do-buraco-Longo2
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -68775,6 +68815,7 @@ MonoBehaviour:
   chegou: 0
   speed: 12
   isHorizontal: 1
+  isDiagonal: 0
   timerSumir: 0.3
 --- !u!212 &1194821031
 SpriteRenderer:
@@ -69074,7 +69115,7 @@ GameObject:
   - component: {fileID: 1209996830}
   - component: {fileID: 1209996833}
   - component: {fileID: 1209996832}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bicho-do-buraco-Longo2
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -69101,6 +69142,7 @@ MonoBehaviour:
   chegou: 0
   speed: 7
   isHorizontal: 1
+  isDiagonal: 0
   timerSumir: 0.3
 --- !u!212 &1209996831
 SpriteRenderer:
@@ -69379,7 +69421,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1224574060}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -69963,6 +70005,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a84bb92b97439df47832e971bdcc0bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPos: 0
+  length: 0
+  startPosY: 0
+  height: 0
   cam: {fileID: 276931993}
   parallaxEffect: 0
 --- !u!212 &1250020592
@@ -70036,7 +70082,7 @@ GameObject:
   - component: {fileID: 1269693603}
   - component: {fileID: 1269693602}
   - component: {fileID: 1269693601}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bicho-do-buraco-Longo2
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -70151,6 +70197,7 @@ MonoBehaviour:
   chegou: 0
   speed: 12
   isHorizontal: 1
+  isDiagonal: 0
   timerSumir: 0.3
 --- !u!212 &1269693604
 SpriteRenderer:
@@ -70223,7 +70270,7 @@ GameObject:
   - component: {fileID: 1285597412}
   - component: {fileID: 1285597411}
   - component: {fileID: 1285597410}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bicho-do-buraco-Longo2
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -70338,6 +70385,7 @@ MonoBehaviour:
   chegou: 0
   speed: 7
   isHorizontal: 1
+  isDiagonal: 0
   timerSumir: 0.3
 --- !u!212 &1285597413
 SpriteRenderer:
@@ -70442,6 +70490,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a84bb92b97439df47832e971bdcc0bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPos: 0
+  length: 0
+  startPosY: 0
+  height: 0
   cam: {fileID: 276931993}
   parallaxEffect: 0.5
 --- !u!212 &1296008616
@@ -70511,7 +70563,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1296123056}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sombras2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70551,7 +70603,7 @@ GameObject:
   - component: {fileID: 1310243056}
   - component: {fileID: 1310243055}
   - component: {fileID: 1310243054}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bicho-do-buraco-Longo2
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -70666,6 +70718,7 @@ MonoBehaviour:
   chegou: 0
   speed: 12
   isHorizontal: 1
+  isDiagonal: 0
   timerSumir: 0.3
 --- !u!212 &1310243057
 SpriteRenderer:
@@ -71528,14 +71581,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1815047954564310635, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
-      propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1815047954564310635, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
-      propertyPath: m_ActionEvents.Array.data[22].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1815047954564310635, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1362762339}
@@ -71894,7 +71939,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1397603620}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -72019,7 +72064,7 @@ GameObject:
   - component: {fileID: 1416645187}
   - component: {fileID: 1416645186}
   - component: {fileID: 1416645185}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bicho-do-buraco-Longo2
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -72134,6 +72179,7 @@ MonoBehaviour:
   chegou: 0
   speed: 12
   isHorizontal: 1
+  isDiagonal: 0
   timerSumir: 0.3
 --- !u!212 &1416645188
 SpriteRenderer:
@@ -72202,7 +72248,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1426717201}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -72389,7 +72435,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1442347474}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -72584,6 +72630,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a84bb92b97439df47832e971bdcc0bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPos: 0
+  length: 0
+  startPosY: 0
+  height: 0
   cam: {fileID: 276931993}
   parallaxEffect: 0.53
 --- !u!212 &1449664599
@@ -73136,6 +73186,7 @@ MonoBehaviour:
   chegou: 0
   speed: 12
   isHorizontal: 0
+  isDiagonal: 0
   timerSumir: 0.13
 --- !u!61 &1480460128
 BoxCollider2D:
@@ -73441,6 +73492,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a84bb92b97439df47832e971bdcc0bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPos: 0
+  length: 0
+  startPosY: 0
+  height: 0
   cam: {fileID: 276931993}
   parallaxEffect: 0
 --- !u!212 &1525231017
@@ -73546,6 +73601,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a84bb92b97439df47832e971bdcc0bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPos: 0
+  length: 0
+  startPosY: 0
+  height: 0
   cam: {fileID: 276931993}
   parallaxEffect: 0
 --- !u!212 &1526746157
@@ -73985,6 +74044,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a84bb92b97439df47832e971bdcc0bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPos: 0
+  length: 0
+  startPosY: 0
+  height: 0
   cam: {fileID: 276931993}
   parallaxEffect: 0.3
 --- !u!212 &1588070350
@@ -89460,6 +89523,7 @@ MonoBehaviour:
   chegou: 0
   speed: 12
   isHorizontal: 0
+  isDiagonal: 0
   timerSumir: 0.13
 --- !u!61 &1635622177
 BoxCollider2D:
@@ -105071,7 +105135,7 @@ GameObject:
   - component: {fileID: 1744678243}
   - component: {fileID: 1744678246}
   - component: {fileID: 1744678245}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bicho-do-buraco-Longo2
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -105098,6 +105162,7 @@ MonoBehaviour:
   chegou: 0
   speed: 12
   isHorizontal: 1
+  isDiagonal: 0
   timerSumir: 0.1
 --- !u!212 &1744678244
 SpriteRenderer:
@@ -105926,7 +105991,7 @@ GameObject:
   - component: {fileID: 1804874051}
   - component: {fileID: 1804874050}
   - component: {fileID: 1804874049}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bicho-do-buraco-Longo2
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -106041,6 +106106,7 @@ MonoBehaviour:
   chegou: 0
   speed: 10
   isHorizontal: 1
+  isDiagonal: 0
   timerSumir: 0.3
 --- !u!212 &1804874052
 SpriteRenderer:
@@ -106113,7 +106179,7 @@ GameObject:
   - component: {fileID: 1805751347}
   - component: {fileID: 1805751346}
   - component: {fileID: 1805751345}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bicho-do-buraco-Longo2
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -106228,6 +106294,7 @@ MonoBehaviour:
   chegou: 0
   speed: 12
   isHorizontal: 1
+  isDiagonal: 0
   timerSumir: 0.3
 --- !u!212 &1805751348
 SpriteRenderer:
@@ -106936,7 +107003,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1832726507}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -107147,7 +107214,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1880797547}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -107406,7 +107473,7 @@ GameObject:
   - component: {fileID: 1910877291}
   - component: {fileID: 1910877294}
   - component: {fileID: 1910877293}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bicho-do-buraco-Longo2
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -107433,6 +107500,7 @@ MonoBehaviour:
   chegou: 0
   speed: 10
   isHorizontal: 1
+  isDiagonal: 0
   timerSumir: 0.1
 --- !u!212 &1910877292
 SpriteRenderer:
@@ -107879,6 +107947,7 @@ MonoBehaviour:
   chegou: 0
   speed: 8.25
   isHorizontal: 0
+  isDiagonal: 0
   timerSumir: 0.3
 --- !u!212 &1924126357
 SpriteRenderer:
@@ -108035,7 +108104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1945211912}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -108368,7 +108437,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1984072610}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -108399,7 +108468,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1997355297}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -108430,7 +108499,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2008183235}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -109158,7 +109227,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2027194038}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -109435,7 +109504,7 @@ GameObject:
   - component: {fileID: 2050093507}
   - component: {fileID: 2050093510}
   - component: {fileID: 2050093509}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bicho-do-buraco-Longo2
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -109462,6 +109531,7 @@ MonoBehaviour:
   chegou: 0
   speed: 10
   isHorizontal: 1
+  isDiagonal: 0
   timerSumir: 0.1
 --- !u!212 &2050093508
 SpriteRenderer:
@@ -110757,6 +110827,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a84bb92b97439df47832e971bdcc0bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPos: 0
+  length: 0
+  startPosY: 0
+  height: 0
   cam: {fileID: 276931993}
   parallaxEffect: 0.3
 --- !u!212 &2146577669

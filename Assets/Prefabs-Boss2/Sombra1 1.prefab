@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8442861690834932650}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -312,6 +312,7 @@ MonoBehaviour:
   chegou: 0
   speed: 7
   isHorizontal: 0
+  isDiagonal: 0
   timerSumir: 0.3
 --- !u!50 &7294851490332398413
 Rigidbody2D:

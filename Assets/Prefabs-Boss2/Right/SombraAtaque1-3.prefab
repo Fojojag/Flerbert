@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1976396017582754957}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -58,7 +58,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2736429049932284941}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 239.4, y: 6.7, z: 0}
   m_LocalScale: {x: 1.4678266, y: 0.03600833, z: 0.8409}
   m_ConstrainProportionsScale: 0
@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 1895234944445948188}
   - component: {fileID: 3761108433356809514}
   - component: {fileID: 1160476614889899787}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bicho-do-buraco-Longo2
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -266,7 +266,8 @@ MonoBehaviour:
   chegou: 0
   speed: 12
   isHorizontal: 1
-  timerSumir: 0.1
+  isDiagonal: 0
+  timerSumir: 0.05
 --- !u!50 &3761108433356809514
 Rigidbody2D:
   serializedVersion: 5

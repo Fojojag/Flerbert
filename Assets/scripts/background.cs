@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class background : MonoBehaviour
 {
-    private float startPos, length;
-    private float startPosY, height;
+    public float startPos, length;
+    public float startPosY, height;
     public GameObject cam;
     public float parallaxEffect; // The speed at which the background should move relative to the camera
 
@@ -22,7 +22,7 @@ public class background : MonoBehaviour
         float movement = cam.transform.position.x * (1 - parallaxEffect);
         transform.position = new Vector3(startPos + distance, startPosY + cam.transform.position.y , transform.position.z);
         // if background has reached the end of its length adjust its position for infinite scrolling if (movement > startPos + length)
-        if (movement > startPos + length)
+        if (movement > startPos + length -40)
         {
             startPos += length;
         }

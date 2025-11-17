@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7936255137493477305}
   - component: {fileID: 6617880771919996804}
   - component: {fileID: 3969631407773042895}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bicho-do-buraco-Longo2
   m_TagString: inimigo
   m_Icon: {fileID: 0}
@@ -113,6 +113,7 @@ MonoBehaviour:
   chegou: 0
   speed: 12
   isHorizontal: 1
+  isDiagonal: 0
   timerSumir: 0.1
 --- !u!50 &6617880771919996804
 Rigidbody2D:
@@ -196,7 +197,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8276114968503699859}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}

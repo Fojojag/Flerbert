@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 477215289525419731}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -58,7 +58,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6960917798162048884}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 59, y: -119, z: 0}
   m_LocalScale: {x: 0.21529055, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -128,7 +128,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -274.61386, y: 120.72742}
+  m_Offset: {x: -20.631866, y: 52.120087}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -138,7 +138,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 756.3775, y: 96.962944}
+  m_Size: {x: 1714.9548, y: 309.37982}
   m_EdgeRadius: 0
 --- !u!114 &4998584859143528674
 MonoBehaviour:
@@ -312,7 +312,8 @@ MonoBehaviour:
   chegou: 0
   speed: 7
   isHorizontal: 0
-  timerSumir: 0.3
+  isDiagonal: 0
+  timerSumir: 10
 --- !u!50 &9196607132666187393
 Rigidbody2D:
   serializedVersion: 5
