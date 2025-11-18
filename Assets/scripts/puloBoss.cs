@@ -95,7 +95,7 @@ public class puloBoss : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "ground" && chegou ||collision.gameObject.tag == "ground" )
+        if (collision.gameObject.tag == "ground" ||collision.gameObject.tag == "chao" )
         {
             chegou = false;
             alvo = null;
@@ -103,6 +103,7 @@ public class puloBoss : MonoBehaviour
             player = new Vector3(0, 0, 0);
             trajMaxHeight = MaxHeight;
             bossMain.isActing = false;
+            bossMain.done();
             this.enabled = false;
             
 

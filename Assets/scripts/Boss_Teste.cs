@@ -56,7 +56,7 @@ public class Boss_Teste : MonoBehaviour
             timer -= Time.deltaTime;
 
         }
-        if (timer <= 0 && !isActing)
+        if (timer <= 0 && !isActing && jumpScript.enabled == false)
         {
             numero = Random.Range(0, 6);
         }
@@ -67,7 +67,7 @@ public class Boss_Teste : MonoBehaviour
         }
 
         //Tiro pra cima
-        if (numero == 1 && !isActing || numero == 2 && !isActing)
+        if (numero == 1 && !isActing)
         {
             isActing = true;
             _anim.SetBool("Fogo", true);
@@ -76,10 +76,9 @@ public class Boss_Teste : MonoBehaviour
 
         }
         //Espinho
-        if (numero == 3 && !espinhoAtivo && !isActing)
+        if (numero == 2 && !espinhoAtivo && !isActing)
         {
             isActing = true;
-            numero = 0;
             _anim.SetBool("Espinho", true);
             
 
@@ -108,8 +107,7 @@ public class Boss_Teste : MonoBehaviour
         {
             isActing = true;
             numero = 0;
-            jumpScript.enabled = true;
-            jumpScript.InitializePulo(player);
+            _anim.SetTrigger("Pulo");
 
         }
         if (numero == 5 && espinhoAtivo)
@@ -153,14 +151,38 @@ public class Boss_Teste : MonoBehaviour
 
         
     }
-
-    void done()
+    void Pulo()
     {
+        if (canJump)
+        {
+            jumpScript.enabled = true;
+            jumpScript.InitializePulo(player);
+        }
+        else
+        {
+        timer = 1f;
+        numero = 0;
+        }
+
+    }
+
+    public void done()
+    {
+        _anim.SetTrigger("Idle");
          _anim.SetBool("Fogo", false);
         _anim.SetBool("Espinho", false);
         _anim.SetBool("Bolha", false);
         isActing = false;
         timer = 2f;
         numero = 0;
+    }
+    public void done2()
+    {
+        _anim.SetTrigger("Idle");
+         _anim.SetBool("Fogo", false);
+        _anim.SetBool("Espinho", false);
+        _anim.SetBool("Bolha", false);
+        isActing = false;
+        numero = 1;
     }
 }

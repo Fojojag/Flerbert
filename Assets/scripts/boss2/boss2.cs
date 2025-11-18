@@ -113,7 +113,7 @@ public float filhadaputa;
     IEnumerator wait()
     {
         Debug.Log("wait");
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         randomMove();
     }
     //RANDOMIZAÇÃO -------------------------------------------------------
@@ -387,8 +387,8 @@ public float filhadaputa;
     }
         //Sombras horizontais, verticais e diagonais
         IEnumerator AtaqueFinal(){
-        GameObject avisoR = GameObject.Find("AvisoR");
-        GameObject linhaR = GameObject.Find("linhaR");
+        GameObject avisoAAA = GameObject.Find("AvisoAAA");
+        GameObject linhaAAA = GameObject.Find("linhaAAA");
         GameObject avisoDR = GameObject.Find("AvisoDR");
         GameObject linhaDR = GameObject.Find("linhaDR");
         GameObject linhaDL = GameObject.Find("linhaDL");
@@ -429,7 +429,7 @@ public float filhadaputa;
             yield return new WaitForSeconds(0.5F);
             Destroy(NovoAviso4);
             yield return new WaitForSeconds(0.5F);
-            GameObject NovoAviso5 = Instantiate(linhaR, avisoR.transform.position,avisoR.transform.rotation);
+            GameObject NovoAviso5 = Instantiate(linhaAAA, avisoAAA.transform.position,avisoAAA.transform.rotation);
             GameObject shadow5 = Instantiate(SombraH, PositionSombra1.position, Sombra1.transform.rotation);
             yield return new WaitForSeconds(0.5F);
             Destroy(NovoAviso5);

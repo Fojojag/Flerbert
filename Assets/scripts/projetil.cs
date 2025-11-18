@@ -37,7 +37,7 @@ public class projetil : MonoBehaviour
         }
         }
 
-        if(collision.gameObject.tag == "inimigo" || collision.gameObject.tag == "boss" || collision.gameObject.tag == "ground")
+        if(collision.gameObject.tag == "inimigo" || collision.gameObject.tag == "boss" || collision.gameObject.tag == "chao")
         {
             if(isEnemy == false)
         {
