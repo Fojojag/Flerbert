@@ -51,5 +51,9 @@ public class Enemybase : MonoBehaviour
 
         
     }
+        void morte()
+    {
+        Destroy(gameObject);
+    }
 
 }

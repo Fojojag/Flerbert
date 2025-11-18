@@ -488,7 +488,7 @@ public float filhadaputa;
         balaNele4.fuzilamento();
         balaNele5.fuzilamento();    
         right();
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(3f);
         
         bossAnim.SetBool("separar", false);
         rend.enabled = true;
@@ -505,9 +505,11 @@ public float filhadaputa;
         balaNele4.fuzilamento();
         balaNele5.fuzilamento();
         left();
-        yield return new WaitForSeconds(1.5f);
+
+      bossAnim.SetBool("separar", false);
+        yield return new WaitForSeconds(0.7f);
         
-        bossAnim.SetBool("separar", false);
+  
         rend.enabled = true;
         Physics2D.IgnoreLayerCollision(7, 11, false);
         StartCoroutine(wait());
@@ -551,6 +553,10 @@ public float filhadaputa;
         Laser.SetActive(true);
         podeUsarLaser = true;
     }
+
+    
+
+
 
     
     

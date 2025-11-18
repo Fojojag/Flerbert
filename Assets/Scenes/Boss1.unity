@@ -4292,10 +4292,11 @@ MonoBehaviour:
   spawn: {fileID: 0}
   spriteRenderer: {fileID: 842747467}
   ENhealth: 0
-  ENmaxhealth: 300
+  ENmaxhealth: 1
   anima: {fileID: 842747470}
   corpo: {fileID: 842747471}
-  boss: 1
+  bossMain: {fileID: 842747472}
+  pulo: {fileID: 842747473}
 --- !u!1 &918527565 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7901265592662743414, guid: 1e260683c6107f74b9eeb695fb233ad9, type: 3}

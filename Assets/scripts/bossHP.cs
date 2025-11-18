@@ -12,7 +12,9 @@ public class bossHP : MonoBehaviour
     public float ENmaxhealth;
     public Animator anima;
     public Enemybase corpo;
-    public bool boss = false;
+    public Boss_Teste bossMain;
+    public puloBoss pulo;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,14 +31,21 @@ public class bossHP : MonoBehaviour
     {
                 if (ENhealth <= 0)
         {
-            corpo.Invoke("ded", 0.1f);
-                if (boss)
+                
+            
+            Destroy(bossMain);
+             Destroy(pulo);
+            GameObject[] gameObjects = GameObject.FindGameObjectsWithTag ("inimigo");
+            foreach (GameObject target in gameObjects)
             {
-                spawn.transform.position = new Vector3(211.6f, -1.4f, -23.5f);
-
-                FadeFases.FadeIn();
+                GameObject.Destroy(target);
             }
-            Destroy(gameObject);
+            anima.SetTrigger("Ded");
+            spawn.transform.position = new Vector3(211.6f, -1.4f, -23.5f);
+
+
+            
+
 
             
         }
@@ -69,6 +78,11 @@ public class bossHP : MonoBehaviour
            
         }
         StartCoroutine(hit_Cor());
+    }
+
+    void morte()
+    {
+        FadeFases.FadeIn();
     }
 
 

@@ -16824,7 +16824,7 @@ Transform:
   m_GameObject: {fileID: 1119715074}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1333.8, y: 137.5, z: 22.26}
+  m_LocalPosition: {x: 1335.9, y: 137.5, z: 22.26}
   m_LocalScale: {x: 0.28292236, y: 0.28292236, z: 0.28292236}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -18758,7 +18758,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2072731369}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -18801,8 +18801,8 @@ PolygonCollider2D:
       - {x: 506.0197, y: -86.40293}
       - {x: 601.63696, y: -68.530624}
       - {x: 1114, y: -67.86233}
-      - {x: 1114, y: 251.9402}
-      - {x: 803.397, y: 251.9402}
+      - {x: 1115.195, y: 184.42188}
+      - {x: 803.397, y: 184.4219}
       - {x: 803.397, y: 52.06398}
       - {x: 587.6105, y: 52.06398}
       - {x: 543.2507, y: 23.603848}

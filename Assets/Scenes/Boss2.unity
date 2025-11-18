@@ -1862,7 +1862,7 @@ GameObject:
   - component: {fileID: 531065738}
   m_Layer: 7
   m_Name: hitbox
-  m_TagString: inimigo
+  m_TagString: boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3230,11 +3230,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1022125851 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 3405367446753465115, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
-  m_PrefabInstance: {fileID: 1431734917}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1032301369
 GameObject:
   m_ObjectHideFlags: 0
@@ -3667,11 +3662,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1129463788}
   - component: {fileID: 1129463790}
-  - component: {fileID: 1129463789}
   - component: {fileID: 1129463791}
+  - component: {fileID: 1129463792}
   m_Layer: 7
   m_Name: hurtbox
-  m_TagString: inimigo
+  m_TagString: boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3691,25 +3686,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4169513177544972334}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1129463789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1129463787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3421a875906434b428b5deffdbb6e62b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::enemyhp
-  spawn: {fileID: 0}
-  spriteRenderer: {fileID: 6955879756704600955}
-  ENhealth: 0
-  ENmaxhealth: 300
-  anima: {fileID: 1022125851}
-  corpo: {fileID: 7747731729037014323}
-  boss: 0
 --- !u!61 &1129463790
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3814,6 +3790,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1129463792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129463787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050e5b41af0f6e241bcfb15f7ea93c3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::boss2HP
+  spawn: {fileID: 0}
+  spriteRenderer: {fileID: 6955879756704600955}
+  ENhealth: 0
+  ENmaxhealth: 1
+  anima: {fileID: 7747731729037014324}
+  corpo: {fileID: 7747731729037014323}
+  bossMain: {fileID: 1280390514330525181}
 --- !u!1 &1151611405
 GameObject:
   m_ObjectHideFlags: 0
@@ -3827,7 +3822,7 @@ GameObject:
   - component: {fileID: 1151611406}
   m_Layer: 0
   m_Name: flash
-  m_TagString: Untagged
+  m_TagString: inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6939,7 +6934,7 @@ GameObject:
   - component: {fileID: 8784129774246072574}
   m_Layer: 7
   m_Name: guliver
-  m_TagString: Untagged
+  m_TagString: boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7680,7 +7675,7 @@ GameObject:
   - component: {fileID: 2030926541620768513}
   m_Layer: 7
   m_Name: LaserTeste
-  m_TagString: Untagged
+  m_TagString: inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
