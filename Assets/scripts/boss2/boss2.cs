@@ -42,6 +42,7 @@ public class boss2 : MonoBehaviour
     bool podeAtirar;
 
     //Laser dele
+    [SerializeField] GameObject flash;
     [SerializeField] Transform boss;
     [SerializeField] Transform LaserEscondido;
     [SerializeField] GameObject Laser;
@@ -85,12 +86,14 @@ public class boss2 : MonoBehaviour
     [SerializeField] int ataqueSelecionado;
     int PickedMoveIndex;
     [SerializeField] List<int> MovePicker;
+    private bool podeUsarLaser;
 
 public float filhadaputa;
     public bool speen;
     public bool speen2;
     void Start()
     {
+
         
         podeTrocar = false;
         podeAtirar = false;
@@ -174,9 +177,13 @@ public float filhadaputa;
 
     void FixedUpdate()
     {
+        
         filhadaputa = Laser.transform.localEulerAngles.z;
-        if (speen && filhadaputa < 131)
+        if (speen && filhadaputa < 131 && podeUsarLaser)
+        {
         Laser.transform.eulerAngles = new Vector3(0, 0, Laser.transform.eulerAngles.z -1.5f);
+        flash.transform.eulerAngles = new Vector3(0, 0, flash.transform.eulerAngles.z +6f);
+        }
         else
         if (speen && filhadaputa > 131)
         {
@@ -188,6 +195,7 @@ public float filhadaputa;
         if (speen2 && filhadaputa < 360 && filhadaputa > 3)
         {
             Laser.SetActive(true);
+            flash.transform.eulerAngles = new Vector3(0, 0, flash.transform.eulerAngles.z -6f);
             Laser.transform.eulerAngles = new Vector3(0, 0, Laser.transform.eulerAngles.z +1.5f);
         }
         else
@@ -197,6 +205,7 @@ public float filhadaputa;
             speen2 = false;
             Laser.transform.eulerAngles = new Vector3(0, 0, -50);
             StartCoroutine(laserOff());
+            podeUsarLaser = false;
 
         }
 
@@ -355,7 +364,7 @@ public float filhadaputa;
         bossAnim.SetBool("entrar", false);
         bossAnim.SetBool("laser", true);
         yield return new WaitForSeconds(1f);
-        Laser.SetActive(true);
+        
         speen = true;  
     }
     IEnumerator laserOff()
@@ -537,7 +546,11 @@ public float filhadaputa;
         }
 
     }
-    
+    void podelaser()
+    {
+        Laser.SetActive(true);
+        podeUsarLaser = true;
+    }
 
     
     
