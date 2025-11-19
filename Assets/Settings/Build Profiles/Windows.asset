@@ -20,19 +20,19 @@ MonoBehaviour:
     rid: 4606716298954539008
   m_OverrideGlobalSceneList: 1
   m_Scenes:
-  - m_enabled: 1
+  - m_enabled: 0
     m_path: Assets/Scenes/Stroryboard.unity
-  - m_enabled: 1
+  - m_enabled: 0
     m_path: Assets/Scenes/Tutorial.unity
-  - m_enabled: 1
+  - m_enabled: 0
     m_path: Assets/Scenes/Fase1.unity
-  - m_enabled: 1
+  - m_enabled: 0
     m_path: Assets/Scenes/Boss1.unity
   - m_enabled: 1
     m_path: Assets/Scenes/Fase2.unity
-  - m_enabled: 1
+  - m_enabled: 0
     m_path: Assets/Scenes/Boss2.unity
-  - m_enabled: 1
+  - m_enabled: 0
     m_path: Assets/Scenes/BossFinal.unity
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
@@ -117,7 +117,7 @@ MonoBehaviour:
     - line: '|   androidAutoRotationBehavior: 1'
     - line: '|   androidPredictiveBackSupport: 0'
     - line: '|   androidApplicationEntry: 2'
-    - line: '|   defaultIsNativeResolution: 1'
+    - line: '|   defaultIsNativeResolution: 0'
     - line: '|   macRetinaSupport: 1'
     - line: '|   runInBackground: 0'
     - line: '|   muteOtherAudioSources: 0'
