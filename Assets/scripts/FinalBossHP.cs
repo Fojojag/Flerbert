@@ -10,6 +10,10 @@ public class FinalBossHP : MonoBehaviour
     public float ENmaxhealth;
     public FinalBoss main;
     public GameObject espinhos;
+    public UrubuDoPix UrubuUiui;
+    public UrubuDoPix UrubuUiui2;
+    public Perereca uiui;
+    public Perereca uiui1;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,6 +38,7 @@ public class FinalBossHP : MonoBehaviour
                 GameObject.Destroy(target);
             }
             headAnim.SetTrigger("ded");
+            StartCoroutine(UrubuCareca());
 
             
         }
@@ -66,6 +71,14 @@ public class FinalBossHP : MonoBehaviour
            
         }
         StartCoroutine(hit_Cor());
+    }
+    IEnumerator UrubuCareca()
+    {
+        yield return new WaitForSeconds(3f);
+        UrubuUiui.coolingDown = true;
+        UrubuUiui2.coolingDown = true;
+        uiui.coolingDown = true;
+        uiui1.coolingDown = true;
     }
 
 

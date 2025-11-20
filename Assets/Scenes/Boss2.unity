@@ -3838,7 +3838,7 @@ MonoBehaviour:
   spawn: {fileID: 0}
   spriteRenderer: {fileID: 6955879756704600955}
   ENhealth: 0
-  ENmaxhealth: 1
+  ENmaxhealth: 350
   anima: {fileID: 7747731729037014324}
   corpo: {fileID: 7747731729037014323}
   bossMain: {fileID: 1280390514330525181}
