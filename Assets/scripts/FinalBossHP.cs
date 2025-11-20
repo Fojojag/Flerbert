@@ -39,7 +39,6 @@ public class FinalBossHP : MonoBehaviour
             }
             headAnim.SetTrigger("ded");
             StartCoroutine(UrubuCareca());
-
             
         }
     }
@@ -72,6 +71,15 @@ public class FinalBossHP : MonoBehaviour
         }
         StartCoroutine(hit_Cor());
     }
+    IEnumerator UrubuCareca()
+    {
+        yield return new WaitForSeconds(3f);
+        UrubuUiui.coolingDown = true;
+        UrubuUiui2.coolingDown = true;
+        uiui.coolingDown = true;
+        uiui1.coolingDown = true;
+    }
+
     IEnumerator UrubuCareca()
     {
         yield return new WaitForSeconds(3f);
