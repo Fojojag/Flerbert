@@ -105,6 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dc1831ac46f5204d9588df62de3e9e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::sombra
+  Maincamera: {fileID: 0}
   rend: {fileID: 1064778319074166866}
   isActive: 0
   target: {fileID: 1553642842020064529}
@@ -231,7 +232,7 @@ GameObject:
   - component: {fileID: 3770460513220896106}
   - component: {fileID: 1630260878621946728}
   - component: {fileID: 2263381134683034580}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SombraHoriz
   m_TagString: Untagged
   m_Icon: {fileID: 0}

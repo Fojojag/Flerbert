@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Boss_Teste : MonoBehaviour
 {
+    public AudioClip fogosub;
+
     public float timer = 3f;
     public int numero;
     public Transform tiro_spawn;
@@ -134,6 +136,7 @@ public class Boss_Teste : MonoBehaviour
     void fogo()
     {
         Instantiate(tiro, tiro_spawn.position, tiro_spawn.rotation);
+        AudioSource.PlayClipAtPoint(fogosub, transform.position, 1);
 
        
     }

@@ -14843,6 +14843,7 @@ GameObject:
   - component: {fileID: 4054740118250986348}
   - component: {fileID: 1308317761211541552}
   - component: {fileID: 3548106570157235148}
+  - component: {fileID: 7080855546599294400}
   m_Layer: 6
   m_Name: player
   m_TagString: Player
@@ -15052,7 +15053,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3548106570157235148}
+      - m_Target: {fileID: 7080855546599294400}
         m_TargetAssemblyTypeName: Arma2, Assembly-CSharp
         m_MethodName: OnShoot2
         m_Mode: 0
@@ -15298,7 +15299,7 @@ MonoBehaviour:
   fade: {fileID: 0}
   currenthealth: 0
   maxhealth: 4
-  explosion: {fileID: 3616292030639813260, guid: c74de13bcda445e4ab99d8e78b7a5710, type: 3}
+  explosion: {fileID: 0}
   spriteRenderer: {fileID: 1682576241174569087}
   firepoint: {fileID: 88978123921638629}
   anim: {fileID: 5937726222846665144}
@@ -15315,6 +15316,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67804a141999f6543826bdd8c6a74e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tiroSFX: {fileID: 8300000, guid: 4e1e83dc14a60e44286cf3d9372bdcbf, type: 3}
+  chargeShotSFX: {fileID: 8300000, guid: c7869907847e6244c9ddb6f17f255e51, type: 3}
   rb: {fileID: 614163957781940394}
   force: 150
   projectile: {fileID: 8567300292946650730, guid: c551124157e1a5b4f84a8865f92a743b, type: 3}
@@ -15453,6 +15456,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::pauseMenu
   menu: {fileID: 0}
 --- !u!114 &3548106570157235148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057277753715163313}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebade8a8dacc1154ba946b208778f34f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Arma2
+  rb: {fileID: 614163957781940394}
+  force: 10
+  spawner: {fileID: 4937529500031452972, guid: d63e081c9a9060b4db0d8932ba8c54e9, type: 3}
+  spawnerUp: {fileID: 4937529500031452972, guid: d63e081c9a9060b4db0d8932ba8c54e9, type: 3}
+  spawnerDown: {fileID: 4937529500031452972, guid: d63e081c9a9060b4db0d8932ba8c54e9, type: 3}
+  firepoint: {fileID: 5539518716713044839}
+  firepointUp: {fileID: 1003278595605953144}
+  firepointDown: {fileID: 2317090728871870587}
+  shot: 0
+  shootRate: 0.2
+  isCharging: 0
+  chargeLvl: 0
+  up: 0
+  down: 0
+  sideRender: {fileID: 6650847314270385151}
+  upRender: {fileID: 3957608074895657848}
+  downRender: {fileID: 3905232115782021662}
+  spawned: {fileID: 0}
+--- !u!114 &7080855546599294400
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -6,6 +6,9 @@ using System.Collections.Generic;
 
 public class boss2 : MonoBehaviour
 {
+    public AudioClip laserSFX;
+    public AudioClip separarSFX;
+    public AudioClip tpSFX;
 
     
     public Renderer rend;
@@ -191,6 +194,7 @@ public float filhadaputa;
             speen2 = true;
             Laser.SetActive(false);
             Laser.transform.eulerAngles = new Vector3(0, 0, 40);
+            
         }
         if (speen2 && filhadaputa < 360 && filhadaputa > 3)
         {
@@ -308,6 +312,7 @@ public float filhadaputa;
             
             bossAnim.SetBool("idle", false);
             bossAnim.SetBool("entrar", true);
+            AudioSource.PlayClipAtPoint(tpSFX, transform.position, 1);
             yield return new WaitForSeconds(1);
             GameObject NovoAviso = Instantiate(linhaR, avisoR.transform.position,avisoR.transform.rotation);
             
@@ -327,6 +332,7 @@ public float filhadaputa;
 
             bossAnim.SetBool("idle", false);
             bossAnim.SetBool("entrar", true);
+            AudioSource.PlayClipAtPoint(tpSFX, transform.position, 1);
             yield return new WaitForSeconds(1);
             GameObject NovoAviso = Instantiate(linhaL, avisoL.transform.position,avisoL.transform.rotation);
             
@@ -355,6 +361,7 @@ public float filhadaputa;
         Mid = true;
         bossAnim.SetBool("idle", false);
         bossAnim.SetBool("entrar", true);
+        AudioSource.PlayClipAtPoint(tpSFX, transform.position, 1);
         yield return new WaitForSeconds(2);
         boss.transform.position = Baixo.position;
          this.transform.eulerAngles = new Vector3(0, 0, -180);
@@ -362,15 +369,18 @@ public float filhadaputa;
         
         this.transform.position = Meio.position;
         bossAnim.SetBool("entrar", false);
+        AudioSource.PlayClipAtPoint(tpSFX, transform.position, 1);
         bossAnim.SetBool("laser", true);
-        yield return new WaitForSeconds(1f);
         
+        yield return new WaitForSeconds(1f);
+        AudioSource.PlayClipAtPoint(laserSFX, transform.position, 1);
         speen = true;  
     }
     IEnumerator laserOff()
     {
         bossAnim.SetBool("laser", false);
         bossAnim.SetBool("entrar", true);
+        AudioSource.PlayClipAtPoint(tpSFX, transform.position, 1);
 
         yield return new WaitForSeconds(2f);
         boss.transform.position = Baixo.position;
@@ -381,6 +391,7 @@ public float filhadaputa;
         Mid = false;
         yield return new WaitForSeconds(0.5f);
         bossAnim.SetBool("entrar", false);
+        AudioSource.PlayClipAtPoint(tpSFX, transform.position, 1);
         bossAnim.SetBool("idle", true);
         if (Right)
         {
@@ -410,6 +421,7 @@ public float filhadaputa;
         
             bossAnim.SetBool("idle", false);
             bossAnim.SetBool("entrar", true);
+            AudioSource.PlayClipAtPoint(tpSFX, transform.position, 1);
             yield return new WaitForSeconds(1);
             GameObject NovoAviso = Instantiate(linhaDR, avisoDR.transform.position,avisoDR.transform.rotation);
 
@@ -468,6 +480,7 @@ public float filhadaputa;
     IEnumerator Atirar()
     {
             Physics2D.IgnoreLayerCollision(7, 11, true);
+            AudioSource.PlayClipAtPoint(separarSFX, transform.position, 1);
             Instantiate(tiro, spawner.transform.position, tiro.transform.rotation);
             Instantiate(tiro2, spawner.transform.position, tiro.transform.rotation);
             Instantiate(tiro3, spawner.transform.position, tiro.transform.rotation);
@@ -533,6 +546,7 @@ public float filhadaputa;
 
             boss.transform.position = Direita.position;
             bossAnim.SetBool("entrar", false);
+            AudioSource.PlayClipAtPoint(tpSFX, transform.position, 1);
             bossAnim.SetBool("idle", true);
             StartCoroutine(wait());
         }
@@ -540,6 +554,7 @@ public float filhadaputa;
         {
             boss.transform.position = Esquerda.position;
             bossAnim.SetBool("entrar", false);
+            AudioSource.PlayClipAtPoint(tpSFX, transform.position, 1);
             bossAnim.SetBool("idle", true);
             StartCoroutine(wait());
         }

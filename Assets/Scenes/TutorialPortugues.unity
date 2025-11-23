@@ -38105,11 +38105,11 @@ PrefabInstance:
     - target: {fileID: 1609586679297197315, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: tiroSFX
       value: 
-      objectReference: {fileID: 8300000, guid: 0f730b59c96d22849983364407c0622b, type: 3}
+      objectReference: {fileID: 8300000, guid: 4e1e83dc14a60e44286cf3d9372bdcbf, type: 3}
     - target: {fileID: 1609586679297197315, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: chargeShotSFX
       value: 
-      objectReference: {fileID: 8300000, guid: 4b614225b8148074997bc5b122126c75, type: 3}
+      objectReference: {fileID: 8300000, guid: c7869907847e6244c9ddb6f17f255e51, type: 3}
     - target: {fileID: 1815047954564310635, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
       value: 2

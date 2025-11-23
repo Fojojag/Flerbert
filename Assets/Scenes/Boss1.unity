@@ -420,6 +420,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9502e3884e62f7345b68021a2da9fd05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossEspinho
+  espinhosfx: {fileID: 8300000, guid: 75163f2f2f2798545857e82184b9c2f7, type: 3}
+  playaudio: 0
   isActive: 0
   atarget: {x: 0, y: 0, z: 0}
   startPoint: {x: 0, y: 0, z: 0}
@@ -4124,6 +4126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2d560f289833f84ba88f88b62ff8d17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Boss_Teste
+  fogosub: {fileID: 8300000, guid: 88fe5306443cec84488535d6a34ee28d, type: 3}
   timer: 3
   numero: 0
   tiro_spawn: {fileID: 128902537}
@@ -4928,6 +4931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AvisoMegaMente
   tiro: {fileID: 575849439}
+  fogocair: {fileID: 8300000, guid: 2934d827cfe834047b9894489505c2b5, type: 3}
   tiroCair: {fileID: 577195874}
   boo1: {fileID: 1090307280}
   boo2: {fileID: 699588981}
@@ -5114,6 +5118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9502e3884e62f7345b68021a2da9fd05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossEspinho
+  espinhosfx: {fileID: 8300000, guid: 75163f2f2f2798545857e82184b9c2f7, type: 3}
+  playaudio: 0
   isActive: 0
   atarget: {x: 0, y: 0, z: 0}
   startPoint: {x: 0, y: 0, z: 0}
@@ -5398,6 +5404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9502e3884e62f7345b68021a2da9fd05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossEspinho
+  espinhosfx: {fileID: 8300000, guid: 75163f2f2f2798545857e82184b9c2f7, type: 3}
+  playaudio: 0
   isActive: 0
   atarget: {x: 0, y: 0, z: 0}
   startPoint: {x: 0, y: 0, z: 0}
@@ -5587,6 +5595,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9502e3884e62f7345b68021a2da9fd05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossEspinho
+  espinhosfx: {fileID: 8300000, guid: 75163f2f2f2798545857e82184b9c2f7, type: 3}
+  playaudio: 0
   isActive: 0
   atarget: {x: 0, y: 0, z: 0}
   startPoint: {x: 0, y: 0, z: 0}
@@ -5636,11 +5646,11 @@ PrefabInstance:
     - target: {fileID: 1609586679297197315, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: tiroSFX
       value: 
-      objectReference: {fileID: 8300000, guid: 0f730b59c96d22849983364407c0622b, type: 3}
+      objectReference: {fileID: 8300000, guid: 4e1e83dc14a60e44286cf3d9372bdcbf, type: 3}
     - target: {fileID: 1609586679297197315, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: chargeShotSFX
       value: 
-      objectReference: {fileID: 8300000, guid: 4b614225b8148074997bc5b122126c75, type: 3}
+      objectReference: {fileID: 8300000, guid: c7869907847e6244c9ddb6f17f255e51, type: 3}
     - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: fade
       value: 
@@ -5909,6 +5919,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9502e3884e62f7345b68021a2da9fd05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossEspinho
+  espinhosfx: {fileID: 8300000, guid: 75163f2f2f2798545857e82184b9c2f7, type: 3}
+  playaudio: 0
   isActive: 0
   atarget: {x: 0, y: 0, z: 0}
   startPoint: {x: 0, y: 0, z: 0}

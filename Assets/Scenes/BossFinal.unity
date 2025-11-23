@@ -3372,7 +3372,10 @@ MonoBehaviour:
   bala3: {fileID: 2243893034850423537, guid: 98553599437d7004685c7eabf371eb0e, type: 3}
   olho: {fileID: 2500304437522867179, guid: 11dba406e3f2d6a46b319f13ccf0ec77, type: 3}
   linha: {fileID: 1379597520690338004, guid: 470387760afa01b41acd21b1a08f4217, type: 3}
-  laserSFX: {fileID: 8300000, guid: d098d4be67069544b9f802121cec8300, type: 3}
+  laserSFX: {fileID: 8300000, guid: 447ecaba109993f45a32a3d815d57237, type: 3}
+  flashSFX: {fileID: 8300000, guid: f81e24f7d1406bf4bbfbbcb56769de97, type: 3}
+  fogo: {fileID: 8300000, guid: e192fa5331296fc4a83f0c20362b365a, type: 3}
+  fogoplus: {fileID: 8300000, guid: 6ce1c23b248b7b34081bd861be8403f0, type: 3}
   flashLaser: {fileID: 667396695}
   flashrend: {fileID: 667396697}
   laser: {fileID: 1877310876}
@@ -12600,6 +12603,7 @@ GameObject:
   - component: {fileID: 708082861}
   - component: {fileID: 708082860}
   - component: {fileID: 708082863}
+  - component: {fileID: 708082864}
   m_Layer: 7
   m_Name: TentaculoEsqu
   m_TagString: inimigo
@@ -12748,6 +12752,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 42.2034, y: 1.3112526}
   m_EdgeRadius: 0
+--- !u!114 &708082864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708082859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840f43268c4325e46bd28b82c30ad0ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::tentaculo
+  tentaSFX: {fileID: 8300000, guid: 6b7396ce6d953894da3e8ea27086fadb, type: 3}
 --- !u!1 &828119631
 GameObject:
   m_ObjectHideFlags: 0
@@ -14511,11 +14528,11 @@ PrefabInstance:
     - target: {fileID: 1609586679297197315, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: tiroSFX
       value: 
-      objectReference: {fileID: 8300000, guid: 0f730b59c96d22849983364407c0622b, type: 3}
+      objectReference: {fileID: 8300000, guid: 4e1e83dc14a60e44286cf3d9372bdcbf, type: 3}
     - target: {fileID: 1609586679297197315, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: chargeShotSFX
       value: 
-      objectReference: {fileID: 8300000, guid: 4b614225b8148074997bc5b122126c75, type: 3}
+      objectReference: {fileID: 8300000, guid: c7869907847e6244c9ddb6f17f255e51, type: 3}
     - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: fade
       value: 
@@ -14718,6 +14735,7 @@ GameObject:
   - component: {fileID: 1603184031}
   - component: {fileID: 1603184033}
   - component: {fileID: 1603184030}
+  - component: {fileID: 1603184034}
   m_Layer: 7
   m_Name: TentaculoDir
   m_TagString: inimigo
@@ -14866,6 +14884,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1603184034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603184029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840f43268c4325e46bd28b82c30ad0ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::tentaculo
+  tentaSFX: {fileID: 8300000, guid: 6b7396ce6d953894da3e8ea27086fadb, type: 3}
 --- !u!4 &1644886780 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1398995918462800006, guid: 0518593532b6c1d45932ea1b2076173c, type: 3}

@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class soundController : MonoBehaviour
+public class tentaculo : MonoBehaviour
 {
-    public AudioClip sombra;
+    public AudioClip tentaSFX;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -10,9 +10,12 @@ public class soundController : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void sombraSFX()
+    void Update()
     {
-        AudioSource.PlayClipAtPoint(sombra, transform.position, 0.2f);
+        
     }
-
+    public void playsound()
+    {
+        AudioSource.PlayClipAtPoint(tentaSFX, transform.position, 1);
+    }
 }

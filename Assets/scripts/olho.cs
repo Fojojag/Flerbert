@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class olho : MonoBehaviour
 {
-
+    public AudioClip boom;
     [SerializeField] private float damage;
     [SerializeField] public float speed;
     [SerializeField] private Rigidbody2D rb;
@@ -28,6 +28,7 @@ public class olho : MonoBehaviour
         if (collision.gameObject.tag == "chao")
         {
             Instantiate(kabum, spawnpoint.position, kabum.gameObject.transform.rotation);
+            AudioSource.PlayClipAtPoint(boom, transform.position, 1);
             Instantiate(waveDir, spawnpoint.position, waveDir.gameObject.transform.rotation);
             Instantiate(waveEsq, spawnpoint.position, waveEsq.gameObject.transform.rotation);
             Destroy(gameObject);
@@ -35,6 +36,7 @@ public class olho : MonoBehaviour
             if(collision.gameObject.tag == "Player")
         {
             Instantiate(kabum, spawnpoint.position, kabum.gameObject.transform.rotation);
+            AudioSource.PlayClipAtPoint(boom, transform.position, 1);
             Destroy(gameObject);        
         }  
     }

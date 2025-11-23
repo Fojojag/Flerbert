@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class BossEspinho : MonoBehaviour
 {
+    public AudioClip espinhosfx;
+    public bool playaudio;
     public bool isActive = false;
     [SerializeField] private Vector3 atarget;
     [SerializeField] private Vector3 startPoint;
@@ -13,6 +15,7 @@ public class BossEspinho : MonoBehaviour
     {
         startPoint = transform.position;
         isActive = true;
+        playaudio = true;
 
 
     }
@@ -39,7 +42,7 @@ public class BossEspinho : MonoBehaviour
 
         if (isActive && transform.position.y == atarget.y && chegou == 0)
         {
-
+            som();
             chegou = 3;
         }
 
@@ -58,6 +61,7 @@ public class BossEspinho : MonoBehaviour
         {
             isActive = false;
             chegou = 0;
+            playaudio = true;
             
 
         }
@@ -67,5 +71,13 @@ public class BossEspinho : MonoBehaviour
     {
         startPoint.x = -startPoint.x;
         thisIsFlipped = !thisIsFlipped;
+    }
+    void som()
+    {
+        if (playaudio)
+        {
+            AudioSource.PlayClipAtPoint(espinhosfx, transform.position, 1);
+            playaudio = false;
+        }
     }
 }

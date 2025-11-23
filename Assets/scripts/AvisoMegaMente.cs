@@ -3,6 +3,7 @@ using UnityEngine;
 public class AvisoMegaMente : MonoBehaviour
 {
     public GameObject tiro;
+        public AudioClip fogocair;
     public GameObject tiroCair;
     public Transform boo1;
     public Transform boo2;
@@ -27,6 +28,7 @@ public class AvisoMegaMente : MonoBehaviour
             Instantiate(tiroCair, boo1.position, boo1.rotation);
             Instantiate(tiroCair, boo2.position, boo2.rotation);
             Instantiate(tiroCair, boo3.position, boo3.rotation);
+            AudioSource.PlayClipAtPoint(fogocair, transform.position, 1);
         }
     }
 }

@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 4343659994263312443}
   - component: {fileID: 6810832832792181905}
   - component: {fileID: 4998584859143528674}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SombraBaixo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,6 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dc1831ac46f5204d9588df62de3e9e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::sombra
+  Maincamera: {fileID: 0}
   rend: {fileID: 3807994784021988314}
   isActive: 0
   target: {fileID: 428105724951581993}

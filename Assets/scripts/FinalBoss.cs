@@ -26,6 +26,9 @@ public class FinalBoss : MonoBehaviour
     public GameObject linha;
 //LASER--------------------------------------------------------------
     public AudioClip laserSFX;
+    public AudioClip flashSFX;
+    public AudioClip fogo;
+    public AudioClip fogoplus;
     public GameObject flashLaser;
     public SpriteRenderer flashrend;
     public GameObject laser;
@@ -342,6 +345,7 @@ public class FinalBoss : MonoBehaviour
     {
         if(!ativado) yield break;
         c.a = 1;
+        AudioSource.PlayClipAtPoint(flashSFX, transform.position, 1f);
         while (c.a > 0)
         {
             c.a -= 0.07f;
@@ -352,7 +356,8 @@ public class FinalBoss : MonoBehaviour
         laser.SetActive(true);
         AudioSource.PlayClipAtPoint(laserSFX, transform.position, 1f);
         yield return new WaitForSeconds(0.5f);
-
+        AudioSource.PlayClipAtPoint(fogoplus, transform.position, 1f);
+            AudioSource.PlayClipAtPoint(fogo, transform.position, 1f);
         fogo1.SetActive(true);
         fogo1.GetComponent<Animator>().SetBool("fogo", true);
         fogo2.SetActive(true);
