@@ -5656,7 +5656,7 @@ PrefabInstance:
     - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: explosion
       value: 
-      objectReference: {fileID: 1792215816}
+      objectReference: {fileID: 3616292030639813260, guid: c74de13bcda445e4ab99d8e78b7a5710, type: 3}
     - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: maxhealth
       value: 4

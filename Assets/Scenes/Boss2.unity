@@ -448,6 +448,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68efb201a45f65c4bb9b7adb8082ec22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BalaNele
+--- !u!114 &208081953 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 66289514106497186, guid: 60ba58182fe4d1441b0833771dbb024d, type: 3}
+  m_PrefabInstance: {fileID: 1091290214}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc68ad19a3f43fa4faafec7de2db85f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FadeFases
 --- !u!1001 &211949577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4424,6 +4435,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 873889959}
     - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 208081953}
+    - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: vida1
       value: 
       objectReference: {fileID: 211949581}
@@ -4442,7 +4457,7 @@ PrefabInstance:
     - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: explosion
       value: 
-      objectReference: {fileID: 978749403}
+      objectReference: {fileID: 3616292030639813260, guid: c74de13bcda445e4ab99d8e78b7a5710, type: 3}
     - target: {fileID: 4057277753715163313, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: m_Name
       value: player
