@@ -3,29 +3,36 @@ using UnityEngine.SceneManagement;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
+    public bool port;
     public void PlayGame()
     {
-        SceneManager.LoadSceneAsync(3);
+        if (port)
+        {
+                SceneManager.LoadSceneAsync(3);
+        }
+        else
+                SceneManager.LoadSceneAsync(4);
+
     }
     public void Fase1()
     {
-        SceneManager.LoadSceneAsync(5);
+        SceneManager.LoadSceneAsync(7);
     }
     public void Boss1()
     {
-        SceneManager.LoadSceneAsync(6);
+        SceneManager.LoadSceneAsync(8);
     }
     public void Fase2()
     {
-        SceneManager.LoadSceneAsync(8);
+        SceneManager.LoadSceneAsync(10);
     }
     public void Boss2()
     {
-        SceneManager.LoadSceneAsync(9);
+        SceneManager.LoadSceneAsync(11);
     }
     public void LastBoss()
     {
-        SceneManager.LoadSceneAsync(10);
+        SceneManager.LoadSceneAsync(12);
     }
     public void MenuPortugues()
     {

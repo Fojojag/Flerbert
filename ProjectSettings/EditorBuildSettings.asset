@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Stroryboard.unity
+    path: Assets/Scenes/StroryboardEN.unity
     guid: fca8afc8439e8624f86010ab6e025549
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity

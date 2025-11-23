@@ -1821,6 +1821,7 @@ GameObject:
   - component: {fileID: 483200860}
   - component: {fileID: 483200863}
   - component: {fileID: 483200864}
+  - component: {fileID: 483200865}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1978,6 +1979,19 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!114 &483200865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483200859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88633bb6b45eff04bb0f7541ebd22476, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::soundController
+  sombra: {fileID: 8300000, guid: 79c4d294bc5b254459f7e1d16f9e285e, type: 3}
 --- !u!1 &531065736
 GameObject:
   m_ObjectHideFlags: 0
@@ -4434,6 +4448,14 @@ PrefabInstance:
       propertyPath: menu
       value: 
       objectReference: {fileID: 873889959}
+    - target: {fileID: 1609586679297197315, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: tiroSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 0f730b59c96d22849983364407c0622b, type: 3}
+    - target: {fileID: 1609586679297197315, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: chargeShotSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 4b614225b8148074997bc5b122126c75, type: 3}
     - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: fade
       value: 

@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class buster : MonoBehaviour
 {
+    public AudioClip tiroSFX;
+    public AudioClip chargeShotSFX;
     public Rigidbody2D rb;
     public float force = 10f;
     [SerializeField] private GameObject projectile;
@@ -116,12 +118,17 @@ public class buster : MonoBehaviour
             shootTimer = shootRate;
 
             if (up)
-            { Instantiate(projectileUp, firepointUp.position, projectileUp.transform.rotation); shot = false; }
+            { Instantiate(projectileUp, firepointUp.position, projectileUp.transform.rotation); shot = false; 
+             AudioSource.PlayClipAtPoint(tiroSFX, transform.position, 2f); }
+           
             else
             if (down && CollisionDetector.IsGrounded == false)
-            { Instantiate(projectileDown, firepointDown.position, projectileDown.transform.rotation); shot = false; }
+            { Instantiate(projectileDown, firepointDown.position, projectileDown.transform.rotation); shot = false;
+             AudioSource.PlayClipAtPoint(tiroSFX, transform.position, 2f); }
+  
             else
-                Instantiate(projectile, firepoint.position, firepoint.rotation); shot = false;
+                Instantiate(projectile, firepoint.position, firepoint.rotation); shot = false;  AudioSource.PlayClipAtPoint(tiroSFX, transform.position, 2f);
+
 
         }
         if (shot == true && chargeLvl == 2 && chargeTime < 1)
@@ -263,6 +270,7 @@ public class buster : MonoBehaviour
         if (up)
         {
             Instantiate(ChargeShotUp, firepointUp.position, projectileUp.transform.rotation);
+            AudioSource.PlayClipAtPoint(chargeShotSFX, transform.position, 2f);
             shot = false;
             
             chargeTime = 0;
@@ -277,6 +285,7 @@ public class buster : MonoBehaviour
         if (down)
         {
             Instantiate(ChargeShotDown, firepointDown.position, projectileDown.transform.rotation);
+            AudioSource.PlayClipAtPoint(chargeShotSFX, transform.position, 2f);
             shot = false;
             
             chargeTime = 0;
@@ -294,6 +303,7 @@ public class buster : MonoBehaviour
         else
         {
             Instantiate(ChargeShot, firepoint.position, firepoint.rotation);
+            AudioSource.PlayClipAtPoint(chargeShotSFX, transform.position, 2f);
             shot = false;
             
             chargeTime = 0;
@@ -327,6 +337,7 @@ public class buster : MonoBehaviour
     private IEnumerator QuickShot()
     {
         Instantiate(ChargeShot, firepoint.position, firepoint.rotation);
+        AudioSource.PlayClipAtPoint(chargeShotSFX, transform.position, 2f);
             shot = false;
             
              chargeTime = 0;

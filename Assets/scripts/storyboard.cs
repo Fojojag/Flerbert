@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class storyboard : MonoBehaviour
 {
+    public bool port;
     public CanvasGroup canvasgroup;
     public float timer = 1f;
     [SerializeField] public static bool fadeIn;
@@ -222,9 +223,17 @@ public class storyboard : MonoBehaviour
                 if (timer <= 0)
                 {
                     timer = 0.1f;
-                SceneManager.LoadScene("Fase1");
-                    
-                    FadeIn();
+                    if (port)
+                        {
+                         SceneManager.LoadScene("TutorialPortugues");
+                         FadeIn();
+                         }
+                         else
+                            {
+                                SceneManager.LoadScene("TutorialIngles");
+                                FadeIn();
+                            }
+
                     
                 }
         }

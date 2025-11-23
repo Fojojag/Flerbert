@@ -27,8 +27,14 @@ MonoBehaviour:
   - m_enabled: 1
     m_path: Assets/Scenes/Menu/MenuPortugues.unity
   - m_enabled: 1
-    m_path: Assets/Scenes/Stroryboard.unity
+    m_path: Assets/Scenes/StroryboardPT.unity
   - m_enabled: 1
+    m_path: Assets/Scenes/StroryboardEN.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/TutorialIngles.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/TutorialPortugues.unity
+  - m_enabled: 0
     m_path: Assets/Scenes/Tutorial.unity
   - m_enabled: 1
     m_path: Assets/Scenes/Fase1.unity

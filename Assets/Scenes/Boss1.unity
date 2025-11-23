@@ -5633,6 +5633,14 @@ PrefabInstance:
       propertyPath: menu
       value: 
       objectReference: {fileID: 918527565}
+    - target: {fileID: 1609586679297197315, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: tiroSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 0f730b59c96d22849983364407c0622b, type: 3}
+    - target: {fileID: 1609586679297197315, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: chargeShotSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 4b614225b8148074997bc5b122126c75, type: 3}
     - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: fade
       value: 

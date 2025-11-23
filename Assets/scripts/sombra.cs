@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 public class sombra : MonoBehaviour
 {
+    public GameObject Maincamera;
     public SpriteRenderer rend;
     Color c;
     public bool isActive = false;
@@ -17,6 +18,8 @@ public class sombra : MonoBehaviour
     public float timerSumir;
     public void Start()
     {
+        Maincamera = GameObject.FindGameObjectWithTag("MainCamera");
+        Maincamera.GetComponent<soundController>();
         startPoint = transform.position;
         c = rend.color;
     }
@@ -121,5 +124,12 @@ IEnumerator fadeOut()
         yield return null;
     }
 }
+    void OnBecameVisible()
+
+    {
+        Maincamera.GetComponent<soundController>().sombraSFX();
+
+
+    }
 
 }
