@@ -5634,6 +5634,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 918527565}
     - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 1696642343}
+    - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: vida1
       value: 
       objectReference: {fileID: 1241227317}
@@ -6193,6 +6197,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60ba58182fe4d1441b0833771dbb024d, type: 3}
+--- !u!114 &1696642343 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 66289514106497186, guid: 60ba58182fe4d1441b0833771dbb024d, type: 3}
+  m_PrefabInstance: {fileID: 1696642342}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc68ad19a3f43fa4faafec7de2db85f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FadeFases
 --- !u!1 &1792215816
 GameObject:
   m_ObjectHideFlags: 0

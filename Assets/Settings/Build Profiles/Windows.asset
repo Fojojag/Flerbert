@@ -29,6 +29,8 @@ MonoBehaviour:
   - m_enabled: 1
     m_path: Assets/Scenes/Boss1.unity
   - m_enabled: 1
+    m_path: Assets/Scenes/Stroryboard2.unity
+  - m_enabled: 1
     m_path: Assets/Scenes/Fase2.unity
   - m_enabled: 1
     m_path: Assets/Scenes/Boss2.unity

@@ -18,6 +18,7 @@ public class FinalBoss : MonoBehaviour
     public Transform firepoint2Esqu;
     public Transform firepoint2Dir;
 //BALAS--------------------------------------------------------------
+    [SerializeField] private AudioClip balaSFX; 
     public GameObject bala;
     public GameObject bala2;
     public GameObject bala3;
@@ -218,14 +219,18 @@ public class FinalBoss : MonoBehaviour
             {
                 projetil2 tiro1 = Instantiate(bala, firepoint.position, firepoint.rotation).GetComponent<projetil2>();
                 tiro1.GetComponent<projetil2>().speed = -pattern1Speed;
+                AudioSource.PlayClipAtPoint(balaSFX, transform.position, 1f);
                 projetil2 tiro2 = Instantiate(bala, firepoint.position, firepoint.rotation).GetComponent<projetil2>();
                 tiro2.GetComponent<projetil2>().speed = pattern1Speed;
+                AudioSource.PlayClipAtPoint(balaSFX, transform.position, 1f);
                 projetil2 tiro3 = Instantiate(bala, firepoint.position, firepoint.rotation).GetComponent<projetil2>();
                 tiro3.GetComponent<projetil2>().speed = -pattern1Speed;
                 tiro3.GetComponent<projetil2>().isHorizontal = true;
+                AudioSource.PlayClipAtPoint(balaSFX, transform.position, 1f);
                 projetil2 tiro4 = Instantiate(bala, firepoint.position, firepoint.rotation).GetComponent<projetil2>();
                 tiro4.GetComponent<projetil2>().speed = pattern1Speed;
                 tiro4.GetComponent<projetil2>().isHorizontal = true;
+                AudioSource.PlayClipAtPoint(balaSFX, transform.position, 1f);
             }
                 yield return new WaitForSeconds(shootRate);
             
@@ -254,9 +259,11 @@ public class FinalBoss : MonoBehaviour
             projetilbounce tiro1 = Instantiate(bala2, firepoint2Esqu.position, firepoint2Esqu.rotation).GetComponent<projetilbounce>();
             tiro1.GetComponent<projetilbounce>().speed = -pattern1Speed;
             tiro1.GetComponent<projetilbounce>().isHorizontal = true;
+            AudioSource.PlayClipAtPoint(balaSFX, transform.position, 1f);
             projetilbounce tiro2 = Instantiate(bala2, firepoint2Dir.position, firepoint2Dir.rotation).GetComponent<projetilbounce>();
             tiro2.GetComponent<projetilbounce>().speed = pattern1Speed;
             tiro2.GetComponent<projetilbounce>().isHorizontal = true;
+            AudioSource.PlayClipAtPoint(balaSFX, transform.position, 1f);
             }
 
             yield return new WaitForSeconds(shootRate);
@@ -289,12 +296,15 @@ public class FinalBoss : MonoBehaviour
                 projetil2 tiro1 = Instantiate(bala3, firepoint.position, firepoint.rotation).GetComponent<projetil2>();
                 tiro1.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, firepoint.eulerAngles.z);
                 tiro1.GetComponent<projetil2>().speed = -pattern1Speed;
+                AudioSource.PlayClipAtPoint(balaSFX, transform.position, 1f);
                 projetil2 tiro2 = Instantiate(bala3, firepoint.position, firepoint.rotation).GetComponent<projetil2>();
                 tiro2.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, firepoint.eulerAngles.z + 20);
                 tiro2.GetComponent<projetil2>().speed = -pattern1Speed;
+                AudioSource.PlayClipAtPoint(balaSFX, transform.position, 1f);
                 projetil2 tiro3 = Instantiate(bala3, firepoint.position, firepoint.rotation).GetComponent<projetil2>();
                 tiro3.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, firepoint.eulerAngles.z - 20);
                 tiro3.GetComponent<projetil2>().speed = -pattern1Speed;
+                AudioSource.PlayClipAtPoint(balaSFX, transform.position, 1f);
                 angle++;
             }
             yield return null;
@@ -398,6 +408,7 @@ public class FinalBoss : MonoBehaviour
             }
             olho tiro = Instantiate(olho, firepoint.position, Quaternion.identity).GetComponent<olho>();
             tiro.GetComponent<olho>().speed = -pattern5Speed;
+            AudioSource.PlayClipAtPoint(balaSFX, transform.position, 1f);
             headAnim.SetTrigger("olhar");
             yield return new WaitForSeconds(1);
 
@@ -488,34 +499,44 @@ public class FinalBoss : MonoBehaviour
                 projetil2 tiro1 = Instantiate(bala, Esqu1.transform.position, firepoint.rotation).GetComponent<projetil2>();
                 tiro1.GetComponent<projetil2>().speed = -pattern6Speed;
                 tiro1.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, maoEsq.transform.eulerAngles.z + 117);
+                AudioSource.PlayClipAtPoint(balaSFX, transform.position, 1f);
                 projetil2 tiro2 = Instantiate(bala, Esqu2.transform.position, firepoint.rotation).GetComponent<projetil2>();
                 tiro2.GetComponent<projetil2>().speed = -pattern6Speed;
                 tiro2.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, maoEsq.transform.eulerAngles.z + 67);
+                AudioSource.PlayClipAtPoint(balaSFX, transform.position, 1f);
                 projetil2 tiro3 = Instantiate(bala, Esqu3.transform.position, firepoint.rotation).GetComponent<projetil2>();
                 tiro3.GetComponent<projetil2>().speed = -pattern6Speed;
                 tiro3.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, maoEsq.transform.eulerAngles.z + 57);
+                AudioSource.PlayClipAtPoint(balaSFX, transform.position, 1f);
                 projetil2 tiro4 = Instantiate(bala, Esqu4.transform.position, firepoint.rotation).GetComponent<projetil2>();
                 tiro4.GetComponent<projetil2>().speed = -pattern6Speed;
                 tiro4.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, maoEsq.transform.eulerAngles.z + 37);
+                AudioSource.PlayClipAtPoint(balaSFX, transform.position, 1f);
                 projetil2 tiro5 = Instantiate(bala, Esqu5.transform.position, firepoint.rotation).GetComponent<projetil2>();
                 tiro5.GetComponent<projetil2>().speed = -pattern6Speed;
                 tiro5.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, maoEsq.transform.eulerAngles.z + 22);
+                AudioSource.PlayClipAtPoint(balaSFX, transform.position, 1f);
 
                 projetil2 tiro6 = Instantiate(bala, Dir1.transform.position, firepoint.rotation).GetComponent<projetil2>();
                 tiro6.GetComponent<projetil2>().speed = -pattern6Speed;
                 tiro6.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, maoDir.transform.eulerAngles.z - 117);
+                AudioSource.PlayClipAtPoint(balaSFX, transform.position, 1f);
                 projetil2 tiro7 = Instantiate(bala, Dir2.transform.position, firepoint.rotation).GetComponent<projetil2>();
                 tiro7.GetComponent<projetil2>().speed = -pattern6Speed;
                 tiro7.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, maoDir.transform.eulerAngles.z - 67);
+                AudioSource.PlayClipAtPoint(balaSFX, transform.position, 1f);
                 projetil2 tiro8 = Instantiate(bala, Dir3.transform.position, firepoint.rotation).GetComponent<projetil2>();
                 tiro8.GetComponent<projetil2>().speed = -pattern6Speed;
                 tiro8.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, maoDir.transform.eulerAngles.z - 57);
+                AudioSource.PlayClipAtPoint(balaSFX, transform.position, 1f);
                 projetil2 tiro9 = Instantiate(bala, Dir4.transform.position, firepoint.rotation).GetComponent<projetil2>();
                 tiro9.GetComponent<projetil2>().speed = -pattern6Speed;
                 tiro9.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, maoDir.transform.eulerAngles.z - 37);
+                AudioSource.PlayClipAtPoint(balaSFX, transform.position, 1f);
                 projetil2 tiro10 = Instantiate(bala, Dir5.transform.position, firepoint.rotation).GetComponent<projetil2>();
                 tiro10.GetComponent<projetil2>().speed = -pattern6Speed;
                 tiro10.GetComponent<projetil2>().transform.eulerAngles = new Vector3(0, 0, maoDir.transform.eulerAngles.z - 22);
+                AudioSource.PlayClipAtPoint(balaSFX, transform.position, 1f);
 
                 yield return new WaitForSeconds(shootRate6);
             }

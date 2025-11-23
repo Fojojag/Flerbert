@@ -141,7 +141,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 4ccbfa1c66682fa419d17f6dbc460855, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -449,7 +449,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3.9
+      scalar: 9.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1531,7 +1531,7 @@ ParticleSystem:
   UVModule:
     serializedVersion: 2
     enabled: 0
-    mode: 0
+    mode: 1
     timeMode: 0
     fps: 30
     frameOverTime:
@@ -5059,7 +5059,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 4ccbfa1c66682fa419d17f6dbc460855, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5367,7 +5367,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3.9
+      scalar: 9.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -6449,7 +6449,7 @@ ParticleSystem:
   UVModule:
     serializedVersion: 2
     enabled: 0
-    mode: 0
+    mode: 1
     timeMode: 0
     fps: 30
     frameOverTime:
@@ -10205,7 +10205,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3.9
+      scalar: 9.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -11287,7 +11287,7 @@ ParticleSystem:
   UVModule:
     serializedVersion: 2
     enabled: 0
-    mode: 0
+    mode: 1
     timeMode: 0
     fps: 30
     frameOverTime:
@@ -14700,7 +14700,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 4ccbfa1c66682fa419d17f6dbc460855, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14842,7 +14842,7 @@ GameObject:
   - component: {fileID: 1981588990649778450}
   - component: {fileID: 4054740118250986348}
   - component: {fileID: 1308317761211541552}
-  - component: {fileID: 5686954179044142310}
+  - component: {fileID: 3548106570157235148}
   m_Layer: 6
   m_Name: player
   m_TagString: Player
@@ -14867,6 +14867,7 @@ Transform:
   - {fileID: 1003278595605953144}
   - {fileID: 2317090728871870587}
   - {fileID: 88978123921638629}
+  - {fileID: 300057645184317996}
   - {fileID: 6742095733686870538}
   - {fileID: 2217488624468040699}
   - {fileID: 3513081268315737625}
@@ -15051,7 +15052,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5686954179044142310}
+      - m_Target: {fileID: 3548106570157235148}
         m_TargetAssemblyTypeName: Arma2, Assembly-CSharp
         m_MethodName: OnShoot2
         m_Mode: 0
@@ -15126,49 +15127,21 @@ MonoBehaviour:
     m_ActionId: 641cd816-40e6-41b4-8c3d-04687c349290
     m_ActionName: 'Player/Sprint[/Keyboard/leftShift]'
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: c95b2375-e6d9-4b88-9c4c-c5e76515df4b
-    m_ActionName: 'UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 7607c7b6-cd76-4816-beef-bd0341cfe950
-    m_ActionName: 'UI/Submit[/Keyboard/enter]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 15cef263-9014-4fd5-94d9-4e4a6234a6ef
-    m_ActionName: 'UI/Cancel[/Keyboard/escape]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 32b35790-4ed0-4e9a-aa41-69ac6d629449
-    m_ActionName: 'UI/Point[/Mouse/position,/Pen/position]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 3c7022bf-7922-4f7c-a998-c437916075ad
-    m_ActionName: 'UI/Click[/Mouse/leftButton,/Pen/tip]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 44b200b1-1557-4083-816c-b22cbdf77ddf
-    m_ActionName: 'UI/RightClick[/Mouse/rightButton]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: dad70c86-b58c-4b17-88ad-f5e53adf419e
-    m_ActionName: 'UI/MiddleClick[/Mouse/middleButton]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 0489e84a-4833-4c40-bfae-cea84b696689
-    m_ActionName: 'UI/ScrollWheel[/Mouse/scroll]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 24908448-c609-4bc3-a128-ea258674378a
-    m_ActionName: UI/TrackedDevicePosition
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
-    m_ActionName: UI/TrackedDeviceOrientation
-  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1609586679297197315}
         m_TargetAssemblyTypeName: buster, Assembly-CSharp
+        m_MethodName: OnUp
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3548106570157235148}
+        m_TargetAssemblyTypeName: Arma2, Assembly-CSharp
         m_MethodName: OnUp
         m_Mode: 0
         m_Arguments:
@@ -15185,6 +15158,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1609586679297197315}
         m_TargetAssemblyTypeName: buster, Assembly-CSharp
+        m_MethodName: OnDown
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3548106570157235148}
+        m_TargetAssemblyTypeName: Arma2, Assembly-CSharp
         m_MethodName: OnDown
         m_Mode: 0
         m_Arguments:
@@ -15229,6 +15214,14 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 2af7887d-9cba-4b33-8cce-302af61e2f7e
     m_ActionName: 'Player/QShotR[/DualSenseGamepadHID/leftShoulder]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 951cbd43-67b4-4da9-bae0-7daa908c4f1e
+    m_ActionName: 'Player/Pause[/DualSenseGamepadHID/start,/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 64cb7d62-3827-4e00-aaf1-7535856f3d41
+    m_ActionName: 'UI/Pause[/Keyboard/escape,/DualSenseGamepadHID/start]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -15301,9 +15294,11 @@ MonoBehaviour:
   vida3: {fileID: 0}
   vida4: {fileID: 0}
   playercontrl: {fileID: 4882726042428790376}
+  buster: {fileID: 1609586679297197315}
+  fade: {fileID: 0}
   currenthealth: 0
   maxhealth: 4
-  explosion: {fileID: 0}
+  explosion: {fileID: 3616292030639813260, guid: c74de13bcda445e4ab99d8e78b7a5710, type: 3}
   spriteRenderer: {fileID: 1682576241174569087}
   firepoint: {fileID: 88978123921638629}
   anim: {fileID: 5937726222846665144}
@@ -15363,7 +15358,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 4224
+    m_Bits: 4096
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -15457,7 +15452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::pauseMenu
   menu: {fileID: 0}
---- !u!114 &5686954179044142310
+--- !u!114 &3548106570157235148
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15659,4 +15654,70 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1009405868467430199, guid: 4106564cad7ee9a4b985a1f11f40390a, type: 3}
   m_PrefabInstance: {fileID: 4522416149563698478}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5850854708437827843
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6169054559677812648}
+    m_Modifications:
+    - target: {fileID: 3616292030639813260, guid: c74de13bcda445e4ab99d8e78b7a5710, type: 3}
+      propertyPath: m_Name
+      value: firepoint death (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616292030639813260, guid: c74de13bcda445e4ab99d8e78b7a5710, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6131771345450711855, guid: c74de13bcda445e4ab99d8e78b7a5710, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6131771345450711855, guid: c74de13bcda445e4ab99d8e78b7a5710, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6131771345450711855, guid: c74de13bcda445e4ab99d8e78b7a5710, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6131771345450711855, guid: c74de13bcda445e4ab99d8e78b7a5710, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6131771345450711855, guid: c74de13bcda445e4ab99d8e78b7a5710, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6131771345450711855, guid: c74de13bcda445e4ab99d8e78b7a5710, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6131771345450711855, guid: c74de13bcda445e4ab99d8e78b7a5710, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6131771345450711855, guid: c74de13bcda445e4ab99d8e78b7a5710, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6131771345450711855, guid: c74de13bcda445e4ab99d8e78b7a5710, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6131771345450711855, guid: c74de13bcda445e4ab99d8e78b7a5710, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c74de13bcda445e4ab99d8e78b7a5710, type: 3}
+--- !u!4 &300057645184317996 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6131771345450711855, guid: c74de13bcda445e4ab99d8e78b7a5710, type: 3}
+  m_PrefabInstance: {fileID: 5850854708437827843}
   m_PrefabAsset: {fileID: 0}

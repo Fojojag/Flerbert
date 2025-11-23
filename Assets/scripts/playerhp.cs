@@ -13,12 +13,15 @@ public class playerhp : MonoBehaviour
     SpriteRenderer rend;
     Color c;
     public playercontroller playercontrl;
+    public buster buster;
+    public FadeFases fade;
     public int currenthealth;
     public int maxhealth = 4;
     //public HealthBar healthBar;
     [SerializeField] private GameObject explosion;
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] private Transform firepoint;
+        [SerializeField] public static bool TrocarFase;
 
     public Animator anim;
     //public Image healthbar;
@@ -92,7 +95,7 @@ public class playerhp : MonoBehaviour
         {
             IsTakingDmg = true;
             
-            TakeDamage(20);
+            instakill();
         }
 
     }
@@ -121,19 +124,19 @@ public class playerhp : MonoBehaviour
         if (collision.gameObject.tag == "death")
         {
 
-            ded();
+            instakill();
         }
         if (collision.gameObject.tag == "espinhos" && IsTakingDmg == false)
         {
             IsTakingDmg = true;
             
-            TakeDamage(20);
+            instakill();
         }
 
         if (collision.gameObject.tag == "kill")
         {
 
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            instakill();
         }
 
     }
@@ -161,14 +164,14 @@ public class playerhp : MonoBehaviour
         }
         if (collision.gameObject.tag == "death")
         {
-
-            ded();
+            
+            instakill();
         }
 
         if (collision.gameObject.tag == "kill")
         {
 
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+             instakill();
         }
 
     }
@@ -201,9 +204,33 @@ public class playerhp : MonoBehaviour
     }
     void ded()
     {
+        fade.stage = 0;
+        playercontrl.rb.linearVelocity = new Vector2(0, 0);
+        Destroy(buster);
+        Destroy(playercontrl);
+        anim.SetBool("ded", true);
+    }
+    void morte()
+    {
+        Instantiate(explosion, firepoint.position, firepoint.rotation);
+        TrocarFase = true;
+        FadeFases.FadeIn();
+        Destroy(gameObject);
+    }
+    void instakill()
+    {
+        vida4.SetBool("fechar", true);
+        vida3.SetBool("fechar", true);
+        vida2.SetBool("fechar", true);
+        vida1.SetBool("fechar", true);
+        
+        fade.stage = 0;
+        playercontrl.rb.linearVelocity = new Vector2(0, 0);      
         Instantiate(explosion, firepoint.position, firepoint.rotation);
         Destroy(gameObject);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        TrocarFase = true;
+        FadeFases.FadeIn();
+        Destroy(gameObject);
     }
     IEnumerator DamageBoost()
     {

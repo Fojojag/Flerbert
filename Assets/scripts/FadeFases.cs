@@ -12,12 +12,12 @@ public class FadeFases : MonoBehaviour
     [SerializeField] public static bool fadeinFinal;
     [SerializeField] public GameObject player;
     [SerializeField] public static bool TrocarFase;
-    public float stage; //1 = fase 1, 1.5 = boss 1, 2 = fase 2, 2.5 = boss 2
+    public float stage; //0 = reload, 1 = fase 1, 1.5 = boss 1, 2 = fase 2, 2.5 = boss 2, 3 = boss 3
     public float timer = 1f;
 
     void Awake()
     {
-        
+        FadeOut();
     }
     public static void FadeIn()
     {
@@ -49,6 +49,11 @@ public class FadeFases : MonoBehaviour
         if (timer <= 0)
         {
             Destroy(spawn);
+            if (stage == 0)
+            {
+                
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
             if (stage == 1)
             {
                 
@@ -60,7 +65,7 @@ public class FadeFases : MonoBehaviour
             }
             if (stage == 2)
             {
-                SceneManager.LoadScene("Fase2");
+                SceneManager.LoadScene("Stroryboard2");
             }
             if(stage == 2.5) 
             {
@@ -96,7 +101,7 @@ public class FadeFases : MonoBehaviour
         {
             if (canvasgroup.alpha >= 0)
             {
-                canvasgroup.alpha -= timeFade * Time.deltaTime;
+                canvasgroup.alpha -= timeFade * Time.deltaTime/1.5f;
                 if (canvasgroup.alpha == 0)
                 {
                     fadeOut = false;

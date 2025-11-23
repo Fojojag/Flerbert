@@ -94,7 +94,7 @@ public float filhadaputa;
     void Start()
     {
 
-        
+        Physics2D.IgnoreLayerCollision(7, 11, false);
         podeTrocar = false;
         podeAtirar = false;
         Mid = false;
