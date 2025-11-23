@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UrubuDoPix : MonoBehaviour
 {
@@ -33,6 +34,10 @@ public class UrubuDoPix : MonoBehaviour
                 J.a += 0.005f;
                 opacity = J.a;
             }
+        }
+        if (opacity >= 1)
+        {
+            SceneManager.LoadScene("StroryFinal");
         }
     }
 

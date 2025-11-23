@@ -13720,7 +13720,7 @@ MonoBehaviour:
   rend: {fileID: 1177040852}
   headAnim: {fileID: 1177040856}
   ENhealth: 0
-  ENmaxhealth: 500
+  ENmaxhealth: 1
   main: {fileID: 511052001}
   espinhos: {fileID: 1960140893}
   UrubuUiui: {fileID: 673959009}
@@ -14530,7 +14530,7 @@ PrefabInstance:
     - target: {fileID: 4027441367321750072, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: explosion
       value: 
-      objectReference: {fileID: 1792215816}
+      objectReference: {fileID: 3616292030639813260, guid: c74de13bcda445e4ab99d8e78b7a5710, type: 3}
     - target: {fileID: 4057277753715163313, guid: 4beb001d5f6950b4493ac593fb19628f, type: 3}
       propertyPath: m_Name
       value: player

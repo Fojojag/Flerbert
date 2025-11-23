@@ -21,6 +21,12 @@ MonoBehaviour:
   m_OverrideGlobalSceneList: 1
   m_Scenes:
   - m_enabled: 1
+    m_path: Assets/Scenes/Menu/MenuLinguagem.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Menu/Menu Ingles.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Menu/MenuPortugues.unity
+  - m_enabled: 1
     m_path: Assets/Scenes/Stroryboard.unity
   - m_enabled: 1
     m_path: Assets/Scenes/Tutorial.unity
@@ -36,6 +42,8 @@ MonoBehaviour:
     m_path: Assets/Scenes/Boss2.unity
   - m_enabled: 1
     m_path: Assets/Scenes/BossFinal.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/StroryFinal.unity
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
     m_Settings:
