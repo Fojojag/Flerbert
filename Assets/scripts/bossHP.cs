@@ -6,6 +6,7 @@ public class bossHP : MonoBehaviour
 {
     public GameObject spawn;
     SpriteRenderer rend;
+    public GameObject BGM;
     Color c;
     [SerializeField] SpriteRenderer spriteRenderer;
     public float ENhealth;
@@ -32,7 +33,7 @@ public class bossHP : MonoBehaviour
                 if (ENhealth <= 0)
         {
                 
-            
+            Destroy(BGM);
             Destroy(bossMain);
              Destroy(pulo);
             GameObject[] gameObjects = GameObject.FindGameObjectsWithTag ("inimigo");
@@ -83,6 +84,7 @@ public class bossHP : MonoBehaviour
     void morte()
     {
         FadeFases.FadeIn();
+        
     }
 
 

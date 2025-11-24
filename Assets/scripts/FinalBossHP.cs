@@ -3,7 +3,10 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 public class FinalBossHP : MonoBehaviour
 {
+    public GameObject BGM;
+    public AudioClip grito;
     public SpriteRenderer rend;
+    public bool podegritar = true;
     Color c;
     public Animator headAnim;
     public float ENhealth;
@@ -29,8 +32,9 @@ public class FinalBossHP : MonoBehaviour
         rend.color = c;
                 if (ENhealth <= 0)
         {
+            grita();
             Destroy(main);
-
+            Destroy(BGM);
             Destroy(espinhos);
             GameObject[] gameObjects = GameObject.FindGameObjectsWithTag ("inimigo");
             foreach (GameObject target in gameObjects)
@@ -79,6 +83,14 @@ public class FinalBossHP : MonoBehaviour
         UrubuUiui2.coolingDown = true;
         uiui.coolingDown = true;
         uiui1.coolingDown = true;
+    }
+    void grita()
+    {
+        if (podegritar)
+        {
+        AudioSource.PlayClipAtPoint(grito, transform.position, 1f);
+        podegritar = false;
+        }
     }
 
 

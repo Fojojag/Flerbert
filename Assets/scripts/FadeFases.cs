@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class FadeFases : MonoBehaviour
 {
+    public GameObject BGM;
     public GameObject spawn;
     public CanvasGroup canvasgroup;
     [SerializeField] public static bool fadeIn;
@@ -58,22 +59,31 @@ public class FadeFases : MonoBehaviour
             {
                 
                 SceneManager.LoadScene("Fase1");
+                
             }
             if (stage == 1.5)
             {
+                Destroy(BGM);
                 SceneManager.LoadScene("Boss1");
+                
             }
             if (stage == 2)
             {
+                Destroy(BGM);
                 SceneManager.LoadScene("Stroryboard2");
+                
             }
             if(stage == 2.5) 
             {
-                SceneManager.LoadScene("Boss2");  
+                Destroy(BGM);  
+                SceneManager.LoadScene("Boss2");
+                
             }
             if(stage == 3)
             {
+                Destroy(BGM);
                 SceneManager.LoadScene("BossFinal");
+                
             }
 
         }

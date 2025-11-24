@@ -4,6 +4,7 @@ using Unity.Cinemachine;
 using System.Collections;
 public class PohaDeGitHubDoKRL : MonoBehaviour
 {
+    public GameObject BGM;
     private CinemachineConfiner2D confiner;
     private CinemachinePositionComposer _transposer;
     public CinemachineCamera cineM;
@@ -25,7 +26,7 @@ public class PohaDeGitHubDoKRL : MonoBehaviour
     {
         if (BossCu)
         {
-            
+            Destroy(BGM);
         }
         else
         {

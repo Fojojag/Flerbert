@@ -26,7 +26,7 @@ public class storyFinal : MonoBehaviour
                 if (timer <= 0)
                 {
                     timer = 0.1f;
-                SceneManager.LoadScene("PRECISA COLOCAR A CENA DO MENU EU ACHO");
+                SceneManager.LoadScene("MenuLinguagem");
                     
                     FadeIn();
                     
